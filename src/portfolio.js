@@ -62,7 +62,7 @@ https://fontawesome.com/icons?d=gallery */
 
 
 const caseStudies = {
-  display: false, //Set it to true to show workExperiences Section
+  display: true, //Set it to true to show workExperiences Section
   experience: [
     {
       role: "Software Engineer",
