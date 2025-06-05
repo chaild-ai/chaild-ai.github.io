@@ -92,11 +92,30 @@ const caseStudies = {
   ]
 };
 
+// people involved in the project
+const bigProjects = {
+  title: "Who we are",
+  subtitle: "Researchers involved in the project",
+  projects: [
+    emoji(
+      "⚡ Co-investigators"
+    ),
+    emoji(
+      "⚡ Researchers"
+    ),
+    emoji(
+      "⚡ Associated researchers"
+    )
+  ],
+  display: true // Set false to hide this section, defaults to true
+};
+
 
 export {
   illustration,
   greeting,
   splashScreen,
   skillsSection,
-  caseStudies
+  caseStudies,
+  bigProjects
 };
