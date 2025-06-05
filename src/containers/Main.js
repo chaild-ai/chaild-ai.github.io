@@ -5,6 +5,7 @@ import Skills from "./skills/Skills";
 import Footer from "../components/footer/Footer";
 import CaseStudies from "./caseStudies/CaseStudies";
 import Projects from "./projects/Projects";
+import StartupProject from "./StartupProjects/StartupProject"
 import ScrollToTopButton from "./topbutton/Top";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
@@ -46,6 +47,7 @@ const Main = () => {
             <Skills />
             <CaseStudies />
             <Projects />
+            <StartupProject />
             <Footer />
             <ScrollToTopButton />
           </>
