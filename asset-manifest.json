@@ -1,7 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.4600f6d2.css",
-    "main.js": "/static/js/main.ccecc03b.js",
+    "main.css": "/static/css/main.17f45881.css",
+    "main.js": "/static/js/main.2e1a18ce.js",
+    "static/css/487.bb36206c.chunk.css": "/static/css/487.bb36206c.chunk.css",
+    "static/js/487.05b7fb5c.chunk.js": "/static/js/487.05b7fb5c.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/manOnTable.svg": "/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
@@ -9,11 +11,13 @@
     "static/media/airbnbLogo.png": "/static/media/airbnbLogo.e8497507db673acd3991.png",
     "static/media/facebookLogo.png": "/static/media/facebookLogo.f46d68b24e9b4f73ee8b.png",
     "index.html": "/index.html",
-    "main.4600f6d2.css.map": "/static/css/main.4600f6d2.css.map",
-    "main.ccecc03b.js.map": "/static/js/main.ccecc03b.js.map"
+    "main.17f45881.css.map": "/static/css/main.17f45881.css.map",
+    "main.2e1a18ce.js.map": "/static/js/main.2e1a18ce.js.map",
+    "487.bb36206c.chunk.css.map": "/static/css/487.bb36206c.chunk.css.map",
+    "487.05b7fb5c.chunk.js.map": "/static/js/487.05b7fb5c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4600f6d2.css",
-    "static/js/main.ccecc03b.js"
+    "static/css/main.17f45881.css",
+    "static/js/main.2e1a18ce.js"
   ]
 }
