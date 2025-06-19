@@ -77,12 +77,6 @@ const blogSection = {
       title: "Our first white paper",
       description:
         "Missions and challenges of the CHAILD project"
-    },
-    {
-      url: "https://forms.gle/NFb2AUskXaGgmcRu8",
-      title: "Join us",
-      description:
-        "Our first call for expression of interest to join our CHAILD community, if you are a researcher, innovator, educator or policymaker"
     }
   ],
   display: true // Set false to hide this section, defaults to true
