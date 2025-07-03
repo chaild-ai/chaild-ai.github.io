@@ -34,7 +34,7 @@ const greeting = {
 
 const skillsSection = {
   title: "What we do",
-  subTitle: "Our missions!!!",
+  subTitle: "Our missions",
   skills: [
     emoji(
       "⚡ Defining children’s critical agency in the digital context"
