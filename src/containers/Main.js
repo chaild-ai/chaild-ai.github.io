@@ -3,9 +3,11 @@ import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import Footer from "../components/footer/Footer";
-import CaseStudies from "./caseStudies/CaseStudies";
-import Projects from "./projects/Projects";
-import StartupProject from "./StartupProjects/StartupProject"
+// import CaseStudies from "./caseStudies/CaseStudies";
+// import Projects from "./projects/Projects";
+import People from "./people/People";
+// import StartupProject from "./StartupProjects/StartupProject"
+import Blogs from "./blogs/Blogs";
 import ScrollToTopButton from "./topbutton/Top";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
@@ -44,11 +46,15 @@ const Main = () => {
           <>
             <Header />
             <Greeting />
+            <Blogs />
             <Skills />
-            <CaseStudies />
-            <Projects />
-            <StartupProject />
-            <Footer />
+            <People />
+            {/* Uncomment the line below to enable StartupProject section */}
+            {/* <StartupProject /> */}
+            {/* <CaseStudies /> */}
+            {/* <Projects /> */}
+            {/* <StartupProject /> */}
+            {/* <Footer /> */}
             <ScrollToTopButton />
           </>
         )}

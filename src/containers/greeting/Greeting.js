@@ -4,7 +4,7 @@ import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import landingPerson from "../../assets/lottie/MainScene";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
-// import Button from "../../components/button/Button";
+import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -35,7 +35,18 @@ export default function Greeting() {
               >
                 {greeting.subTitle}
               </p>
-              
+              <div className="button-greeting-div">
+                
+                {greeting.resumeLink && (
+                  <a
+                    href={require("./WhitePaper.pdf")}
+                    download="CHAILDWhitePaper.pdf"
+                    className="download-link-button"
+                  >
+                    <Button text="Download our white paper" />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
           <div className="greeting-image-div">

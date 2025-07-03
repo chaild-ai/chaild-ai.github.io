@@ -1,0 +1,78 @@
+@import "../../_globalColor";
+
+.people-main-div {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.people-text-div {
+  margin-left: 50px;
+}
+
+.people-main-div > * {
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.people-image-div > img {
+  max-width: 20%;
+  height: 10px;
+}
+
+.people-heading {
+  font-size: 56px;
+  font-weight: 400;
+}
+.subTitle {
+  color: $subTitle;
+}
+
+.people-text-row-div {
+  display: flex;
+}
+
+.people-text-col-div {
+  flex: 50%
+}
+
+/* Media Query */
+@media (max-width: 1380px) {
+  .people-heading {
+    font-size: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .people-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+  .greeting-text-p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .people-main-div {
+    flex-direction: column;
+  }
+  .people-text-div {
+    margin-left: 0px;
+    margin: 20px;
+  }
+  .people-text {
+    font-size: 16px;
+  }
+  .people-text-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  .people-image-div {
+    /* display: none; */
+    order: 2;
+  }
+  .people-text-row-div {
+    flex-direction: column;
+  }
+  .people-text-col-div {
+    flex: 100%;
+  }
+}
