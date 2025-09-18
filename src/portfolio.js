@@ -72,7 +72,7 @@ const peopleSection = {
     ),
     emoji("⚡ Dr Jun Zhao, University of Oxford"),
     emoji(
-      "⚡ Professor Manolis Mavrakis, University College London"
+      "⚡ Professor Manolis Mavrikis, University College London"
     ),
     emoji(
       "⚡ Dr Carina Prunkl, Utrecht University"
@@ -91,7 +91,7 @@ const peopleSection = {
   people2: [
     "Researchers:",
     emoji(
-      "⚡ Vidminas Vizgirda, University of Oxford"
+      "⚡ Vidminas Vizgirda, University College London and University of Oxford"
     ),
     emoji(
       "⚡ Dr Isobel Voysey, University of Oxford"
