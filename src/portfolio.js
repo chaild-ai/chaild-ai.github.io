@@ -117,7 +117,7 @@ const blogSection = {
   displayMediumBlogs: "true", // Set true or false to display Medium blogs, defaults to false
   blogs: [
     {
-      url: "https://oxfordccai.org/outreach/20-24-07-llm/",
+      url: "https://oxfordccai.org/cfp/20-24-07-llm/",
       image: require("./assets/images/developerActivity.svg"),
       title: "Our new research study with children and genAI",
       description: "Support children's use of genAI and making better sense of genAI outputs"
