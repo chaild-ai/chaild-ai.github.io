@@ -1,26 +1,26 @@
 @import "../../_globalColor";
 
-.skills-main-div {
+.people-main-div {
   display: flex;
   width: 100%;
   overflow: hidden;
 }
 
-.skills-text-div {
+.people-text-div {
   margin-left: 50px;
 }
 
-.skills-main-div > * {
+.people-main-div > * {
   flex: 1;
   margin-bottom: 30px;
 }
 
-.skills-image-div > img {
-  max-width: 80%;
+.people-image-div > img {
+  max-width: 20%;
   height: 10px;
 }
 
-.skills-heading {
+.people-heading {
   font-size: 56px;
   font-weight: 400;
 }
@@ -28,14 +28,22 @@
   color: $subTitle;
 }
 
+.people-text-row-div {
+  display: flex;
+}
+
+.people-text-col-div {
+  flex: 50%
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
-  .skills-heading {
+  .people-heading {
     font-size: 40px;
   }
 }
 @media (max-width: 768px) {
-  .skills-heading {
+  .people-heading {
     font-size: 30px;
     text-align: center;
   }
@@ -43,22 +51,28 @@
     font-size: 16px;
     line-height: normal;
   }
-  .skills-main-div {
+  .people-main-div {
     flex-direction: column;
   }
-  .skills-text-div {
+  .people-text-div {
     margin-left: 0px;
     margin: 20px;
   }
-  .skills-text {
+  .people-text {
     font-size: 16px;
   }
-  .skills-text-subtitle {
+  .people-text-subtitle {
     font-size: 16px;
     text-align: center;
   }
-  .skills-image-div {
+  .people-image-div {
     /* display: none; */
     order: 2;
+  }
+  .people-text-row-div {
+    flex-direction: column;
+  }
+  .people-text-col-div {
+    flex: 100%;
   }
 }

@@ -2,9 +2,9 @@ import React, {useEffect, useState} from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
+import Footer from "../components/footer/Footer";
+import People from "./people/People";
 import Blogs from "./blogs/Blogs";
-// import Footer from "../components/footer/Footer";
-// import CaseStudies from "./caseStudies/CaseStudies";
 import ScrollToTopButton from "./topbutton/Top";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
@@ -44,7 +44,9 @@ const Main = () => {
             <Header />
             <Greeting />
             <Blogs />
-            <Skills />            
+            <Skills />
+            <People />
+
             <ScrollToTopButton />
           </>
         )}

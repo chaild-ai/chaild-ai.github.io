@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4600f6d2.css",
+    "main.js": "/static/js/main.e8f87613.js",
+    "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/manOnTable.svg": "/static/media/manOnTable.8f117eb207e57ed8f89d67d595aceb45.svg",
+    "static/media/quoraLogo.png": "/static/media/quoraLogo.85eb29f4d52320c8ed99.png",
+    "static/media/airbnbLogo.png": "/static/media/airbnbLogo.e8497507db673acd3991.png",
+    "static/media/facebookLogo.png": "/static/media/facebookLogo.f46d68b24e9b4f73ee8b.png",
+    "index.html": "/index.html",
+    "main.4600f6d2.css.map": "/static/css/main.4600f6d2.css.map",
+    "main.e8f87613.js.map": "/static/js/main.e8f87613.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4600f6d2.css",
+    "static/js/main.e8f87613.js"
+  ]
+}

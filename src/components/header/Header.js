@@ -5,12 +5,16 @@ import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import {
   greeting,
-  skillsSection
+  skillsSection,
+  peopleSection,
+  blogSection
 } from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
   const viewSkills = skillsSection.display;
+  const viewPeople = peopleSection.display;
+  const viewBlog = blogSection.display;
   
 
   return (
@@ -29,7 +33,22 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>         
+        <ul className={isDark ? "dark-menu menu" : "menu"}>
+          {viewBlog && (
+            <li>
+              <a href="#blogs">News</a>
+            </li>
+          )}
+          {viewSkills && (
+            <li>
+              <a href="#skills">Our mission</a>
+            </li>
+          )}
+          {viewPeople && (
+            <li>
+              <a href="#people">Our people</a>
+            </li>
+          )}
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>

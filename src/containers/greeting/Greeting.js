@@ -35,13 +35,12 @@ export default function Greeting() {
               >
                 {greeting.subTitle}
               </p>
-
               <div className="button-greeting-div">
                 
                 {greeting.resumeLink && (
                   <a
-                    href={require("./wp.pdf")}
-                    download="WhitePaper.pdf"
+                    href={require("./WhitePaper.pdf")}
+                    download="CHAILDWhitePaper.pdf"
                     className="download-link-button"
                   >
                     <Button text="Download our white paper" />

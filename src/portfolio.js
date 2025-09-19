@@ -23,7 +23,7 @@ const greeting = {
   username: "CHAILD",
   title: "Hi, Welcome to CHAILD",
   subTitle: emoji(
-    "A UKRI research project defining and designing Children's agency in the age of AI"
+    "A UKRI research project defining and designing children's agency in the age of AI"
   ),
   resumeLink: true,
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -60,32 +60,96 @@ https://fontawesome.com/icons?d=gallery */
   display: true // Set false to hide this section, defaults to true
 };
 
+
+// People Section
+
+const peopleSection = {
+  title: "Who we are",
+  subTitle: "A multidisciplinary team of researchers",
+  people1: [
+    "Co-investigators:",
+    emoji(
+      "⚡ Professor Sir Nigel Shadbolt, University of Oxford"
+    ),
+    emoji("⚡ Dr Jun Zhao, University of Oxford"),
+    emoji(
+      "⚡ Professor Manolis Mavrikis, University College London"
+    ),
+    emoji(
+      "⚡ Dr Carina Prunkl, Utrecht University"
+    ),
+    emoji(
+      "⚡ Professor Kaśka Porayska-Pomsta, University College London"
+    ),
+    emoji(
+      "⚡ Professor Wayne Holmes, University College London"
+    ),
+    emoji(
+      "⚡ Baroness Beeban Kidron, 5Rights Foundation"
+    ),
+
+  ],
+  people2: [
+    "Researchers:",
+    emoji(
+      "⚡ Vidminas Vizgirda, University College London and University of Oxford"
+    ),
+    emoji(
+      "⚡ Dr Isobel Voysey, University of Oxford"
+    ),
+    "Associated researchers:",
+    emoji(
+      "⚡ Zaki Pauzi, University College London"
+    ),
+    emoji(
+      "⚡ Dr Sarah Turner, University College London"
+    ),
+  ],
+
+  /* Make Sure to include correct Font Awesome Classname to view your icon
+https://fontawesome.com/icons?d=gallery */
+  display: true // Set false to hide this section, defaults to true
+};
+
 const blogSection = {
   title: "News",
-  subtitle:
-    "Find out the latest news",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  subtitle: "Read our latest updates",
+  display: true, // Set false to hide this section, defaults to true
+  displayMediumBlogs: "true", // Set true or false to display Medium blogs, defaults to false
   blogs: [
     {
-      url: "https://oxfordccai.org/outreach/20-24-07-llm/",
+      url: "https://oxfordccai.org/cfp/20-24-07-llm/",
+      image: require("./assets/images/developerActivity.svg"),
       title: "Our new research study with children and genAI",
-      description:
-        "Support children's use of genAI and making better sense of genAI outputs"
+      description: "Support children's use of genAI and making better sense of genAI outputs"
     },
     {
-      url: "./static/media/wp.653df15585af837b56f0.pdf",
+      url: "./static/media/WhitePaper.653df15585af837b56f0.pdf",
       title: "Our first white paper",
       description:
         "Missions and challenges of the CHAILD project"
     }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  ]
 };
+
+const openSource = {
+  showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
+  display: false // Set false to hide this section, defaults to true
+};
+
+const socialMediaLinks = {
+  twitter: "https://x.com/oxfordccai",
+  github: "https://github.com/OxfordHCC",
+  display: true // Set true to display this section, defaults to false
+};
+
 
 export {
   illustration,
   greeting,
   splashScreen,
+  socialMediaLinks,
   skillsSection,
-  blogSection
+  peopleSection,
+  blogSection,
 };
