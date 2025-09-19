@@ -49,7 +49,6 @@ function Header() {
               <a href="#people">Our people</a>
             </li>
           )}
-
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a>

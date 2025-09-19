@@ -46,7 +46,7 @@ export default function Greeting() {
                     <Button text="Download our white paper" />
                   </a>
                 )}
-              </div>
+              </div>              
             </div>
           </div>
           <div className="greeting-image-div">

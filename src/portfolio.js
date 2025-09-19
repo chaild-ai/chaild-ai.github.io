@@ -60,6 +60,7 @@ https://fontawesome.com/icons?d=gallery */
   display: true // Set false to hide this section, defaults to true
 };
 
+
 // People Section
 
 const peopleSection = {
@@ -141,8 +142,6 @@ const socialMediaLinks = {
   github: "https://github.com/OxfordHCC",
   display: true // Set true to display this section, defaults to false
 };
-
-
 
 
 export {
