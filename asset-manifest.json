@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fadf938a.css",
-    "main.js": "/static/js/main.f38be594.js",
+    "main.js": "/static/js/main.d41cb905.js",
     "static/media/WhitePaper.pdf": "/static/media/WhitePaper.653df15585af837b56f0.pdf",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
@@ -9,10 +9,10 @@
     "static/media/developerActivity.svg": "/static/media/developerActivity.2c0445cae86f4243433a2f5a22b2c031.svg",
     "index.html": "/index.html",
     "main.fadf938a.css.map": "/static/css/main.fadf938a.css.map",
-    "main.f38be594.js.map": "/static/js/main.f38be594.js.map"
+    "main.d41cb905.js.map": "/static/js/main.d41cb905.js.map"
   },
   "entrypoints": [
     "static/css/main.fadf938a.css",
-    "static/js/main.f38be594.js"
+    "static/js/main.d41cb905.js"
   ]
 }
