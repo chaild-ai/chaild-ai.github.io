@@ -2,9 +2,9 @@
 
 Website for the CHAILD project
 
-Site published from gh-pages branch
+Site published from gh-pages branch, no Jekyll
 
-### To deploy changes:
+### To publish changes:
 
 Install gh-pages
 
