@@ -1,6 +1,6 @@
 # chaild-ai.github.io
 
-Website for the CHAILD project
+Website for the CHAILD project, hosted at chaild.org
 
 Site published from gh-pages branch, no Jekyll
 
