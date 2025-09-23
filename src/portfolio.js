@@ -118,6 +118,12 @@ const blogSection = {
   displayMediumBlogs: "true", // Set true or false to display Medium blogs, defaults to false
   blogs: [
     {
+      url: "https://www.mpls.ox.ac.uk/public-engagement/pcer-fellows-scheme-25-26",
+      // image: require("./assets/images/developerActivity.svg"),
+      title: "We have been awarded funding to create a youth advisory group for AI and data science projects at Oxford",
+      description: "Further information for interested young people and researchers to follow"
+    },
+    {
       url: "https://oxfordccai.org/cfp/20-24-07-llm/",
       image: require("./assets/images/developerActivity.svg"),
       title: "Our new research study with children and genAI",
