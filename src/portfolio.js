@@ -120,7 +120,7 @@ const blogSection = {
     {
       url: "https://www.mpls.ox.ac.uk/public-engagement/pcer-fellows-scheme-25-26",
       // image: require("./assets/images/developerActivity.svg"),
-      title: "We have been awarded funding to create a youth advisory group for AI and data science projects at Oxford",
+      title: "Funding awarded for a youth advisory group for AI and data science projects at Oxford",
       description: "Further information for interested young people and researchers to follow"
     },
     {
