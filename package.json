@@ -23,7 +23,7 @@
     "sass": "^1.32.8"
   },
   "scripts": {
-    "predeploy": "npm run build && cp ./CNAME ./build/CNAME",
+    "predeploy": "npm run build && cp ./CNAME ./build/CNAME && cp ./build/index.html ./build/404.html",
     "start": "node fetch.js && react-scripts start",
     "build": "node fetch.js && react-scripts build",
     "deploy": "touch ./build/.nojekyll && gh-pages -d build",
