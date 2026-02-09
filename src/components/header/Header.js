@@ -19,9 +19,13 @@ function Header() {
   // Detect if we're on a blog page
   const isOnBlogPage = window.location.pathname.startsWith("/blog");
   
-  // Helper to create correct link based on current page
+  // Helper to create correct link based on current page.
+  // Use full origin when on a different page so anchors work with custom domains.
   const getLink = (anchor) => {
-    return isOnBlogPage ? `/#${anchor}` : `#${anchor}`;
+    if (isOnBlogPage) {
+      return `${window.location.origin}/#${anchor}`;
+    }
+    return `#${anchor}`;
   };
 
   return (
