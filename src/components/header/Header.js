@@ -16,6 +16,13 @@ function Header() {
   const viewPeople = peopleSection.display;
   const viewBlog = blogSection.display;
   
+  // Detect if we're on a blog page
+  const isOnBlogPage = window.location.pathname.startsWith("/blog");
+  
+  // Helper to create correct link based on current page
+  const getLink = (anchor) => {
+    return isOnBlogPage ? `/#${anchor}` : `#${anchor}`;
+  };
 
   return (
     <Headroom>
@@ -34,19 +41,19 @@ function Header() {
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
         <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewBlog && (
-            <li>
-              <a href="#blogs">News</a>
-            </li>
-          )}
           {viewSkills && (
             <li>
-              <a href="#skills">Our mission</a>
+              <a href={getLink("skills")}>Our mission</a>
             </li>
           )}
           {viewPeople && (
             <li>
-              <a href="#people">Our people</a>
+              <a href={getLink("people")}>Our people</a>
+            </li>
+          )}
+          {viewBlog && (
+            <li>
+              <a href="/blog">News</a>
             </li>
           )}
           <li>

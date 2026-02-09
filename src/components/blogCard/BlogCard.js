@@ -2,17 +2,23 @@ import React from "react";
 import "./BlogCard.scss";
 
 export default function BlogCard({blog, isDark}) {
-  function openUrlInNewTab(url, name) {
-    if (!url) {
-      console.log(`URL for ${name} not found`);
+  function handleClick() {
+    if (!blog.url) {
+      console.log(`URL for ${blog.title} not found`);
       return;
     }
-    var win = window.open(url, "_blank");
-    win.focus();
+    // Check if it's an internal link
+    if (blog.url.startsWith("/")) {
+      window.location.href = blog.url;
+    } else {
+      // External link
+      var win = window.open(blog.url, "_blank");
+      win.focus();
+    }
   }
 
   return (
-    <div onClick={() => openUrlInNewTab(blog.url, blog.title)}>
+    <div onClick={handleClick}>
       <div className={isDark ? "blog-container dark-mode" : "blog-container"}>
         <a
           className={

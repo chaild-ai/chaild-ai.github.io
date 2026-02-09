@@ -1,1 +1,0 @@
-Further information on youth advisory group
