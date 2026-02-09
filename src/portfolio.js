@@ -71,12 +71,14 @@ const peopleSection = {
     emoji(
       "⚡ Professor Sir Nigel Shadbolt, University of Oxford"
     ),
-    emoji("⚡ Dr Jun Zhao, University of Oxford"),
+    emoji(
+      "⚡ Dr Jun Zhao, University of Oxford"
+    ),
     emoji(
       "⚡ Professor Manolis Mavrikis, University College London"
     ),
     emoji(
-      "⚡ Dr Carina Prunkl, Utrecht University"
+      "⚡ Dr Carina Prunkl, University of Oxford"
     ),
     emoji(
       "⚡ Professor Kaśka Porayska-Pomsta, University College London"
@@ -92,6 +94,9 @@ const peopleSection = {
   people2: [
     "Researchers:",
     emoji(
+      "⚡ Dr Leslye Dias Duran, University of Oxford"
+    ),
+    emoji(
       "⚡ Vidminas Vizgirda, University College London and University of Oxford"
     ),
     emoji(
@@ -99,7 +104,7 @@ const peopleSection = {
     ),
     "Associated researchers:",
     emoji(
-      "⚡ Zaki Pauzi, University College London"
+      "⚡ Dr Zaki Pauzi, University College London"
     ),
     emoji(
       "⚡ Dr Sarah Turner, University College London"
@@ -118,22 +123,24 @@ const blogSection = {
   displayMediumBlogs: "true", // Set true or false to display Medium blogs, defaults to false
   blogs: [
     {
-      url: "https://www.mpls.ox.ac.uk/public-engagement/pcer-fellows-scheme-25-26",
+      slug: "funding-youth-advisory",
+      url: "/blog/funding-youth-advisory",
       // image: require("./assets/images/developerActivity.svg"),
       title: "Funding awarded for a youth advisory group for AI and data science projects at Oxford",
       description: "Further information for interested young people and researchers to follow"
     },
     {
-      url: "https://oxfordccai.org/cfp/20-24-07-llm/",
+      slug: "study-genai",
+      url: "/blog/study-genai",
       image: require("./assets/images/developerActivity.svg"),
       title: "Our new research study with children and genAI",
       description: "Support children's use of genAI and making better sense of genAI outputs"
     },
     {
+      slug: "white-paper",
       url: "./static/media/WhitePaper.653df15585af837b56f0.pdf",
       title: "Our first white paper",
-      description:
-        "Missions and challenges of the CHAILD project"
+      description: "Missions and challenges of the CHAILD project"
     }
   ]
 };
