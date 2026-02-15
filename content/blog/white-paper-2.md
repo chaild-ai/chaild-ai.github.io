@@ -4,6 +4,6 @@ The [2026 International AI Safety Report](https://internationalaisafetyreport.or
 As policymakers gather for the Indian AI Summit 2026, this white paper spotlights the need for a greater attention on children’s autonomy and agency in the context of AI, by presenting emerging evidence and outlining a future policy roadmap.
 
 
-To read the full blog, see [here](/static/media/CHAILD-white-paper-2026.pdf).
+To read the full paper, see [here](/static/media/CHAILD-white-paper-2026.pdf).
 
 *Published: February 2026*
