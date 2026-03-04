@@ -123,6 +123,13 @@ const blogSection = {
   displayMediumBlogs: "true", // Set true or false to display Medium blogs, defaults to false
   blogs: [
     {
+      slug: "white-paper-2",
+      url: "/blog/white-paper-2",
+      // image: require("./assets/images/developerActivity.svg"),
+      title: "Our reflections for the 2026 AI Safety agenda and the Indian AI Summit",
+      description: "Spotlights the need for a greater attention on children's autonomy and agency in the context of AI"
+    },
+    {
       slug: "funding-youth-advisory",
       url: "/blog/funding-youth-advisory",
       // image: require("./assets/images/developerActivity.svg"),
