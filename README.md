@@ -13,3 +13,5 @@ Install gh-pages
 Deploy to gh-pages
 
 ``npm run deploy``
+
+**Remember to push local changes to main**
