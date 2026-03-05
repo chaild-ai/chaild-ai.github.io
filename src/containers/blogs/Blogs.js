@@ -4,12 +4,17 @@ import BlogCard from "../../components/blogCard/BlogCard";
 import {blogSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import { fetchAllBlogMetadata } from "../../utils/parseFrontmatter";
+
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
+  const [blogs, setBlogs] = useState([]);
   const [mediumBlogs, setMediumBlogs] = useState([]);
+  
   function setMediumBlogsFunction(array) {
     setMediumBlogs(array);
   }
+  
   //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
   function extractTextContent(html) {
     return typeof html === "string"
@@ -20,7 +25,15 @@ export default function Blogs() {
           .join(" ")
       : NaN;
   }
+  
   useEffect(() => {
+    // Fetch blog metadata from markdown files
+    async function loadBlogs() {
+      const blogData = await fetchAllBlogMetadata(blogSection.blogSlugs);
+      setBlogs(blogData);
+    }
+    loadBlogs();
+
     if (blogSection.displayMediumBlogs === "true") {
       const getProfileData = () => {
         fetch("/blogs.json")
@@ -43,9 +56,11 @@ export default function Blogs() {
       getProfileData();
     }
   }, []);
+  
   if (!blogSection.display) {
     return null;
   }
+  
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="blogs">
@@ -63,13 +78,13 @@ export default function Blogs() {
           <div className="blog-text-div">
             {blogSection.displayMediumBlogs !== "true" ||
             mediumBlogs === "Error"
-              ? blogSection.blogs.map((blog, i) => {
+              ? blogs.map((blog, i) => {
                   return (
                     <BlogCard
                       key={i}
                       isDark={isDark}
                       blog={{
-                        url: blog.url,
+                        url: `/blog/${blog.slug}`,
                         image: blog.image,
                         title: blog.title,
                         description: blog.description

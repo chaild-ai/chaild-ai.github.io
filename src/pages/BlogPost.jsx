@@ -1,37 +1,36 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/header/Header";
 import ScrollToTopButton from "../containers/topbutton/Top";
-import { blogSection } from "../portfolio";
 import { StyleProvider } from "../contexts/StyleContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { Fade } from "react-reveal";
+import { fetchAndParseBlog } from "../utils/parseFrontmatter";
 import "./BlogPost.scss";
 
 export default function BlogPost({ slug }) {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const [post, setPost] = useState(null);
   const [mdContent, setMdContent] = useState(null);
   const [MdRenderer, setMdRenderer] = useState(null);
   const [remarkPlugins, setRemarkPlugins] = useState([]);
-
-  const post = blogSection.blogs.find((b) => b.slug === slug);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadMd() {
-      try {
-        const res = await fetch(`/content/blog/${slug}.md`);
-        if (!res.ok) {
-          setMdContent(`# ${post ? post.title : "Not found"}\n\nContent not available.`);
-          return;
-        }
-        const text = await res.text();
-        setMdContent(text);
-      } catch (e) {
-        setMdContent(`# ${post ? post.title : "Not found"}\n\nContent could not be loaded.`);
+    async function loadPost() {
+      const blogPost = await fetchAndParseBlog(slug);
+      if (!blogPost) {
+        setPost(null);
+        setLoading(false);
+        return;
       }
+      setPost(blogPost);
+      // Extract content from the parsed frontmatter result
+      setMdContent(blogPost.content);
+      setLoading(false);
     }
 
-    loadMd();
+    loadPost();
 
     async function loadRenderer() {
       try {
@@ -50,6 +49,20 @@ export default function BlogPost({ slug }) {
   const changeTheme = () => {
     setIsDark(!isDark);
   };
+
+  if (loading) {
+    return (
+      <div className={isDark ? "dark-mode" : null}>
+        <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+          <Header />
+          <div className="blog-post-container">
+            <p>Loading...</p>
+          </div>
+          <ScrollToTopButton />
+        </StyleProvider>
+      </div>
+    );
+  }
 
   if (!post) {
     return (
@@ -78,6 +91,27 @@ export default function BlogPost({ slug }) {
             <h1 className={isDark ? "dark-mode blog-post-title" : "blog-post-title"}>
               {post.title}
             </h1>
+            {/* <p className={isDark ? "dark-mode blog-post-description" : "blog-post-description"}>
+              {post.description}
+            </p> */}
+
+            {/* Display tags */}
+            {post.tags && post.tags.length > 0 && (
+              <div className="blog-post-tags">
+                {post.tags.map((tag) => (
+                  <span key={tag} className={`blog-tag ${isDark ? "dark-mode" : ""}`}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Display date */}
+            {post.date && (
+              <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
+                Published: {new Date(post.date).toLocaleDateString()}
+              </p>
+            )}
 
             {mdContent ? (
               MdRenderer ? (
@@ -88,7 +122,7 @@ export default function BlogPost({ slug }) {
                 <pre style={{ whiteSpace: "pre-wrap" }}>{mdContent}</pre>
               )
             ) : (
-              <p>Loading…</p>
+              <p>Loading content…</p>
             )}
 
             {post.url && (

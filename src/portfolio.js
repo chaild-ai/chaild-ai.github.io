@@ -116,39 +116,19 @@ https://fontawesome.com/icons?d=gallery */
   display: true // Set false to hide this section, defaults to true
 };
 
-const blogSection = {
+const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to blog page
   title: "News",
   subtitle: "Read our latest updates",
   display: true, // Set false to hide this section, defaults to true
-  displayMediumBlogs: "true", // Set true or false to display Medium blogs, defaults to false
-  blogs: [
-    {
-      slug: "white-paper-2",
-      url: "/blog/white-paper-2",
-      // image: require("./assets/images/developerActivity.svg"),
-      title: "Our reflections for the 2026 AI Safety agenda and the Indian AI Summit",
-      description: "Spotlights the need for a greater attention on children's autonomy and agency in the context of AI"
-    },
-    {
-      slug: "funding-youth-advisory",
-      url: "/blog/funding-youth-advisory",
-      // image: require("./assets/images/developerActivity.svg"),
-      title: "Funding awarded for a youth advisory group for AI and data science projects at Oxford",
-      description: "Further information for interested young people and researchers to follow"
-    },
-    {
-      slug: "study-genai",
-      url: "/blog/study-genai",
-      image: require("./assets/images/developerActivity.svg"),
-      title: "Our new research study with children and genAI",
-      description: "Support children's use of genAI and making better sense of genAI outputs"
-    },
-    {
-      slug: "white-paper",
-      url: "./static/media/WhitePaper.653df15585af837b56f0.pdf",
-      title: "Our first white paper",
-      description: "Missions and challenges of the CHAILD project"
-    }
+  displayMediumBlogs: "false", // Set true or false to display Medium blogs, defaults to false
+  // Blog slugs: metadata is loaded from markdown frontmatter in /public/content/blog/<slug>.md
+  blogSlugs: [
+    "youth-advisory-group-kickoff",
+    "agency-lit-review",
+    "white-paper-2",
+    "funding-youth-advisory",
+    "study-genai",
+    "white-paper"
   ]
 };
 
