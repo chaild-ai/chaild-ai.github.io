@@ -127,6 +127,8 @@ const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to b
     "youth-advisory-group-kickoff",
     "agency-lit-review",
     "white-paper-2",
+    "royal-society-2026",
+    "chi-workshop-2026",
     "funding-youth-advisory",
     "study-genai",
     "white-paper"
