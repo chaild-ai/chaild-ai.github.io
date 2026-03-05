@@ -3,6 +3,7 @@ title: "Report on Teenagers and LLMs: how students use generative AI, what they 
 description: "A short summary of our study in December 2025"
 tags: ["youth prism"]
 date: "2026-03-05"
+url: "/static/media/YOUTH-PRISM-2025.pdf"
 ---
 
 On 4 December 2025, we met 40 students from two local Oxfordshire schools in Trinity College at the University of Oxford, for an academic taster session. In this one-hour session, we facilitated discussions and hands-on activities to show what human-computer interaction research can look like in practice – by running our Youth PRISM study. 

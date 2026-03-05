@@ -3,6 +3,7 @@ title: "Literature review of children's agency in the context of AI"
 description: "Preprint out now"
 tags: ["publication"]
 date: "2026-03-05"
+url: "https://hal.science/hal-05500673"
 ---
 
 We recently investigated how the HCI community treats agency in child-AI interaction, which we report in our paper *Agency in Child-AI Interaction: A Review of How It Is Conceptualised, Studied, and Supported in HCI*.

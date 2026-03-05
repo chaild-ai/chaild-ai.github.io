@@ -12,4 +12,6 @@ We got to know each other a little bit (are *you* more koala 🐨 or lion 🦁?)
 
 Our first session with Oxford researchers will take place at the end of March.
 
-The project is part of the MPLS Public and Community Engagement with Research Fellowship.
+The project is part of the [MPLS Public and Community Engagement with Research Fellowship](https://www.mpls.ox.ac.uk/public-engagement/pcer-fellows-scheme-25-26).
+
+We will share more about our Advisory Group development here in the coming months. Look out for more updates.
