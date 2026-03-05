@@ -3,6 +3,7 @@ title: "CHAILD team leads an agency workshop at CHI 2026"
 description: "Child-Centred AI-Mediated Collaborative Agency by Design workshop at CHI 2026"
 tags: ["impact"]
 date: "2026-02-25"
+url: "https://oxfordhcc.github.io/CAMCAD/"
 ---
 
 
