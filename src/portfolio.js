@@ -97,7 +97,7 @@ const peopleSection = {
       "⚡ Dr Leslye Dias Duran, University of Oxford"
     ),
     emoji(
-      "⚡ Vidminas Vizgirda, University College London and University of Oxford"
+      "⚡ Dr Vidminas Vizgirda, University College London and University of Oxford"
     ),
     emoji(
       "⚡ Dr Isobel Voysey, University of Oxford"
