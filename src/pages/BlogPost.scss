@@ -161,6 +161,13 @@
   }
 }
 
+.blog-markdown img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
 .dark-mode .blog-markdown {
   color: $textColorDark;
 
