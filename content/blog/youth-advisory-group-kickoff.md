@@ -5,7 +5,7 @@ tags: ["youth advisory group"]
 date: "2026-03-04"
 ---
 
-![title slide](Kickoff-Meeting.png "Title slide")
+![title slide](/content/blog/Kickoff-Meeting.png "Title slide")
 
 Last Friday, we had the first meeting of the new youth advisory group focused on AI and data science projects at Oxford.
 
