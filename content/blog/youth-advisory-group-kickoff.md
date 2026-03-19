@@ -5,7 +5,6 @@ tags: ["youth advisory group"]
 date: "2026-03-04"
 ---
 
-![title slide](/content/blog/images/Kickoff-Meeting.png "Title slide")
 
 Last Friday, we had the first meeting of the new youth advisory group focused on AI and data science projects at Oxford.
 
@@ -15,4 +14,4 @@ Our first session with Oxford researchers will take place at the end of March.
 
 The project is part of the [MPLS Public and Community Engagement with Research Fellowship](https://www.mpls.ox.ac.uk/public-engagement/pcer-fellows-scheme-25-26).
 
-We will share more about our youth advisory group development here in the coming months. Look out for more updates.
+We will share more about our Advisory Group development here in the coming months. Look out for more updates.
