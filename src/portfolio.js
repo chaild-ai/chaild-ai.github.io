@@ -128,6 +128,7 @@ const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to b
     "agency-lit-review",
     "white-paper-2",
     "royal-society-2026",
+    "mpls-ai-ethics-conf",
     "chi-workshop-2026",
     "funding-youth-advisory",
     "study-genai",
