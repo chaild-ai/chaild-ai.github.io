@@ -61,6 +61,9 @@ export default function Blogs() {
     return null;
   }
   
+  const isUsingMedium = blogSection.displayMediumBlogs === "true" && mediumBlogs !== "Error";
+  const displayedBlogs = isUsingMedium ? mediumBlogs.slice(0, 8) : blogs.slice(0, 8);
+  
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="blogs">
@@ -76,35 +79,29 @@ export default function Blogs() {
         </div>
         <div className="blog-main-div">
           <div className="blog-text-div">
-            {blogSection.displayMediumBlogs !== "true" ||
-            mediumBlogs === "Error"
-              ? blogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: `/blog/${blog.slug}`,
-                        image: blog.image,
-                        title: blog.title,
-                        description: blog.description
-                      }}
-                    />
-                  );
-                })
-              : mediumBlogs.map((blog, i) => {
-                  return (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: blog.link,
-                        title: blog.title,
-                        description: extractTextContent(blog.content)
-                      }}
-                    />
-                  );
-                })}
+            {displayedBlogs.map((blog, i) => {
+              return (
+                <BlogCard
+                  key={i}
+                  isDark={isDark}
+                  blog={{
+                    url: isUsingMedium ? blog.link : `/blog/${blog.slug}`,
+                    image: isUsingMedium ? null : blog.image,
+                    title: blog.title,
+                    description: isUsingMedium ? extractTextContent(blog.content) : blog.description
+                  }}
+                />
+              );
+            })}
+            <BlogCard
+              key="more-news"
+              isDark={isDark}
+              blog={{
+                url: "/blog",
+                title: "More news...",
+                description: "Click here to see all our news and updates"
+              }}
+            />
           </div>
         </div>
       </div>
