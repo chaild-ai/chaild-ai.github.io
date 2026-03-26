@@ -123,6 +123,7 @@ const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to b
   displayMediumBlogs: "false", // Set true or false to display Medium blogs, defaults to false
   // Blog slugs: metadata is loaded from markdown frontmatter in /public/content/blog/<slug>.md
   blogSlugs: [
+    "youth-advisory-group-2",
     "youth-prism-first",
     "youth-advisory-group-kickoff",
     "agency-lit-review",
