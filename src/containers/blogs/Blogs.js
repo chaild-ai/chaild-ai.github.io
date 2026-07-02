@@ -9,23 +9,7 @@ import { fetchAllBlogMetadata } from "../../utils/parseFrontmatter";
 export default function Blogs() {
   const {isDark} = useContext(StyleContext);
   const [blogs, setBlogs] = useState([]);
-  const [mediumBlogs, setMediumBlogs] = useState([]);
-  
-  function setMediumBlogsFunction(array) {
-    setMediumBlogs(array);
-  }
-  
-  //Medium API returns blogs' content in HTML format. Below function extracts blogs' text content within paragraph tags
-  function extractTextContent(html) {
-    return typeof html === "string"
-      ? html
-          .split("p>")
-          .filter(el => !el.includes(">"))
-          .map(el => el.replace("</", ".").replace("<", ""))
-          .join(" ")
-      : NaN;
-  }
-  
+
   useEffect(() => {
     // Fetch blog metadata from markdown files
     async function loadBlogs() {
@@ -33,37 +17,14 @@ export default function Blogs() {
       setBlogs(blogData);
     }
     loadBlogs();
-
-    if (blogSection.displayMediumBlogs === "true") {
-      const getProfileData = () => {
-        fetch("/blogs.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setMediumBlogsFunction(response.items);
-          })
-          .catch(function (error) {
-            console.error(
-              `${error} (because of this error Blogs section could not be displayed. Blogs section has reverted to default)`
-            );
-            setMediumBlogsFunction("Error");
-            blogSection.displayMediumBlogs = "false";
-          });
-      };
-      getProfileData();
-    }
   }, []);
-  
+
   if (!blogSection.display) {
     return null;
   }
-  
-  const isUsingMedium = blogSection.displayMediumBlogs === "true" && mediumBlogs !== "Error";
-  const displayedBlogs = isUsingMedium ? mediumBlogs.slice(0, 8) : blogs.slice(0, 8);
-  
+
+  const displayedBlogs = blogs.slice(0, 8);
+
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="blogs">
@@ -85,10 +46,10 @@ export default function Blogs() {
                   key={i}
                   isDark={isDark}
                   blog={{
-                    url: isUsingMedium ? blog.link : `/blog/${blog.slug}`,
-                    image: isUsingMedium ? null : blog.image,
+                    url: `/blog/${blog.slug}`,
+                    image: blog.image,
                     title: blog.title,
-                    description: isUsingMedium ? extractTextContent(blog.content) : blog.description
+                    description: blog.description
                   }}
                 />
               );

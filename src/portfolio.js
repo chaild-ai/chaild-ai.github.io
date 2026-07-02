@@ -120,7 +120,6 @@ const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to b
   title: "News",
   subtitle: "Read our latest updates",
   display: true, // Set false to hide this section, defaults to true
-  displayMediumBlogs: "false", // Set true or false to display Medium blogs, defaults to false
   // Blog slugs: metadata is loaded from markdown frontmatter in /public/content/blog/<slug>.md
   blogSlugs: [
     "youth-advisory-group-2",
@@ -135,11 +134,6 @@ const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to b
     "study-genai",
     "white-paper"
   ]
-};
-
-const openSource = {
-  showGithubProfile: "false", // Set true or false to show Contact profile using Github, defaults to true
-  display: false // Set false to hide this section, defaults to true
 };
 
 const socialMediaLinks = {
