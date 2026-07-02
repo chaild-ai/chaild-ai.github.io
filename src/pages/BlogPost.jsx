@@ -46,6 +46,12 @@ export default function BlogPost({ slug }) {
     loadRenderer();
   }, [slug]);
 
+  useEffect(() => {
+    if (post && post.title) {
+      document.title = `${post.title} | CHAILD`;
+    }
+  }, [post]);
+
   const changeTheme = () => {
     setIsDark(!isDark);
   };
@@ -55,9 +61,9 @@ export default function BlogPost({ slug }) {
       <div className={isDark ? "dark-mode" : null}>
         <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
           <Header />
-          <div className="blog-post-container">
+          <main id="main-content" className="blog-post-container">
             <p>Loading...</p>
-          </div>
+          </main>
           <ScrollToTopButton />
         </StyleProvider>
       </div>
@@ -69,10 +75,10 @@ export default function BlogPost({ slug }) {
       <div className={isDark ? "dark-mode" : null}>
         <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
           <Header />
-          <div className="blog-post-container">
+          <main id="main-content" className="blog-post-container">
             <h1>Post not found</h1>
             <a href="/blog">← Back to all posts</a>
-          </div>
+          </main>
           <ScrollToTopButton />
         </StyleProvider>
       </div>
@@ -84,7 +90,7 @@ export default function BlogPost({ slug }) {
       <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
         <Header />
         <Fade bottom duration={1000} distance="20px">
-          <div className="blog-post-container">
+          <main id="main-content" className="blog-post-container">
             <a href="/blog" className="back-link">
               ← Back to all posts
             </a>
@@ -106,10 +112,16 @@ export default function BlogPost({ slug }) {
               </div>
             )}
 
-            {/* Display date */}
+            {/* Display date; format in UTC so "2026-02-01" doesn't render
+                as the previous day in timezones west of UTC */}
             {post.date && (
               <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
-                Published: {new Date(post.date).toLocaleDateString()}
+                Published:{" "}
+                <time dateTime={post.date}>
+                  {new Date(post.date).toLocaleDateString(undefined, {
+                    timeZone: "UTC"
+                  })}
+                </time>
               </p>
             )}
 
@@ -130,7 +142,7 @@ export default function BlogPost({ slug }) {
                 Original / Download
               </a>
             )}
-          </div>
+          </main>
         </Fade>
         <ScrollToTopButton />
       </StyleProvider>

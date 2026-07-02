@@ -3,6 +3,9 @@ import "./SoftwareSkill.scss";
 import {skillsSection} from "../../portfolio";
 
 export default function SoftwareSkill() {
+  if (!skillsSection.softwareSkills.length) {
+    return null;
+  }
   return (
     <div>
       <div className="software-skills-main-div">

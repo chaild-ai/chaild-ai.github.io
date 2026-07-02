@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
+import emoji from "react-easy-emoji";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
@@ -13,15 +14,19 @@ export default function Skills() {
     return null;
   }
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
+    <section
+      className={isDark ? "dark-mode main" : "main"}
+      id="skills"
+      aria-labelledby="skills-heading"
+    >
       <div className="skills-main-div">
         <Fade left duration={1000}>
-          <div className="skills-image-div">
+          <div className="skills-image-div" aria-hidden="true">
             {illustration.animated ? (
               <DisplayLottie animationData={codingPerson} />
             ) : (
               <img
-                alt="Man Working"
+                alt=""
                 src={require("../../assets/lottie/splashAnimation")}
               ></img>
             )}
@@ -29,11 +34,12 @@ export default function Skills() {
         </Fade>
         <Fade right duration={1000}>
           <div className="skills-text-div">
-            <h1
+            <h2
+              id="skills-heading"
               className={isDark ? "dark-mode skills-heading" : "skills-heading"}
             >
               {skillsSection.title}{" "}
-            </h1>
+            </h2>
             <p
               className={
                 isDark
@@ -44,10 +50,10 @@ export default function Skills() {
               {skillsSection.subTitle}
             </p>
             <SoftwareSkill />
-            <div>
-              {skillsSection.skills.map((skills, i) => {
+            <ul className="skills-list">
+              {skillsSection.skills.map((skill, i) => {
                 return (
-                  <p
+                  <li
                     key={i}
                     className={
                       isDark
@@ -55,14 +61,15 @@ export default function Skills() {
                         : "subTitle skills-text"
                     }
                   >
-                    {skills}
-                  </p>
+                    <span aria-hidden="true">{emoji("⚡ ")}</span>
+                    {skill}
+                  </li>
                 );
               })}
-            </div>
+            </ul>
           </div>
         </Fade>
       </div>
-    </div>
+    </section>
   );
 }

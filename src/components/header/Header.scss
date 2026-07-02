@@ -38,6 +38,10 @@
   color: $subTitle;
 }
 
+.dark-menu .grey-color {
+  color: $subTitleDark;
+}
+
 .header li a {
   display: block;
   padding: 15px 20px;
@@ -46,8 +50,43 @@
 }
 
 .header li a:hover,
-.header .menu-btn:hover {
+.header .menu-icon:hover {
   background-color: $headerHoverBG;
+}
+
+.header li.switch-item {
+  display: block;
+  padding: 15px 20px;
+}
+
+/* skip link: hidden above the viewport until focused */
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  padding: 12px 18px;
+  background-color: $buttonColor;
+  color: $textColorDark;
+  text-decoration: none;
+  border-radius: 4px;
+  transform: translateY(-250%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* keyboard focus indicators */
+.header a:focus-visible,
+.header .menu-icon:focus-visible {
+  outline: 3px solid $buttonColor;
+  outline-offset: 2px;
+}
+
+.dark-menu a:focus-visible,
+.dark-menu .menu-icon:focus-visible {
+  outline-color: $textColorDark;
 }
 
 .header .logo {
@@ -85,6 +124,8 @@
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  background: transparent;
+  border: none;
 }
 
 .header .menu-icon .navicon {
@@ -130,30 +171,26 @@
   top: -5px;
 }
 
-/* menu btn */
+/* open menu state (aria-expanded is set by the menu button in Header.js) */
 
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
+.header .menu.menu-open {
   max-height: 486px;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.header .menu-icon[aria-expanded="true"] .navicon {
   background: transparent !important;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.header .menu-icon[aria-expanded="true"] .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.header .menu-icon[aria-expanded="true"] .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-icon[aria-expanded="true"] .navicon:before,
+.header .menu-icon[aria-expanded="true"] .navicon:after {
   top: 0;
 }
 

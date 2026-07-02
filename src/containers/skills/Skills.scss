@@ -24,6 +24,15 @@
   font-size: 56px;
   font-weight: 400;
 }
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin: 16px 0;
+}
 .subTitle {
   color: $subTitle;
 }

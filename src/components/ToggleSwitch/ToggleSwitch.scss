@@ -7,9 +7,14 @@
   height: 26px;
 }
 
-/* Fix visible slider checkbox */
-input {
-  transform: scale(0.5);
+/* Visually hide the checkbox; the slider is the visual control */
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
 }
 
 .slider {
@@ -40,8 +45,9 @@ input:checked + .slider {
   background-color: $toggleCheck;
 }
 
-input:focus + .slider {
-  box-shadow: $toggleCheck;
+input:focus-visible + .slider {
+  outline: 3px solid $toggleCheck;
+  outline-offset: 2px;
 }
 
 input:checked + .slider::before,

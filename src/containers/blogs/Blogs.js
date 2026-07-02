@@ -27,9 +27,11 @@ export default function Blogs() {
 
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="blogs">
+      <section className="main" id="blogs" aria-labelledby="blogs-heading">
         <div className="blog-header">
-          <h1 className="blog-header-text">{blogSection.title}</h1>
+          <h2 id="blogs-heading" className="blog-header-text">
+            {blogSection.title}
+          </h2>
           <p
             className={
               isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
@@ -65,7 +67,7 @@ export default function Blogs() {
             />
           </div>
         </div>
-      </div>
+      </section>
     </Fade>
   );
 }
