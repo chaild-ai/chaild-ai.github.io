@@ -42,11 +42,12 @@ const Main = () => {
         ) : (
           <>
             <Header />
-            <Greeting />
-            <Blogs />
-            <Skills />
-            <People />
-
+            <main id="main-content">
+              <Greeting />
+              <Blogs />
+              <Skills />
+              <People />
+            </main>
             <ScrollToTopButton />
           </>
         )}

@@ -18,6 +18,10 @@ export default function BlogList() {
   const [allTags, setAllTags] = useState([]);
 
   useEffect(() => {
+    document.title = "News | CHAILD";
+  }, []);
+
+  useEffect(() => {
     // Fetch all blog metadata from markdown files
     async function loadBlogs() {
       const blogData = await fetchAllBlogMetadata(blogSection.blogSlugs);
@@ -59,7 +63,7 @@ export default function BlogList() {
       <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
         <Header />
         <Fade bottom duration={1000} distance="20px">
-          <div className="main" id="blogs">
+          <main id="main-content" className="main">
             <div className="blog-header">
               <h1 className="blog-header-text">{blogSection.title}</h1>
               <p className={isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"}>
@@ -78,6 +82,7 @@ export default function BlogList() {
                       className={`tag-button ${
                         selectedTags.includes(tag) ? "active" : ""
                       } ${isDark ? "dark-mode" : ""}`}
+                      aria-pressed={selectedTags.includes(tag)}
                       onClick={() => toggleTag(tag)}
                     >
                       {tag}
@@ -109,7 +114,7 @@ export default function BlogList() {
                 )}
               </div>
             </div>
-          </div>
+          </main>
         </Fade>
         <ScrollToTopButton />
       </StyleProvider>
