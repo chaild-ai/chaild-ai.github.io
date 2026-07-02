@@ -39,8 +39,8 @@ export default function Greeting() {
                 
                 {greeting.resumeLink && (
                   <a
-                    href={require("./WhitePaper.pdf")}
-                    download="CHAILDWhitePaper.pdf"
+                    href="/static/media/CHAILD-white-paper-1.pdf"
+                    download="CHAILD-white-paper-1.pdf"
                     className="download-link-button"
                   >
                     <Button text="Download our white paper" />
