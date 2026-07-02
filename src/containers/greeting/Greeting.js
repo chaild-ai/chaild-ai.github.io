@@ -15,11 +15,12 @@ export default function Greeting() {
   }
   return (
     <Fade bottom duration={1000} distance="40px">
-      <div className="greet-main" id="greeting">
+      <section className="greet-main" id="greeting" aria-labelledby="greeting-heading">
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div>
               <h1
+                id="greeting-heading"
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
@@ -36,31 +37,29 @@ export default function Greeting() {
                 {greeting.subTitle}
               </p>
               <div className="button-greeting-div">
-                
                 {greeting.resumeLink && (
-                  <a
+                  <Button
+                    text="Download our white paper"
                     href="/static/media/CHAILD-white-paper-1.pdf"
                     download="CHAILD-white-paper-1.pdf"
                     className="download-link-button"
-                  >
-                    <Button text="Download our white paper" />
-                  </a>
+                  />
                 )}
-              </div>              
+              </div>
             </div>
           </div>
-          <div className="greeting-image-div">
+          <div className="greeting-image-div" aria-hidden="true">
             {illustration.animated ? (
               <DisplayLottie animationData={landingPerson} />
             ) : (
               <img
-                alt="man sitting on table"
+                alt=""
                 src={require("../../assets/images/manOnTable.svg")}
               ></img>
             )}
           </div>
         </div>
-      </div>
+      </section>
     </Fade>
   );
 }

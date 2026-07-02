@@ -24,6 +24,20 @@
   font-size: 56px;
   font-weight: 400;
 }
+
+.people-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.people-list li {
+  margin: 16px 0;
+}
+
+.people-group-title {
+  font-size: 1em;
+  margin: 16px 0 8px;
+}
 .subTitle {
   color: $subTitle;
 }

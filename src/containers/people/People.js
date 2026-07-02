@@ -1,10 +1,8 @@
 import React, {useContext} from "react";
 import "./People.scss";
-// import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, peopleSection} from "../../portfolio";
+import emoji from "react-easy-emoji";
+import {peopleSection} from "../../portfolio";
 import {Fade} from "react-reveal";
-import codingPerson from "../../assets/lottie/codingPerson";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function People() {
@@ -12,16 +10,51 @@ export default function People() {
   if (!peopleSection.display) {
     return null;
   }
+
+  const renderGroup = group => (
+    <div key={group.title}>
+      <h3
+        className={
+          isDark
+            ? "dark-mode subTitle people-text people-group-title"
+            : "subTitle people-text people-group-title"
+        }
+      >
+        {group.title}
+      </h3>
+      <ul className="people-list">
+        {group.members.map((member, i) => (
+          <li
+            key={i}
+            className={
+              isDark ? "dark-mode subTitle people-text" : "subTitle people-text"
+            }
+          >
+            <span aria-hidden="true">{emoji("⚡ ")}</span>
+            {member}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  const [firstGroup, ...otherGroups] = peopleSection.peopleGroups;
+
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="people">
+    <section
+      className={isDark ? "dark-mode main" : "main"}
+      id="people"
+      aria-labelledby="people-heading"
+    >
       <div className="people-main-div">
         <Fade left duration={1000}>
           <div className="people-text-div">
-            <h1
+            <h2
+              id="people-heading"
               className={isDark ? "dark-mode people-heading" : "people-heading"}
             >
               {peopleSection.title}{" "}
-            </h1>
+            </h2>
             <p
               className={
                 isDark
@@ -31,44 +64,15 @@ export default function People() {
             >
               {peopleSection.subTitle}
             </p>
-            {/* <SoftwareSkill /> */}
             <div className="people-text-row-div">
               <div className="people-text-col-div">
-                {peopleSection.people1.map((people1, i) => {
-                  return (
-                    <p
-                      key={i}
-                      className={
-                        isDark
-                          ? "dark-mode subTitle people-text"
-                          : "subTitle people-text"
-                      }
-                    >
-                      {people1}
-                    </p>
-                  );
-                })}
+                {renderGroup(firstGroup)}
               </div>
-              <div>
-                {peopleSection.people2.map((people2, i) => {
-                  return (
-                    <p
-                      key={i}
-                      className={
-                        isDark
-                          ? "dark-mode subTitle people-text"
-                          : "subTitle people-text"
-                      }
-                    >
-                      {people2}
-                    </p>
-                  );
-                })}
-              </div>
+              <div>{otherGroups.map(renderGroup)}</div>
             </div>
           </div>
         </Fade>
       </div>
-    </div>
+    </section>
   );
 }

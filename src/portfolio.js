@@ -36,19 +36,11 @@ const skillsSection = {
   title: "What we do",
   subTitle: "Our missions",
   skills: [
-    emoji(
-      "⚡ Defining children’s critical agency in the digital context"
-    ),
-    emoji("⚡ Establishing approaches to assess the impact on agency"),
-    emoji(
-      "⚡ Developing design principles for agency"
-    ),
-    emoji(
-      "⚡ Creating new guidelines for parental and educational support"
-    ),
-    emoji(
-      "⚡ Formulating policy recommendations to prioritise children’s agency"
-    )
+    "Defining children’s critical agency in the digital context",
+    "Establishing approaches to assess the impact on agency",
+    "Developing design principles for agency",
+    "Creating new guidelines for parental and educational support",
+    "Formulating policy recommendations to prioritise children’s agency"
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -66,49 +58,36 @@ https://fontawesome.com/icons?d=gallery */
 const peopleSection = {
   title: "Who we are",
   subTitle: "A multidisciplinary team of researchers",
-  people1: [
-    "Co-investigators:",
-    emoji(
-      "⚡ Professor Sir Nigel Shadbolt, University of Oxford"
-    ),
-    emoji(
-      "⚡ Dr Jun Zhao, University of Oxford"
-    ),
-    emoji(
-      "⚡ Professor Manolis Mavrikis, University College London"
-    ),
-    emoji(
-      "⚡ Dr Carina Prunkl, University of Oxford"
-    ),
-    emoji(
-      "⚡ Professor Kaśka Porayska-Pomsta, University College London"
-    ),
-    emoji(
-      "⚡ Professor Wayne Holmes, University College London"
-    ),
-    emoji(
-      "⚡ Baroness Beeban Kidron, 5Rights Foundation"
-    ),
-
-  ],
-  people2: [
-    "Researchers:",
-    emoji(
-      "⚡ Dr Leslye Dias Duran, University of Oxford"
-    ),
-    emoji(
-      "⚡ Dr Vidminas Vizgirda, University College London and University of Oxford"
-    ),
-    emoji(
-      "⚡ Dr Isobel Voysey, University of Oxford"
-    ),
-    "Associated researchers:",
-    emoji(
-      "⚡ Dr Zaki Pauzi, University College London"
-    ),
-    emoji(
-      "⚡ Dr Sarah Turner, University College London"
-    ),
+  // Each group renders as a sub-heading with a list of members.
+  // The first group appears in the left column, the rest in the right.
+  peopleGroups: [
+    {
+      title: "Co-investigators:",
+      members: [
+        "Professor Sir Nigel Shadbolt, University of Oxford",
+        "Dr Jun Zhao, University of Oxford",
+        "Professor Manolis Mavrikis, University College London",
+        "Dr Carina Prunkl, University of Oxford",
+        "Professor Kaśka Porayska-Pomsta, University College London",
+        "Professor Wayne Holmes, University College London",
+        "Baroness Beeban Kidron, 5Rights Foundation"
+      ]
+    },
+    {
+      title: "Researchers:",
+      members: [
+        "Dr Leslye Dias Duran, University of Oxford",
+        "Dr Vidminas Vizgirda, University College London and University of Oxford",
+        "Dr Isobel Voysey, University of Oxford"
+      ]
+    },
+    {
+      title: "Associated researchers:",
+      members: [
+        "Dr Zaki Pauzi, University College London",
+        "Dr Sarah Turner, University College London"
+      ]
+    }
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
