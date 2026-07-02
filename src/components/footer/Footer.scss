@@ -5,7 +5,9 @@
   color: $subTitle !important;
 }
 
-.dark-mode {
+/* scoped to the footer; a bare .dark-mode selector here used to leak
+   'color: white !important' onto every dark-mode element site-wide */
+.dark-mode.footer-text {
   color: $textColorDark !important;
 }
 

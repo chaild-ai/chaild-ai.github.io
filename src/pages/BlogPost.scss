@@ -15,6 +15,10 @@
   background-color: $darkBackground;
 }
 
+.dark-mode .back-link {
+  color: $accentColorDark;
+}
+
 .back-link {
   display: inline-block;
   color: $buttonColor;
@@ -60,7 +64,7 @@
 .read-more-link {
   display: inline-block;
   background-color: $buttonColor;
-  color: white;
+  color: $textColorDark;
   padding: 12px 24px;
   border-radius: 5px;
   text-decoration: none;
@@ -95,7 +99,7 @@
 
 .blog-tag.dark-mode {
   background-color: rgba($buttonColor, 0.2);
-  color: $buttonHover;
+  color: $accentColorDark;
 }
 
 .blog-post-date {
@@ -106,7 +110,7 @@
 }
 
 .dark-mode .blog-post-date {
-  color: #aaa;
+  color: $subTitleDark;
 }
 
 .blog-markdown {
@@ -153,11 +157,7 @@
 
   a {
     color: $buttonColor;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
 }
 
@@ -170,6 +170,10 @@
 
 .dark-mode .blog-markdown {
   color: $textColorDark;
+
+  a {
+    color: $accentColorDark;
+  }
 
   code {
     background-color: rgba(255, 255, 255, 0.1);

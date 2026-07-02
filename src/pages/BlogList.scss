@@ -45,22 +45,23 @@
 
   &:hover {
     background-color: $buttonColor;
-    color: white;
+    color: $textColorDark;
   }
 
   &.active {
     background-color: $buttonColor;
-    color: white;
+    color: $textColorDark;
   }
 }
 
 .tag-button.dark-mode {
-  border-color: $buttonColor;
-  color: $buttonColor;
+  border-color: $accentColorDark;
+  color: $accentColorDark;
 
   &:hover,
   &.active {
     background-color: $buttonColor;
-    color: white;
+    border-color: $buttonColor;
+    color: $textColorDark;
   }
 }

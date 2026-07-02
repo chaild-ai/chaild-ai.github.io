@@ -28,3 +28,23 @@
 .subTitle {
   color: $subTitle;
 }
+
+/* !important needed to out-rank the '.subTitle { ... !important }'
+   light-theme rules in Greeting.scss and Footer.scss */
+.dark-mode.subTitle {
+  color: $subTitleDark !important;
+}
+
+/* keyboard focus indicators, both themes */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid $buttonColor;
+  outline-offset: 2px;
+}
+
+.dark-mode a:focus-visible,
+.dark-mode button:focus-visible,
+.dark-mode input:focus-visible {
+  outline-color: $accentColorDark;
+}
