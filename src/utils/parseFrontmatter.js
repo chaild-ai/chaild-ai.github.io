@@ -50,6 +50,10 @@ export async function fetchAndParseBlog(slug) {
     if (!res.ok) return null;
     const markdown = await res.text();
     const { frontmatter, content } = parseFrontmatter(markdown);
+    // A response without a frontmatter title is not a blog post. The dev
+    // server (and SPA fallbacks) answer unknown paths with index.html and
+    // status 200, which would otherwise render raw HTML as a "post".
+    if (!frontmatter.title) return null;
     return { ...frontmatter, slug, content };
   } catch (e) {
     console.error(`Error fetching blog ${slug}:`, e);

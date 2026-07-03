@@ -5,7 +5,8 @@ import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 
 function App() {
-  const pathname = window.location.pathname;
+  // Strip any trailing slash so "/blog/" matches the same as "/blog"
+  const pathname = window.location.pathname.replace(/\/+$/, "");
   const blogMatch = pathname.match(/^\/blog\/(.+)$/);
 
   if (blogMatch) {
