@@ -1,14 +1,18 @@
 import React, { useContext } from "react";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
-import landingPerson from "../../assets/lottie/MainScene";
+import childrenWaving from "../../assets/lottie/childrenWaving";
+import childrenWavingStill from "../../assets/images/childrenWaving.svg";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import Button from "../../components/button/Button";
-import { illustration, greeting } from "../../portfolio";
+import { greeting } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
   const { isDark } = useContext(StyleContext);
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
   if (!greeting.displayGreeting) {
     return null;
   }
@@ -50,13 +54,10 @@ export default function Greeting() {
           </div>
         </div>
         <div className="greeting-image-div" aria-hidden="true">
-          {illustration.animated ? (
-            <DisplayLottie animationData={landingPerson} />
+          {prefersReducedMotion ? (
+            <img alt="" src={childrenWavingStill} />
           ) : (
-            <img
-              alt=""
-              src={require("../../assets/images/manOnTable.svg")}
-            ></img>
+            <DisplayLottie animationData={childrenWaving} />
           )}
         </div>
       </div>
