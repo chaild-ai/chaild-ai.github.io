@@ -1,4 +1,4 @@
-@import "../_globalColor";
+@use "../globalColor" as *;
 
 .blog-tags-filter {
   margin: 30px 0;
