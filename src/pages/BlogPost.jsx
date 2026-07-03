@@ -3,7 +3,6 @@ import Header from "../components/header/Header";
 import ScrollToTopButton from "../containers/topbutton/Top";
 import { StyleProvider } from "../contexts/StyleContext";
 import { useLocalStorage } from "../hooks/useLocalStorage";
-import { Fade } from "react-reveal";
 import { fetchAndParseBlog } from "../utils/parseFrontmatter";
 import "./BlogPost.scss";
 
@@ -89,61 +88,71 @@ export default function BlogPost({ slug }) {
     <div className={isDark ? "dark-mode" : null}>
       <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
         <Header />
-        <Fade bottom duration={1000} distance="20px">
-          <main id="main-content" className="blog-post-container">
-            <a href="/blog" className="back-link">
-              ← Back to all posts
-            </a>
-            <h1 className={isDark ? "dark-mode blog-post-title" : "blog-post-title"}>
-              {post.title}
-            </h1>
-            {/* <p className={isDark ? "dark-mode blog-post-description" : "blog-post-description"}>
+        <main id="main-content" className="blog-post-container fade-in-up">
+          <a href="/blog" className="back-link">
+            ← Back to all posts
+          </a>
+          <h1
+            className={isDark ? "dark-mode blog-post-title" : "blog-post-title"}
+          >
+            {post.title}
+          </h1>
+          {/* <p className={isDark ? "dark-mode blog-post-description" : "blog-post-description"}>
               {post.description}
             </p> */}
 
-            {/* Display tags */}
-            {post.tags && post.tags.length > 0 && (
-              <div className="blog-post-tags">
-                {post.tags.map((tag) => (
-                  <span key={tag} className={`blog-tag ${isDark ? "dark-mode" : ""}`}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+          {/* Display tags */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="blog-post-tags">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className={`blog-tag ${isDark ? "dark-mode" : ""}`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
-            {/* Display date; format in UTC so "2026-02-01" doesn't render
+          {/* Display date; format in UTC so "2026-02-01" doesn't render
                 as the previous day in timezones west of UTC */}
-            {post.date && (
-              <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
-                Published:{" "}
-                <time dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString(undefined, {
-                    timeZone: "UTC"
-                  })}
-                </time>
-              </p>
-            )}
+          {post.date && (
+            <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
+              Published:{" "}
+              <time dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString(undefined, {
+                  timeZone: "UTC",
+                })}
+              </time>
+            </p>
+          )}
 
-            {mdContent ? (
-              MdRenderer ? (
-                <div className="blog-markdown">
-                  <MdRenderer remarkPlugins={remarkPlugins}>{mdContent}</MdRenderer>
-                </div>
-              ) : (
-                <pre style={{ whiteSpace: "pre-wrap" }}>{mdContent}</pre>
-              )
+          {mdContent ? (
+            MdRenderer ? (
+              <div className="blog-markdown">
+                <MdRenderer remarkPlugins={remarkPlugins}>
+                  {mdContent}
+                </MdRenderer>
+              </div>
             ) : (
-              <p>Loading content…</p>
-            )}
+              <pre style={{ whiteSpace: "pre-wrap" }}>{mdContent}</pre>
+            )
+          ) : (
+            <p>Loading content…</p>
+          )}
 
-            {post.url && (
-              <a href={post.url} target="_blank" rel="noreferrer" className="read-more-link">
-                Original / Download
-              </a>
-            )}
-          </main>
-        </Fade>
+          {post.url && (
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noreferrer"
+              className="read-more-link"
+            >
+              Original / Download
+            </a>
+          )}
+        </main>
         <ScrollToTopButton />
       </StyleProvider>
     </div>

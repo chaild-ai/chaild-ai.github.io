@@ -5,8 +5,8 @@ import Skills from "./skills/Skills";
 import People from "./people/People";
 import Blogs from "./blogs/Blogs";
 import ScrollToTopButton from "./topbutton/Top";
-import {StyleProvider} from "../contexts/StyleContext";
-import {useLocalStorage} from "../hooks/useLocalStorage";
+import { StyleProvider } from "../contexts/StyleContext";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
@@ -19,7 +19,7 @@ const Main = () => {
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
+      <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
         <Header />
         <main id="main-content">
           <Greeting />

@@ -1,17 +1,16 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./People.scss";
 import emoji from "react-easy-emoji";
-import {peopleSection} from "../../portfolio";
-import {Fade} from "react-reveal";
+import { peopleSection } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function People() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   if (!peopleSection.display) {
     return null;
   }
 
-  const renderGroup = group => (
+  const renderGroup = (group) => (
     <div key={group.title}>
       <h3
         className={
@@ -47,31 +46,27 @@ export default function People() {
       aria-labelledby="people-heading"
     >
       <div className="people-main-div">
-        <Fade left duration={1000}>
-          <div className="people-text-div">
-            <h2
-              id="people-heading"
-              className={isDark ? "dark-mode people-heading" : "people-heading"}
-            >
-              {peopleSection.title}{" "}
-            </h2>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle people-text-subtitle"
-                  : "subTitle people-text-subtitle"
-              }
-            >
-              {peopleSection.subTitle}
-            </p>
-            <div className="people-text-row-div">
-              <div className="people-text-col-div">
-                {renderGroup(firstGroup)}
-              </div>
-              <div>{otherGroups.map(renderGroup)}</div>
-            </div>
+        <div className="people-text-div fade-in-up">
+          <h2
+            id="people-heading"
+            className={isDark ? "dark-mode people-heading" : "people-heading"}
+          >
+            {peopleSection.title}{" "}
+          </h2>
+          <p
+            className={
+              isDark
+                ? "dark-mode subTitle people-text-subtitle"
+                : "subTitle people-text-subtitle"
+            }
+          >
+            {peopleSection.subTitle}
+          </p>
+          <div className="people-text-row-div">
+            <div className="people-text-col-div">{renderGroup(firstGroup)}</div>
+            <div>{otherGroups.map(renderGroup)}</div>
           </div>
-        </Fade>
+        </div>
       </div>
     </section>
   );
