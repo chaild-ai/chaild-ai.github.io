@@ -2,13 +2,12 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header/Header";
 import ScrollToTopButton from "../containers/topbutton/Top";
 import { StyleProvider } from "../contexts/StyleContext";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useDarkTheme } from "../hooks/useDarkTheme";
 import { fetchAndParseBlog } from "../utils/parseFrontmatter";
 import "./BlogPost.scss";
 
 export default function BlogPost({ slug }) {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const [isDark, toggleTheme] = useDarkTheme();
   const [post, setPost] = useState(null);
   const [mdContent, setMdContent] = useState(null);
   const [MdRenderer, setMdRenderer] = useState(null);
@@ -51,14 +50,10 @@ export default function BlogPost({ slug }) {
     }
   }, [post]);
 
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
-
   if (loading) {
     return (
       <div className={isDark ? "dark-mode" : null}>
-        <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+        <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
           <Header />
           <main id="main-content" className="blog-post-container">
             <p>Loading...</p>
@@ -72,7 +67,7 @@ export default function BlogPost({ slug }) {
   if (!post) {
     return (
       <div className={isDark ? "dark-mode" : null}>
-        <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+        <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
           <Header />
           <main id="main-content" className="blog-post-container">
             <h1>Post not found</h1>
@@ -86,7 +81,7 @@ export default function BlogPost({ slug }) {
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+      <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
         <main id="main-content" className="blog-post-container fade-in-up">
           <a href="/blog" className="back-link">

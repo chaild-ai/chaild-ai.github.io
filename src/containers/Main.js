@@ -6,20 +6,15 @@ import People from "./people/People";
 import Blogs from "./blogs/Blogs";
 import ScrollToTopButton from "./topbutton/Top";
 import { StyleProvider } from "../contexts/StyleContext";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import { useDarkTheme } from "../hooks/useDarkTheme";
 import "./Main.scss";
 
 const Main = () => {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
-
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
+  const [isDark, toggleTheme] = useDarkTheme();
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+      <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
         <main id="main-content">
           <Greeting />
