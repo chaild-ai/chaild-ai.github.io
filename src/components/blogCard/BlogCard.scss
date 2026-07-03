@@ -147,3 +147,13 @@
 .blog-card-shadow {
   box-shadow: 1px 0px 20px $darkBoxShadow2;
 }
+
+/* last in the file so it overrides the width-specific transitions above:
+   hover state changes still apply, but instantly, without motion */
+@media (prefers-reduced-motion: reduce) {
+  .blog-card::before,
+  .blog-card:hover > .small,
+  .blog-card:hover > h3 {
+    transition: none;
+  }
+}

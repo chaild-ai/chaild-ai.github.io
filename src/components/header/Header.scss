@@ -97,6 +97,11 @@
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
+  color: $textColor;
+}
+
+.dark-menu .logo {
+  color: $textColorDark;
 }
 
 .header .logo-name {

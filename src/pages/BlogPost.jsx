@@ -2,14 +2,12 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header/Header";
 import ScrollToTopButton from "../containers/topbutton/Top";
 import { StyleProvider } from "../contexts/StyleContext";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { Fade } from "react-reveal";
+import { useDarkTheme } from "../hooks/useDarkTheme";
 import { fetchAndParseBlog } from "../utils/parseFrontmatter";
 import "./BlogPost.scss";
 
 export default function BlogPost({ slug }) {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const [isDark, toggleTheme] = useDarkTheme();
   const [post, setPost] = useState(null);
   const [mdContent, setMdContent] = useState(null);
   const [MdRenderer, setMdRenderer] = useState(null);
@@ -52,14 +50,10 @@ export default function BlogPost({ slug }) {
     }
   }, [post]);
 
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
-
   if (loading) {
     return (
       <div className={isDark ? "dark-mode" : null}>
-        <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+        <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
           <Header />
           <main id="main-content" className="blog-post-container">
             <p>Loading...</p>
@@ -73,7 +67,7 @@ export default function BlogPost({ slug }) {
   if (!post) {
     return (
       <div className={isDark ? "dark-mode" : null}>
-        <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+        <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
           <Header />
           <main id="main-content" className="blog-post-container">
             <h1>Post not found</h1>
@@ -87,63 +81,73 @@ export default function BlogPost({ slug }) {
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+      <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
-        <Fade bottom duration={1000} distance="20px">
-          <main id="main-content" className="blog-post-container">
-            <a href="/blog" className="back-link">
-              ← Back to all posts
-            </a>
-            <h1 className={isDark ? "dark-mode blog-post-title" : "blog-post-title"}>
-              {post.title}
-            </h1>
-            {/* <p className={isDark ? "dark-mode blog-post-description" : "blog-post-description"}>
+        <main id="main-content" className="blog-post-container fade-in-up">
+          <a href="/blog" className="back-link">
+            ← Back to all posts
+          </a>
+          <h1
+            className={isDark ? "dark-mode blog-post-title" : "blog-post-title"}
+          >
+            {post.title}
+          </h1>
+          {/* <p className={isDark ? "dark-mode blog-post-description" : "blog-post-description"}>
               {post.description}
             </p> */}
 
-            {/* Display tags */}
-            {post.tags && post.tags.length > 0 && (
-              <div className="blog-post-tags">
-                {post.tags.map((tag) => (
-                  <span key={tag} className={`blog-tag ${isDark ? "dark-mode" : ""}`}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
+          {/* Display tags */}
+          {post.tags && post.tags.length > 0 && (
+            <div className="blog-post-tags">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className={`blog-tag ${isDark ? "dark-mode" : ""}`}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
 
-            {/* Display date; format in UTC so "2026-02-01" doesn't render
+          {/* Display date; format in UTC so "2026-02-01" doesn't render
                 as the previous day in timezones west of UTC */}
-            {post.date && (
-              <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
-                Published:{" "}
-                <time dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString(undefined, {
-                    timeZone: "UTC"
-                  })}
-                </time>
-              </p>
-            )}
+          {post.date && (
+            <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
+              Published:{" "}
+              <time dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString(undefined, {
+                  timeZone: "UTC",
+                })}
+              </time>
+            </p>
+          )}
 
-            {mdContent ? (
-              MdRenderer ? (
-                <div className="blog-markdown">
-                  <MdRenderer remarkPlugins={remarkPlugins}>{mdContent}</MdRenderer>
-                </div>
-              ) : (
-                <pre style={{ whiteSpace: "pre-wrap" }}>{mdContent}</pre>
-              )
+          {mdContent ? (
+            MdRenderer ? (
+              <div className="blog-markdown">
+                <MdRenderer remarkPlugins={remarkPlugins}>
+                  {mdContent}
+                </MdRenderer>
+              </div>
             ) : (
-              <p>Loading content…</p>
-            )}
+              <pre style={{ whiteSpace: "pre-wrap" }}>{mdContent}</pre>
+            )
+          ) : (
+            <p>Loading content…</p>
+          )}
 
-            {post.url && (
-              <a href={post.url} target="_blank" rel="noreferrer" className="read-more-link">
-                Original / Download
-              </a>
-            )}
-          </main>
-        </Fade>
+          {post.url && (
+            <a
+              href={post.url}
+              target="_blank"
+              rel="noreferrer"
+              className="read-more-link"
+            >
+              Original / Download
+            </a>
+          )}
+        </main>
         <ScrollToTopButton />
       </StyleProvider>
     </div>

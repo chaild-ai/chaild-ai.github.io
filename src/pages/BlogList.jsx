@@ -4,15 +4,13 @@ import BlogCard from "../components/blogCard/BlogCard";
 import ScrollToTopButton from "../containers/topbutton/Top";
 import { blogSection } from "../portfolio";
 import { StyleProvider } from "../contexts/StyleContext";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { Fade } from "react-reveal";
+import { useDarkTheme } from "../hooks/useDarkTheme";
 import { fetchAllBlogMetadata } from "../utils/parseFrontmatter";
 import "../containers/blogs/Blog.scss";
 import "./BlogList.scss";
 
 export default function BlogList() {
-  const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
-  const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const [isDark, toggleTheme] = useDarkTheme();
   const [blogs, setBlogs] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
   const [allTags, setAllTags] = useState([]);
@@ -40,16 +38,13 @@ export default function BlogList() {
     loadBlogs();
   }, []);
 
-  const changeTheme = () => {
-    setIsDark(!isDark);
-  };
-
   // Filter blogs by selected tags (show if any selected tag matches)
   const filteredBlogs =
     selectedTags.length === 0
       ? blogs
-      : blogs.filter((blog) =>
-          blog.tags && blog.tags.some((tag) => selectedTags.includes(tag))
+      : blogs.filter(
+          (blog) =>
+            blog.tags && blog.tags.some((tag) => selectedTags.includes(tag))
         );
 
   const toggleTag = (tag) => {
@@ -60,62 +55,64 @@ export default function BlogList() {
 
   return (
     <div className={isDark ? "dark-mode" : null}>
-      <StyleProvider value={{ isDark: isDark, changeTheme: changeTheme }}>
+      <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
-        <Fade bottom duration={1000} distance="20px">
-          <main id="main-content" className="main">
-            <div className="blog-header">
-              <h1 className="blog-header-text">{blogSection.title}</h1>
-              <p className={isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"}>
-                {blogSection.subtitle}
-              </p>
-            </div>
+        <main id="main-content" className="main fade-in-up">
+          <div className="blog-header">
+            <h1 className="blog-header-text">{blogSection.title}</h1>
+            <p
+              className={
+                isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
+              }
+            >
+              {blogSection.subtitle}
+            </p>
+          </div>
 
-            {/* Tag Filter */}
-            {allTags.length > 0 && (
-              <div className="blog-tags-filter">
-                <p className="tags-label">Filter by tags:</p>
-                <div className="tags-container">
-                  {allTags.map((tag) => (
-                    <button
-                      key={tag}
-                      className={`tag-button ${
-                        selectedTags.includes(tag) ? "active" : ""
-                      } ${isDark ? "dark-mode" : ""}`}
-                      aria-pressed={selectedTags.includes(tag)}
-                      onClick={() => toggleTag(tag)}
-                    >
-                      {tag}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <div className="blog-main-div">
-              <div className="blog-text-div">
-                {filteredBlogs.length > 0 ? (
-                  filteredBlogs.map((blog, i) => (
-                    <BlogCard
-                      key={i}
-                      isDark={isDark}
-                      blog={{
-                        url: `/blog/${blog.slug}`,
-                        image: blog.image,
-                        title: blog.title,
-                        description: blog.description
-                      }}
-                    />
-                  ))
-                ) : (
-                  <p className={isDark ? "dark-mode" : ""}>
-                    No blogs match the selected tags.
-                  </p>
-                )}
+          {/* Tag Filter */}
+          {allTags.length > 0 && (
+            <div className="blog-tags-filter">
+              <p className="tags-label">Filter by tags:</p>
+              <div className="tags-container">
+                {allTags.map((tag) => (
+                  <button
+                    key={tag}
+                    className={`tag-button ${
+                      selectedTags.includes(tag) ? "active" : ""
+                    } ${isDark ? "dark-mode" : ""}`}
+                    aria-pressed={selectedTags.includes(tag)}
+                    onClick={() => toggleTag(tag)}
+                  >
+                    {tag}
+                  </button>
+                ))}
               </div>
             </div>
-          </main>
-        </Fade>
+          )}
+
+          <div className="blog-main-div">
+            <div className="blog-text-div">
+              {filteredBlogs.length > 0 ? (
+                filteredBlogs.map((blog, i) => (
+                  <BlogCard
+                    key={i}
+                    isDark={isDark}
+                    blog={{
+                      url: `/blog/${blog.slug}`,
+                      image: blog.image,
+                      title: blog.title,
+                      description: blog.description,
+                    }}
+                  />
+                ))
+              ) : (
+                <p className={isDark ? "dark-mode" : ""}>
+                  No blogs match the selected tags.
+                </p>
+              )}
+            </div>
+          </div>
+        </main>
         <ScrollToTopButton />
       </StyleProvider>
     </div>
