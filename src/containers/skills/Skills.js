@@ -4,8 +4,6 @@ import emoji from "react-easy-emoji";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
-import skillsAnimation from "../../assets/lottie/splashAnimation";
-import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Skills() {
@@ -20,11 +18,6 @@ export default function Skills() {
       aria-labelledby="skills-heading"
     >
       <div className="skills-main-div">
-        <Fade left duration={1000}>
-          <div className="skills-image-div" aria-hidden="true">
-            <DisplayLottie animationData={skillsAnimation} />
-          </div>
-        </Fade>
         <Fade right duration={1000}>
           <div className="skills-text-div">
             <h2
