@@ -95,7 +95,7 @@ https://fontawesome.com/icons?d=gallery */
   display: true // Set false to hide this section, defaults to true
 };
 
-const blogSection = { // TODO: cap to first 5 blogs and add "see more" link to blog page
+const blogSection = {
   title: "News",
   subtitle: "Read our latest updates",
   display: true, // Set false to hide this section, defaults to true

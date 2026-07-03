@@ -2,9 +2,9 @@ import React, {useContext} from "react";
 import "./Skills.scss";
 import emoji from "react-easy-emoji";
 import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
-import {illustration, skillsSection} from "../../portfolio";
+import {skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
-import codingPerson from "../../assets/lottie/splashAnimation";
+import skillsAnimation from "../../assets/lottie/splashAnimation";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -22,14 +22,7 @@ export default function Skills() {
       <div className="skills-main-div">
         <Fade left duration={1000}>
           <div className="skills-image-div" aria-hidden="true">
-            {illustration.animated ? (
-              <DisplayLottie animationData={codingPerson} />
-            ) : (
-              <img
-                alt=""
-                src={require("../../assets/lottie/splashAnimation")}
-              ></img>
-            )}
+            <DisplayLottie animationData={skillsAnimation} />
           </div>
         </Fade>
         <Fade right duration={1000}>
