@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.12602d85.css",
-    "main.js": "/static/js/main.51dbabef.js",
+    "main.css": "/static/css/main.99fb16ba.css",
+    "main.js": "/static/js/main.b85a9853.js",
     "static/js/83.63bd4a00.chunk.js": "/static/js/83.63bd4a00.chunk.js",
     "static/js/395.c2770368.chunk.js": "/static/js/395.c2770368.chunk.js",
+    "static/media/oxford-cs-POS_RGB.jpg": "/static/media/oxford-cs-POS_RGB.630e405238a50361252e.jpg",
+    "static/media/oxford-cs-NEG_RGB.jpg": "/static/media/oxford-cs-NEG_RGB.16385c6cea2c7fda6be9.jpg",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
+    "static/media/ieai-dark.png": "/static/media/ieai-dark.5d66fadcb19ab91e64d8.png",
     "static/media/childrenWaving.svg": "/static/media/childrenWaving.e3d9efe5ce29ae7768a3fb1455f1a3ad.svg",
+    "static/media/ieai-light.png": "/static/media/ieai-light.98a11fa3283eee1ac86a.png",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
+    "static/media/ukri-inverted.svg": "/static/media/ukri-inverted.54e494937abb5a7b663ad1749a5c1f67.svg",
+    "static/media/ukri.svg": "/static/media/ukri.9e2bb533d57a139a9e8f8c11c4da695e.svg",
     "index.html": "/index.html",
-    "main.12602d85.css.map": "/static/css/main.12602d85.css.map",
-    "main.51dbabef.js.map": "/static/js/main.51dbabef.js.map",
+    "static/media/ucl-inverted.svg": "/static/media/ucl-inverted.207bf154949b9910ea4817c8fe6955a5.svg",
+    "static/media/ucl.svg": "/static/media/ucl.6b7c113391f5fa28fe8141fdbb4bfa1c.svg",
+    "main.99fb16ba.css.map": "/static/css/main.99fb16ba.css.map",
+    "main.b85a9853.js.map": "/static/js/main.b85a9853.js.map",
     "83.63bd4a00.chunk.js.map": "/static/js/83.63bd4a00.chunk.js.map",
     "395.c2770368.chunk.js.map": "/static/js/395.c2770368.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.12602d85.css",
-    "static/js/main.51dbabef.js"
+    "static/css/main.99fb16ba.css",
+    "static/js/main.b85a9853.js"
   ]
 }

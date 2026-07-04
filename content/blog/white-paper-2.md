@@ -1,7 +1,7 @@
 ---
 title: "Our reflections for the 2026 AI Safety agenda and the Indian AI Summit"
 description: "Spotlights the need for a greater attention on children's autonomy and agency in the context of AI"
-tags: ["white paper"]
+tags: ["white paper", "publication", "policy"]
 date: "2026-02-01"
 url: "/static/media/CHAILD-white-paper-2026.pdf"
 ---

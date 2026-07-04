@@ -1,7 +1,7 @@
 ---
 title: "CHAILD consults with youth advisory group"
 description: "We consulted the youth advisory group about our co-design study"
-tags: ["youth advisory group"]
+tags: ["youth advisory group", "research study"]
 date: "2026-03-26"
 ---
 

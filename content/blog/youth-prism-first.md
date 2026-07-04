@@ -1,7 +1,7 @@
 ---
 title: "Report on Teenagers and LLMs: how students use generative AI, what they value, and how schools can respond"
 description: "A short summary of our study in December 2025"
-tags: ["youth prism"]
+tags: ["youth prism", "publication", "research study"]
 date: "2026-03-05"
 url: "/static/media/YOUTH-PRISM-2025.pdf"
 ---

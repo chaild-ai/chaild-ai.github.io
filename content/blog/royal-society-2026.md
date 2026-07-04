@@ -1,7 +1,7 @@
 ---
 title: "CHAILD team member is a lead author on a recent Royal Society report on AI literacy"
 description: "Gaps and open challenges in AI literacy frameworks"
-tags: ["impact"]
+tags: ["impact", "publication"]
 date: "2026-02-26"
 url: "https://royalsociety.org/-/media/policy/projects/ai-in-education/hillman-et-al-a-rapid-review-of-ai-literacy-frameworks.pdf"
 ---
