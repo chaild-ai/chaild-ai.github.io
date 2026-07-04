@@ -69,5 +69,9 @@ export async function fetchAllBlogMetadata(slugs) {
   const blogs = await Promise.all(
     slugs.map((slug) => fetchAndParseBlog(slug))
   );
-  return blogs.filter(Boolean); // Remove nulls
+  const valid = blogs.filter(Boolean); // Remove nulls
+  // Newest first. Array.sort is stable, so posts sharing a date keep their
+  // order from the slug manifest.
+  valid.sort((a, b) => new Date(b.date) - new Date(a.date));
+  return valid;
 }

@@ -1,7 +1,7 @@
 ---
 title: "Funding awarded for a youth advisory group for AI and data science projects at Oxford"
 description: "Further information for interested young people and researchers to follow"
-tags: ["youth advisory group"]
+tags: ["youth advisory group", "funding"]
 date: "2026-02-09"
 ---
 
