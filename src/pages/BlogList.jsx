@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/header/Header";
 import BlogCard from "../components/blogCard/BlogCard";
 import ScrollToTopButton from "../containers/topbutton/Top";
+import Footer from "../components/footer/Footer";
 import { blogSection } from "../portfolio";
 import { StyleProvider } from "../contexts/StyleContext";
 import { useDarkTheme } from "../hooks/useDarkTheme";
@@ -113,6 +114,7 @@ export default function BlogList() {
             </div>
           </div>
         </main>
+        <Footer />
         <ScrollToTopButton />
       </StyleProvider>
     </div>

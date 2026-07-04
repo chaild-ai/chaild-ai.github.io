@@ -5,6 +5,7 @@ import Skills from "./skills/Skills";
 import People from "./people/People";
 import Blogs from "./blogs/Blogs";
 import ScrollToTopButton from "./topbutton/Top";
+import Footer from "../components/footer/Footer";
 import { StyleProvider } from "../contexts/StyleContext";
 import { useDarkTheme } from "../hooks/useDarkTheme";
 import "./Main.scss";
@@ -22,6 +23,7 @@ const Main = () => {
           <Skills />
           <People />
         </main>
+        <Footer />
         <ScrollToTopButton />
       </StyleProvider>
     </div>

@@ -3,6 +3,10 @@
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  margin: 0.4rem auto;
+  max-width: 60rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* scoped to the footer; a bare .dark-mode selector here used to leak
@@ -11,7 +15,61 @@
   color: $textColorDark !important;
 }
 
+.footer-text a {
+  color: $buttonColor;
+}
+
+.dark-mode.footer-text a {
+  color: $accentColorDark;
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* Institutional/funder logos vary in colour and many are dark; a light
+   card behind them keeps all four legible in both light and dark themes
+   without inverting (which mangles multi-colour marks). */
+.footer-partner-logos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  max-width: max-content;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.75rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.footer-partner-logos li {
+  display: flex;
+}
+
+.footer-partner-logos img {
+  height: 48px;
+  width: auto;
+  max-width: 170px;
+  object-fit: contain;
+  display: block;
+}
+
 .footer-div {
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-partner-logos {
+    gap: 1rem 1.75rem;
+    padding: 0.85rem 1.25rem;
+  }
+  .footer-partner-logos img {
+    height: 36px;
+  }
 }
