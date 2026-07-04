@@ -49,11 +49,11 @@ News posts are markdown files served from `public/content/blog/`.
    - `url` is optional: a "read more" link shown at the bottom of the post — either an external `https://` link or a site-relative path (e.g. a PDF).
    - `image` is optional: a thumbnail shown on the news card.
 
-3. Add the slug to the `blogSlugs` array in `src/portfolio.js`. Posts appear in the array's order, so put new posts first.
+3. Add the slug to the `blogSlugs` array in `src/portfolio.js`. Posts are sorted by `date` automatically (newest first) on both the homepage and the `/blog` list, so the array order doesn't matter — just add the slug anywhere.
 4. Put any images in `public/content/blog/images/` (reference them as `/content/blog/images/<name>`) and PDFs or other documents in `public/static/media/` (reference them as `/static/media/<name>`). Use descriptive filenames, e.g. `CHAILD-white-paper-2026.pdf`.
 5. Preview locally with `npm start`, then commit and deploy (below).
 
-Other site content (homepage sections, team members, social links, etc.) is configured in `src/portfolio.js`.
+Other site content (homepage sections, team members, social links, footer grant info, etc.) is configured in `src/portfolio.js`. The footer's partner/funder logos are defined in `src/components/footer/Footer.js`, with image assets in `src/assets/images/logos/` — each partner has a light-theme and a dark-theme logo variant so the strip stays legible in both themes.
 
 ## Deployment
 
@@ -61,6 +61,8 @@ Other site content (homepage sections, team members, social links, etc.) is conf
 npm run deploy
 ```
 
-This builds the site, copies `index.html` to `404.html` (so client-side routes work on GitHub Pages), and pushes the `build/` directory to the `gh-pages` branch, which GitHub Pages serves at chaild.org. The `CNAME` file comes from `public/`, so it is included automatically.
+This builds the site and pushes the `build/` directory to the `gh-pages` branch, which GitHub Pages serves at chaild.org. The `CNAME` file comes from `public/`, so it is included automatically.
+
+Client-side routing works on GitHub Pages via `public/404.html`, which GitHub serves for any path with no matching file. It runs a small [spa-github-pages](https://github.com/rafgraph/spa-github-pages) redirect (paired with a decode snippet at the top of `public/index.html`) that hands the path off to the SPA, so deep links like `/blog/<slug>` load correctly while genuinely unknown paths render the in-app "Page not found" view.
 
 **Remember to also commit and push your source changes to `main`** — deploying only updates the published site, not the source branch.
