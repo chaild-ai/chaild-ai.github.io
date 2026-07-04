@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page not found | CHAILD</title>
+    <!--
+      Single Page Apps for GitHub Pages
+      https://github.com/rafgraph/spa-github-pages (MIT License)
+      GitHub Pages serves this file for any path that has no matching file.
+      The script encodes the requested path into a query string and redirects
+      to the app's index.html, which decodes it and hands off to the SPA
+      router. This keeps deep links (e.g. /blog/<slug>) working on a hard load.
+      pathSegmentsToKeep = 0 because the site is deployed at the domain root.
+    -->
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 0;
+
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          "//" +
+          l.hostname +
+          (l.port ? ":" + l.port : "") +
+          l.pathname
+            .split("/")
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join("/") +
+          "/?/" +
+          l.pathname
+            .slice(1)
+            .split("/")
+            .slice(pathSegmentsToKeep)
+            .join("/")
+            .replace(/&/g, "~and~") +
+          (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+          l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <p>
+      Page not found. Redirecting… If you are not redirected automatically,
+      <a href="/">return to the CHAILD home page</a>.
+    </p>
+  </body>
+</html>

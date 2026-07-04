@@ -3,9 +3,11 @@ import "./App.scss";
 import Main from "./containers/Main";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
+import NotFound from "./pages/NotFound";
 
 function App() {
-  // Strip any trailing slash so "/blog/" matches the same as "/blog"
+  // Strip any trailing slash so "/blog/" matches the same as "/blog".
+  // The home path "/" collapses to "".
   const pathname = window.location.pathname.replace(/\/+$/, "");
   const blogMatch = pathname.match(/^\/blog\/(.+)$/);
 
@@ -17,7 +19,11 @@ function App() {
     return <BlogList />;
   }
 
-  return <Main />;
+  if (pathname === "") {
+    return <Main />;
+  }
+
+  return <NotFound />;
 }
 
 export default App;
