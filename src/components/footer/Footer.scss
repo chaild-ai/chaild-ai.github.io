@@ -28,9 +28,10 @@
   opacity: 0.85;
 }
 
-/* Institutional/funder logos vary in colour and many are dark; a light
-   card behind them keeps all four legible in both light and dark themes
-   without inverting (which mangles multi-colour marks). */
+/* The footer background is transparent so it inherits the page theme.
+   Each partner logo is swapped for a dark-theme variant in Footer.js
+   (Oxford CS NEG, UCL inverted, UKRI reversed), so no light card is
+   needed and the strip adapts to the active theme. */
 .footer-partner-logos {
   list-style: none;
   display: flex;
@@ -38,12 +39,9 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem 2.5rem;
-  max-width: max-content;
+  max-width: 60rem;
   margin: 0 auto 1.5rem;
-  padding: 1rem 1.75rem;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  padding: 0;
 }
 
 .footer-partner-logos li {
@@ -53,21 +51,26 @@
 .footer-partner-logos img {
   height: 48px;
   width: auto;
-  max-width: 170px;
+  max-width: 190px;
   object-fit: contain;
   display: block;
+  border-radius: 4px;
 }
 
 .footer-div {
   margin-top: 2rem;
   padding: 1.5rem 1rem 2rem;
   text-align: center;
+  border-top: 1px solid $lightBorder1;
+}
+
+.dark-mode.footer-div {
+  border-top-color: rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 768px) {
   .footer-partner-logos {
     gap: 1rem 1.75rem;
-    padding: 0.85rem 1.25rem;
   }
   .footer-partner-logos img {
     height: 36px;
