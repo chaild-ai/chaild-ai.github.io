@@ -65,17 +65,17 @@ const peopleSection = {
       ]
     },
     {
-      title: "Researchers:",
+      title: "Postdoctoral researchers:",
       members: [
         "Dr Leslye Dias Duran, University of Oxford",
         "Dr Vidminas Vizgirda, University College London and University of Oxford",
-        "Dr Isobel Voysey, University of Oxford"
+        "Dr Isobel Voysey, University of Oxford",
+        "Dr Zaki Pauzi, University College London"
       ]
     },
     {
       title: "Associated researchers:",
       members: [
-        "Dr Zaki Pauzi, University College London",
         "Dr Sarah Turner, University College London"
       ]
     }
