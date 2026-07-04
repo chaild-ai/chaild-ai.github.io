@@ -44,9 +44,9 @@ export default function Greeting() {
             <div className="button-greeting-div">
               {greeting.resumeLink && (
                 <Button
-                  text="Download our white paper"
+                  text="Read our whitepaper"
                   href="/static/media/CHAILD-white-paper-1.pdf"
-                  download="CHAILD-white-paper-1.pdf"
+                  newTab={true}
                   className="download-link-button"
                 />
               )}

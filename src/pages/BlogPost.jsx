@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/header/Header";
 import ScrollToTopButton from "../containers/topbutton/Top";
+import Footer from "../components/footer/Footer";
 import { StyleProvider } from "../contexts/StyleContext";
 import { useDarkTheme } from "../hooks/useDarkTheme";
 import { fetchAndParseBlog } from "../utils/parseFrontmatter";
@@ -58,6 +59,7 @@ export default function BlogPost({ slug }) {
           <main id="main-content" className="blog-post-container">
             <p>Loading...</p>
           </main>
+          <Footer />
           <ScrollToTopButton />
         </StyleProvider>
       </div>
@@ -73,6 +75,7 @@ export default function BlogPost({ slug }) {
             <h1>Post not found</h1>
             <a href="/blog">← Back to all posts</a>
           </main>
+          <Footer />
           <ScrollToTopButton />
         </StyleProvider>
       </div>
@@ -148,6 +151,7 @@ export default function BlogPost({ slug }) {
             </a>
           )}
         </main>
+        <Footer />
         <ScrollToTopButton />
       </StyleProvider>
     </div>

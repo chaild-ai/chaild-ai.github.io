@@ -65,17 +65,17 @@ const peopleSection = {
       ]
     },
     {
-      title: "Researchers:",
+      title: "Postdoctoral researchers:",
       members: [
         "Dr Leslye Dias Duran, University of Oxford",
         "Dr Vidminas Vizgirda, University College London and University of Oxford",
-        "Dr Isobel Voysey, University of Oxford"
+        "Dr Isobel Voysey, University of Oxford",
+        "Dr Zaki Pauzi, University College London"
       ]
     },
     {
       title: "Associated researchers:",
       members: [
-        "Dr Zaki Pauzi, University College London",
         "Dr Sarah Turner, University College London"
       ]
     }
@@ -112,6 +112,17 @@ const socialMediaLinks = {
   display: true // Set true to display this section, defaults to false
 };
 
+// Footer Section (partner logos live in Footer.js, next to their imports)
+const footerSection = {
+  grantName:
+    "CHAILD — Children's Agency In the age of AI: Leveraging InterDisciplinarity",
+  grantRef: "UKRI ref. MR/Z505882/1",
+  grantUrl: "https://gtr.ukri.org/projects?ref=MR%2FZ505882%2F1",
+  disclaimer:
+    "Institution and funder logos are the property of their respective owners; they are shown to acknowledge our partners and funding and do not imply endorsement.",
+  copyrightName: "CHAILD project"
+};
+
 
 export {
   illustration,
@@ -120,4 +131,5 @@ export {
   skillsSection,
   peopleSection,
   blogSection,
+  footerSection,
 };

@@ -3,6 +3,10 @@
 .footer-text {
   text-align: center;
   color: $subTitle !important;
+  margin: 0.4rem auto;
+  max-width: 60rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* scoped to the footer; a bare .dark-mode selector here used to leak
@@ -11,7 +15,64 @@
   color: $textColorDark !important;
 }
 
+.footer-text a {
+  color: $buttonColor;
+}
+
+.dark-mode.footer-text a {
+  color: $accentColorDark;
+}
+
+.footer-disclaimer {
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+
+/* The footer background is transparent so it inherits the page theme.
+   Each partner logo is swapped for a dark-theme variant in Footer.js
+   (Oxford CS NEG, UCL inverted, UKRI reversed), so no light card is
+   needed and the strip adapts to the active theme. */
+.footer-partner-logos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  max-width: 60rem;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+}
+
+.footer-partner-logos li {
+  display: flex;
+}
+
+.footer-partner-logos img {
+  height: 48px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
 .footer-div {
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+  border-top: 1px solid $lightBorder1;
+}
+
+.dark-mode.footer-div {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  .footer-partner-logos {
+    gap: 1rem 1.75rem;
+  }
+  .footer-partner-logos img {
+    height: 36px;
+  }
 }
