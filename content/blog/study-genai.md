@@ -1,6 +1,6 @@
 ---
 title: "Our new research study with children and genAI"
-description: "Support children's use of genAI and making better sense of genAI outputs"
+description: "Supporting children's use of genAI and making better sense of genAI outputs"
 tags: ["research study"]
 date: "2026-02-15"
 ---
