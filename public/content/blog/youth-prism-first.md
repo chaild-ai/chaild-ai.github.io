@@ -10,7 +10,7 @@ On 4 December 2025, we met 40 students from two local Oxfordshire schools in Tri
  
 Launched in summer 2025, the Youth PRISM study aims to understand how children aged 13-16 use large language models (LLMs) and how they make choices between multiple models. The research is expected to provide important evidence for our understanding of how children apply critical thinking when interacting with LLMs and how educators and researchers can better support them in using these tools responsibly. 
 
-Our key findings include 
+Our key findings include:
 - What students are using LLMs for  
 - Where students draw boundaries with LLM use 
 - What makes a “good” AI response for students

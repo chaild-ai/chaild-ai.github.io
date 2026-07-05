@@ -14,4 +14,4 @@ The Child-Centred AI-Mediated Collaborative Agency by Design (CAMCAD) workshop i
 This workshop builds on previous [Child-Centred AI workshops](https://oxfordccai.org/post/20-23-01-chi-ccai/) at CHI 2023 and 2024. This year’s theme is collaborative agency. Through this lens, we are interested in how children and young people can be supported in making and acting on decisions not just as individuals, but in collaboration with others, such as peers, teachers, and parents.
 
 
-Please visit our [workshop website](https://oxfordhcc.github.io/CAMCAD/) for further deetails, and look out for our call for contributions to the special issue at [IJCCI](https://www.sciencedirect.com/journal/international-journal-of-child-computer-interaction).
+Please visit our [workshop website](https://oxfordhcc.github.io/CAMCAD/) for further details, and look out for our call for contributions to the special issue at [IJCCI](https://www.sciencedirect.com/journal/international-journal-of-child-computer-interaction).
