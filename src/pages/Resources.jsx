@@ -11,7 +11,7 @@ import "./Resources.scss";
 // resources below as we find new ones.
 const resourceCategories = [
   {
-    title: "Getting started in the classroom",
+    title: "Classroom-ready lessons and curricula",
     resources: [
       {
         name: "Experience AI",
@@ -20,27 +20,51 @@ const resourceCategories = [
           "Lesson plans, activities, and training from the Raspberry Pi Foundation, with learning objectives mapped to UNESCO's AI competency framework for students."
       },
       {
-        name: "National Centre for Computing Education CPD",
-        url: "https://teachcomputing.org/courses",
+        name: "TRAILS: Teaching Responsible AI Literacy in Schools",
+        url: "https://trails.scot/",
         description:
-          "Free professional development for teachers in England, including on-demand courses about teaching generative AI."
+          "Scottish resources for teaching responsible AI literacy, built with and for teachers."
       },
       {
-        name: "Hello World magazine",
-        url: "https://helloworld.cc/",
+        name: "Imagine AI — Center for Digital Thriving",
+        url: "https://digitalthriving.gse.harvard.edu/imagine-ai-portfolio/",
         description:
-          "A free magazine for computing educators, regularly covering AI and how to teach it."
-      }
-    ]
-  },
-  {
-    title: "Teaching critical AI use",
-    resources: [
+          "Activities from Harvard's Center for Digital Thriving that get young people reflecting on how AI shapes their lives."
+      },
+      {
+        name: "DAILy Curriculum — Everyday AI",
+        url: "https://everyday-ai.org/resources/curriculum/daily-curriculum-v20",
+        description:
+          "A middle-school AI literacy curriculum from MIT covering how AI works, its ethical implications, and careers."
+      },
+      {
+        name: "AI Literacy Lessons for Grades 6–12",
+        url: "https://www.commonsense.org/education/collections/ai-literacy-lessons-for-grades-6-12",
+        description:
+          "Ready-to-teach lessons from Common Sense Education on AI's benefits, risks, and responsible use."
+      },
       {
         name: "Media literacy in the age of AI",
         url: "https://experience-ai.org/en/units/ai-safety/lessons/10",
         description:
           "A classroom lesson on recognising and critically evaluating AI-generated content."
+      }
+    ]
+  },
+  {
+    title: "Hands-on tools and activities",
+    resources: [
+      {
+        name: "Teachable Machine",
+        url: "https://teachablemachine.withgoogle.com/",
+        description:
+          "Train simple machine learning models in the browser — a quick way to show how classifiers work, including how confidently they can be wrong."
+      },
+      {
+        name: "Machine Learning for Kids",
+        url: "https://machinelearningforkids.co.uk/",
+        description:
+          "Build machine learning models and use them in Scratch and Python projects — a classroom staple for hands-on AI."
       },
       {
         name: "Prompt a large language model",
@@ -49,10 +73,51 @@ const resourceCategories = [
           "A hands-on coding project where young people build and refine their own prompts."
       },
       {
-        name: "Teachable Machine",
-        url: "https://teachablemachine.withgoogle.com/",
+        name: "Somekone",
+        url: "https://somekone.gen-ai.fi/library",
         description:
-          "Train simple machine learning models in the browser — a quick way to show how classifiers work, including how confidently they can be wrong."
+          "A social-media emulator from Finland's Generation AI programme that lets pupils see recommender systems and profiling at work."
+      }
+    ]
+  },
+  {
+    title: "Teacher training and further learning",
+    resources: [
+      {
+        name: "National Centre for Computing Education CPD",
+        url: "https://teachcomputing.org/courses",
+        description:
+          "Free professional development for teachers in England, including on-demand courses about teaching generative AI."
+      },
+      {
+        name: "Generative AI for Educators",
+        url: "https://skillshop.exceedlms.com/student/path/1176018",
+        description:
+          "Google's free course for teachers on using generative AI, developed in collaboration with MIT."
+      },
+      {
+        name: "Microsoft AI for Education",
+        url: "https://learn.microsoft.com/en-us/training/educator-center/topics/ai-for-education",
+        description:
+          "Training paths and classroom toolkits for educators, including guidance on using generative AI safely and responsibly."
+      },
+      {
+        name: "Code.org AI 101 for Teachers",
+        url: "https://code.org/ai/pl/101",
+        description:
+          "A free foundational course on AI for any teacher, in short videos."
+      },
+      {
+        name: "Elements of AI",
+        url: "https://course.elementsofai.com/",
+        description:
+          "A free online course from the University of Helsinki introducing AI without requiring maths or programming."
+      },
+      {
+        name: "Hello World magazine",
+        url: "https://helloworld.cc/",
+        description:
+          "A free magazine for computing educators, regularly covering AI and how to teach it."
       }
     ]
   },
@@ -64,6 +129,18 @@ const resourceCategories = [
         url: "https://www.unesco.org/en/digital-education/ai-future-learning/competency-frameworks",
         description:
           "International frameworks describing the AI competencies students and teachers need."
+      },
+      {
+        name: "AI4K12",
+        url: "https://ai4k12.org/activities/",
+        description:
+          "Activities and the 'Five Big Ideas in AI' framework for teaching AI across school years."
+      },
+      {
+        name: "TeachAI Toolkit",
+        url: "https://www.teachai.org/toolkit",
+        description:
+          "Guidance for schools and education authorities developing their own policies on AI in teaching and learning."
       },
       {
         name: "PRIMM",
