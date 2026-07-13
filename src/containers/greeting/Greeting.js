@@ -50,11 +50,6 @@ export default function Greeting() {
                   className="download-link-button"
                 />
               )}
-              <Button
-                text="Our publications"
-                href="/blog?tag=publication"
-                className="download-link-button"
-              />
             </div>
           </div>
         </div>

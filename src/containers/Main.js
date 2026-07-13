@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
+import AudiencePaths from "./audiencePaths/AudiencePaths";
 import CurrentWork from "./currentWork/CurrentWork";
 import People from "./people/People";
 import Blogs from "./blogs/Blogs";
@@ -20,6 +21,7 @@ const Main = () => {
         <Header />
         <main id="main-content">
           <Greeting />
+          <AudiencePaths />
           <CurrentWork />
           <Blogs />
           <Skills />
