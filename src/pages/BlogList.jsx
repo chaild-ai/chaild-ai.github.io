@@ -13,7 +13,11 @@ import "./BlogList.scss";
 export default function BlogList() {
   const [isDark, toggleTheme] = useDarkTheme();
   const [blogs, setBlogs] = useState([]);
-  const [selectedTags, setSelectedTags] = useState([]);
+  // Allow deep-linking to a pre-filtered list, e.g. /blog?tag=publication
+  const [selectedTags, setSelectedTags] = useState(() => {
+    const tag = new URLSearchParams(window.location.search).get("tag");
+    return tag ? [tag] : [];
+  });
   const [allTags, setAllTags] = useState([]);
 
   useEffect(() => {
