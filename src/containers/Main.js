@@ -3,7 +3,6 @@ import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import AudiencePaths from "./audiencePaths/AudiencePaths";
-import CurrentWork from "./currentWork/CurrentWork";
 import People from "./people/People";
 import Blogs from "./blogs/Blogs";
 import ScrollToTopButton from "./topbutton/Top";
@@ -22,7 +21,6 @@ const Main = () => {
         <main id="main-content">
           <Greeting />
           <AudiencePaths />
-          <CurrentWork />
           <Blogs />
           <Skills />
           <People />

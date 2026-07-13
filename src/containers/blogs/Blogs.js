@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
+import CurrentWork from "../currentWork/CurrentWork";
 import { blogSection } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import { fetchAllBlogMetadata } from "../../utils/parseFrontmatter";
@@ -42,6 +43,7 @@ export default function Blogs() {
           {blogSection.subtitle}
         </p>
       </div>
+      <CurrentWork />
       <div className="blog-main-div">
         <div className="blog-text-div">
           {displayedBlogs.map((blog, i) => {

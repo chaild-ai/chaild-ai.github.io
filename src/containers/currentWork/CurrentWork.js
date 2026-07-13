@@ -26,49 +26,45 @@ export default function CurrentWork() {
   }
 
   return (
-    <section
-      className="main fade-in-up"
-      id="current-work"
-      aria-labelledby="current-work-heading"
+    <div
+      className={isDark ? "dark-mode current-work-card" : "current-work-card"}
     >
-      <div className={isDark ? "dark-mode current-work-card" : "current-work-card"}>
-        <h2 id="current-work-heading" className="current-work-heading">
-          {currentWork.title}
-        </h2>
-        <p
-          className={
-            isDark
-              ? "dark-mode current-work-subtitle"
-              : "subTitle current-work-subtitle"
-          }
-        >
-          {currentWork.subtitle}
-        </p>
-        <ul className="current-work-list">
-          {currentWork.items.map((item) => (
-            <li
-              key={item.text}
-              className={isDark ? "dark-mode current-work-item" : "current-work-item"}
-            >
-              <span className="current-work-item-title">{item.text}</span>
-              {item.description && (
-                <span className="current-work-item-description">
-                  {" — "}
-                  {item.description}
-                </span>
-              )}
-              {item.url && (
-                <>
-                  {" "}
-                  <a className="current-work-item-link" href={item.url}>
-                    Read more →
-                  </a>
-                </>
-              )}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+      <h3 className="current-work-heading">{currentWork.title}</h3>
+      <p
+        className={
+          isDark
+            ? "dark-mode current-work-subtitle"
+            : "subTitle current-work-subtitle"
+        }
+      >
+        {currentWork.subtitle}
+      </p>
+      <ul className="current-work-list">
+        {currentWork.items.map((item) => (
+          <li
+            key={item.text}
+            className={
+              isDark ? "dark-mode current-work-item" : "current-work-item"
+            }
+          >
+            <span className="current-work-item-title">{item.text}</span>
+            {item.description && (
+              <span className="current-work-item-description">
+                {" — "}
+                {item.description}
+              </span>
+            )}
+            {item.url && (
+              <>
+                {" "}
+                <a className="current-work-item-link" href={item.url}>
+                  Read more →
+                </a>
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

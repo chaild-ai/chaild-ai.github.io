@@ -1,9 +1,9 @@
 @use "../../globalColor" as *;
 
+/* Rendered as the lead box at the start of the News section. */
 .current-work-card {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
+  margin: 0 0 2rem;
+  padding: 1.25rem 1.75rem;
   border: 2px solid $buttonColor;
   border-radius: 10px;
   background-color: $lightBackground3;
@@ -15,7 +15,7 @@
 }
 
 .current-work-heading {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 0 0 0.25rem;
 }
 
