@@ -20,9 +20,9 @@ const Main = () => {
         <Header />
         <main id="main-content">
           <Greeting />
+          <CurrentWork />
           <Blogs />
           <Skills />
-          <CurrentWork />
           <People />
         </main>
         <Footer />

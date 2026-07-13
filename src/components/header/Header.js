@@ -83,6 +83,11 @@ function Header() {
                 </a>
               </li>
             )}
+            <li>
+              <a href="/resources" onClick={closeMenu}>
+                Resources
+              </a>
+            </li>
             <li className="switch-item">
               <ToggleSwitch />
             </li>
