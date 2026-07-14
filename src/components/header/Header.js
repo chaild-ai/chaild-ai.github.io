@@ -84,6 +84,11 @@ function Header() {
               </li>
             )}
             <li>
+              <a href="/publications" onClick={closeMenu}>
+                Publications
+              </a>
+            </li>
+            <li>
               <a href="/resources" onClick={closeMenu}>
                 Resources
               </a>

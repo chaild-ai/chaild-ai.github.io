@@ -4,6 +4,7 @@ import Main from "./containers/Main";
 import BlogList from "./pages/BlogList";
 import BlogPost from "./pages/BlogPost";
 import Resources from "./pages/Resources";
+import Publications from "./pages/Publications";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
 
   if (pathname === "/resources") {
     return <Resources />;
+  }
+
+  if (pathname === "/publications") {
+    return <Publications />;
   }
 
   if (pathname === "") {

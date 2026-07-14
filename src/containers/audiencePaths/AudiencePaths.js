@@ -14,7 +14,7 @@ const audiences = [
     title: "For researchers",
     description: "Read our publications and conference presentations.",
     linkText: "Publications & presentations",
-    href: buildTagLink(["publication", "talks"])
+    href: "/publications"
   },
   {
     icon: "🍎",
