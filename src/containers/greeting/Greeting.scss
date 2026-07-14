@@ -1,16 +1,22 @@
 @use "../../globalColor" as *;
+@use "../../layout" as *;
 
+/* Shared homepage section wrapper: a consistent max width keeps every
+   content block the same width, with margins for readability on wide
+   screens. */
 .main {
   width: 90%;
-  padding: 20px 10px;
+  max-width: $contentMaxWidth;
+  padding: 16px 10px;
   margin: 0px auto;
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 .greet-main {
   width: 90%;
-  padding: 20px 10px;
+  max-width: $contentMaxWidth;
+  padding: 16px 10px;
   margin: 0px auto;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .greeting-main {
@@ -23,11 +29,16 @@
 
 .greeting-main {
   display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
+/* The text column holds the hero, missions, and button; the animation is
+   positioned over the right side and may bleed past the block (decorative). */
+.greeting-text-div {
+  flex: 0 1 55%;
+  margin-bottom: 26px;
+  z-index: 1;
 }
 .button-greeting-div {
   display: flex;
@@ -39,9 +50,10 @@
 }
 
 .greeting-text {
-  font-size: 70px;
+  font-size: 60px;
   line-height: 1.1;
   color: $textColor !important;
+  white-space: nowrap;
 }
 
 .dark-mode.greeting-text {
@@ -53,9 +65,68 @@
   line-height: 40px;
 }
 
+/* "What we do" missions, folded into the greeting text column. */
+.greeting-missions {
+  margin: 1rem 0 0.5rem;
+}
+
+.greeting-missions-heading {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  color: $textColor;
+}
+
+.dark-mode.greeting-missions-heading {
+  color: $textColorDark;
+}
+
+.greeting-missions-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.greeting-mission {
+  margin: 8px 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: $subTitle;
+}
+
+.dark-mode.greeting-mission {
+  color: $subTitleDark;
+}
+
 .greeting-image-div > img {
   max-width: 100%;
   height: auto;
+}
+
+/* Decorative animation, sized by the width available to the right of the
+   text so it always stays essentially whole: its 720:500 aspect ratio then
+   sets the height, capped at the height of the greeting block. It is allowed
+   a small bleed past the block edge (clipped at the viewport by
+   #main-content), and starts well clear of the text so it never overlaps. */
+.greeting-image-div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 66%;
+  right: -10%;
+  aspect-ratio: 720 / 500;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.greeting-image-div > *,
+.greeting-image-div svg,
+.greeting-image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .wave-emoji {
@@ -99,19 +170,54 @@
 /* Media Query */
 @media (max-width: 1380px) {
   .greeting-text {
-    font-size: 50px;
+    font-size: 48px;
   }
   .greeting-text-p {
     font-size: 20px;
   }
 }
-@media (max-width: 768px) {
+
+/* Below this width there isn't room for the animation beside the text
+   without overlapping it, so stack it underneath instead. */
+@media (max-width: $bpGreetingStack) {
+  .greeting-main {
+    display: block;
+    position: static;
+  }
+  .greeting-text-div {
+    flex: none;
+    width: 100%;
+  }
+  .greeting-image-div {
+    position: static;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    aspect-ratio: auto;
+    max-height: none;
+    height: 320px;
+    margin: 1rem auto 0;
+    justify-content: center;
+  }
+  .greeting-image-div > *,
+  .greeting-image-div svg,
+  .greeting-image-div img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: $bpMobile) {
   .button-greeting-div {
     justify-content: space-around;
   }
   .greeting-text {
     font-size: 30px;
     text-align: center;
+    white-space: normal;
   }
   .greeting-text-p {
     font-size: 16px;
@@ -120,8 +226,17 @@
   }
   .greeting-main {
     display: block;
+    position: static;
   }
+  .greeting-text-div {
+    flex: none;
+    width: 100%;
+  }
+  /* Stack the animation below the text again on small screens. */
   .greeting-image-div {
+    position: static;
+    left: auto;
+    aspect-ratio: auto;
     height: 256px;
   }
 }

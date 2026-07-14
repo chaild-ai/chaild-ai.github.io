@@ -5,7 +5,7 @@ import childrenWaving from "../../assets/lottie/childrenWaving";
 import childrenWavingStill from "../../assets/images/childrenWaving.svg";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import Button from "../../components/button/Button";
-import { greeting } from "../../portfolio";
+import { greeting, skillsSection } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
@@ -41,6 +41,34 @@ export default function Greeting() {
             >
               {greeting.subTitle}
             </p>
+            {skillsSection.display && (
+              <div id="skills" className="greeting-missions">
+                <h2
+                  className={
+                    isDark
+                      ? "dark-mode greeting-missions-heading"
+                      : "greeting-missions-heading"
+                  }
+                >
+                  {skillsSection.title}
+                </h2>
+                <ul className="greeting-missions-list">
+                  {skillsSection.skills.map((skill, i) => (
+                    <li
+                      key={i}
+                      className={
+                        isDark
+                          ? "dark-mode greeting-mission"
+                          : "greeting-mission"
+                      }
+                    >
+                      <span aria-hidden="true">{emoji("⚡ ")}</span>
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="button-greeting-div">
               {greeting.resumeLink && (
                 <Button
