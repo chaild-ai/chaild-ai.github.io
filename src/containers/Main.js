@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import AudiencePaths from "./audiencePaths/AudiencePaths";
+import GetInvolved from "./getInvolved/GetInvolved";
 import People from "./people/People";
 import Blogs from "./blogs/Blogs";
 import ScrollToTopButton from "./topbutton/Top";
@@ -20,6 +21,7 @@ const Main = () => {
         <main id="main-content">
           <Greeting />
           <AudiencePaths />
+          <GetInvolved />
           <Blogs />
           <People />
         </main>

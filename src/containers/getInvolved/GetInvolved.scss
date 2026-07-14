@@ -1,0 +1,193 @@
+@use "../../globalColor" as *;
+@use "../../layout" as *;
+
+/* A distinct call-to-action band between the audience pathways and the news. */
+.get-involved-card {
+  padding: 1.75rem 2rem;
+  border: 2px solid $buttonColor;
+  border-radius: $cardRadius;
+  background-color: $lightBackground3;
+}
+
+.dark-mode.get-involved-card {
+  border-color: $accentColorDark;
+  background-color: transparent;
+}
+
+.get-involved-header {
+  margin-bottom: 1.25rem;
+}
+
+.get-involved-heading {
+  font-size: 1.8rem;
+  margin: 0 0 0.35rem;
+}
+
+.get-involved-subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.get-involved-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* QR code beside the text, so the form can also be reached by scanning. */
+.get-involved-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* The QR doubles as a button that opens an enlarged view. */
+.get-involved-qr-button {
+  flex: 0 0 auto;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+/* The artwork carries its own transparent rounded corners; the matching
+   percentage radius scales with the image so no white corner ever shows. */
+.get-involved-qr {
+  width: 132px;
+  height: 132px;
+  border-radius: 4%;
+  display: block;
+}
+
+.get-involved-item-text {
+  min-width: 0;
+}
+
+.get-involved-item-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.35rem;
+  color: $textColor;
+}
+
+.dark-mode.get-involved-item .get-involved-item-title {
+  color: $textColorDark;
+}
+
+.get-involved-item-description {
+  margin: 0 0 0.6rem;
+  line-height: 1.55;
+  color: $subTitle;
+}
+
+.dark-mode.get-involved-item .get-involved-item-description {
+  color: $subTitleDark;
+}
+
+.get-involved-link {
+  font-weight: 700;
+  color: $buttonColor;
+  text-decoration: none;
+}
+
+.get-involved-link:hover {
+  text-decoration: underline;
+}
+
+.dark-mode.get-involved-item .get-involved-link {
+  color: $accentColorDark;
+}
+
+/* Enlarged QR dialog */
+.qr-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.qr-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+  max-width: min(92vw, 460px);
+  padding: 1.25rem;
+  border-radius: 12px;
+  background-color: $lightBackground1;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode.qr-dialog {
+  background-color: $darkBackground;
+  border: 2px solid $accentColorDark;
+}
+
+.qr-dialog-image {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 4%;
+}
+
+/* The dialog is portalled to <body>, outside the page's .dark-mode wrapper,
+   so it carries its own dark-mode class and needs its own link colour. */
+.dark-mode.qr-dialog .qr-dialog-link {
+  color: $accentColorDark;
+}
+
+.qr-dialog-close {
+  padding: 0.5rem 1.25rem;
+  border: 2px solid $buttonColor;
+  border-radius: 6px;
+  background: none;
+  color: $buttonColor;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.qr-dialog-close:hover {
+  background-color: $buttonColor;
+  color: $textColorDark;
+}
+
+.dark-mode .qr-dialog-close {
+  border-color: $accentColorDark;
+  color: $accentColorDark;
+}
+
+.dark-mode .qr-dialog-close:hover {
+  background-color: $accentColorDark;
+  color: $darkBackground;
+}
+
+@media (max-width: $bpMobile) {
+  .get-involved-card {
+    padding: 1.25rem;
+  }
+  .get-involved-heading {
+    font-size: 1.5rem;
+  }
+  .get-involved-list {
+    grid-template-columns: 1fr;
+  }
+  /* Stack the QR above the text once the cards are full width. */
+  .get-involved-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .get-involved-qr {
+    width: 150px;
+    height: 150px;
+  }
+}
