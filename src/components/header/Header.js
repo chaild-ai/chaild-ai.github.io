@@ -3,31 +3,12 @@ import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
-import {
-  greeting,
-  skillsSection,
-  peopleSection,
-  blogSection
-} from "../../portfolio";
+import {greeting, blogSection} from "../../portfolio";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const viewSkills = skillsSection.display;
-  const viewPeople = peopleSection.display;
   const viewBlog = blogSection.display;
-
-  // Detect if we're on a blog page
-  const isOnBlogPage = window.location.pathname.startsWith("/blog");
-
-  // Helper to create correct link based on current page.
-  // Use full origin when on a different page so anchors work with custom domains.
-  const getLink = anchor => {
-    if (isOnBlogPage) {
-      return `${window.location.origin}/#${anchor}`;
-    }
-    return `#${anchor}`;
-  };
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -62,27 +43,11 @@ function Header() {
         </button>
         <nav aria-label="Main">
           <ul id="nav-menu" className={menuClasses}>
-            {viewSkills && (
-              <li>
-                <a href={getLink("skills")} onClick={closeMenu}>
-                  Our mission
-                </a>
-              </li>
-            )}
-            {viewPeople && (
-              <li>
-                <a href={getLink("people")} onClick={closeMenu}>
-                  Our people
-                </a>
-              </li>
-            )}
-            {viewBlog && (
-              <li>
-                <a href="/blog" onClick={closeMenu}>
-                  News
-                </a>
-              </li>
-            )}
+            <li>
+              <a href="/" onClick={closeMenu}>
+                Home
+              </a>
+            </li>
             <li>
               <a href="/publications" onClick={closeMenu}>
                 Publications
@@ -93,6 +58,13 @@ function Header() {
                 Resources
               </a>
             </li>
+            {viewBlog && (
+              <li>
+                <a href="/blog" onClick={closeMenu}>
+                  News
+                </a>
+              </li>
+            )}
             <li className="switch-item">
               <ToggleSwitch />
             </li>
