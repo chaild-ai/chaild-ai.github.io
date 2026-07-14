@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
-import CurrentWork from "../currentWork/CurrentWork";
 import { blogSection } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 import { fetchAllBlogMetadata } from "../../utils/parseFrontmatter";
@@ -23,7 +22,9 @@ export default function Blogs() {
     return null;
   }
 
-  const displayedBlogs = blogs.slice(0, 8);
+  // Up to 6 latest posts; how many actually show is controlled responsively
+  // in CSS (6 in a 2x3 grid on wide screens, 4 on medium, 3 on narrow).
+  const displayedBlogs = blogs.slice(0, 6);
 
   return (
     <section
@@ -43,7 +44,6 @@ export default function Blogs() {
           {blogSection.subtitle}
         </p>
       </div>
-      <CurrentWork />
       <div className="blog-main-div">
         <div className="blog-text-div">
           {displayedBlogs.map((blog, i) => {
@@ -60,17 +60,11 @@ export default function Blogs() {
               />
             );
           })}
-          <BlogCard
-            key="more-news"
-            isDark={isDark}
-            blog={{
-              url: "/blog",
-              title: "More news...",
-              description: "Click here to see all our news and updates",
-            }}
-          />
         </div>
       </div>
+      <a className="all-news-link" href="/blog">
+        All news →
+      </a>
     </section>
   );
 }

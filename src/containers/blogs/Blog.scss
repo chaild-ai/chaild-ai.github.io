@@ -1,5 +1,6 @@
 /*Blog Cards Layout*/
 @use "../../globalColor" as *;
+@use "../../layout" as *;
 
 .square {
   width: 440px;
@@ -18,8 +19,25 @@
 }
 
 .blog-header-text {
-  font-size: 56px;
+  font-size: 40px;
   font-weight: 400;
+}
+
+.all-news-link {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  font-weight: 700;
+  color: $buttonColor;
+  text-decoration: none;
+}
+
+.all-news-link:hover {
+  text-decoration: underline;
+}
+
+.dark-mode .all-news-link {
+  color: $accentColorDark;
 }
 
 .blog-subtitle {
@@ -36,10 +54,19 @@
   max-width: 100%;
   height: auto;
 }
+/* News grid: 3 columns (2x3 = 6 cards) on wide screens, 2 columns
+   (2x2 = 4 cards) on medium, 1 column (3 cards) on narrow. Extra cards
+   past each layout's count are hidden. The "current & upcoming" card is
+   always the first cell, so the post counts are 5 / 3 / 2. */
 .blog-text-div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+/* Card-count limits apply only to the homepage News section; the /blog page
+   reuses .blog-text-div and must list every post matching the filters. */
+#blogs .blog-text-div > *:nth-child(n + 7) {
+  display: none;
 }
 .subTitle {
   color: $subTitle;
@@ -63,8 +90,20 @@
   }
 }
 
-@media screen and (max-width: 480px) and (min-width: 300px) {
+@media (max-width: $bpNewsTwoCol) {
   .blog-text-div {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #blogs .blog-text-div > *:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (max-width: $bpNewsOneCol) {
+  .blog-text-div {
+    grid-template-columns: 1fr;
+  }
+  #blogs .blog-text-div > *:nth-child(n + 4) {
+    display: none;
   }
 }
