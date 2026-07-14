@@ -1,7 +1,8 @@
 @use "../globalColor" as *;
+@use "../layout" as *;
 
 .blog-post-container {
-  max-width: 900px;
+  max-width: $pageMaxWidth;
   margin: 50px auto;
   padding: 30px 20px;
   background-color: $lightBackground2;
