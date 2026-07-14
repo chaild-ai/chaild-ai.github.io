@@ -1,0 +1,38 @@
+/* Shared layout values used across components.
+   Colours live in _globalColor.scss. */
+
+/* Widths */
+
+// Homepage content blocks (greeting, audience paths, get involved, news,
+// people) all share this width so they line up, with margins either side on
+// wide screens.
+$contentMaxWidth: 1320px;
+
+// Reading width for text-heavy pages (publications, resources, blog posts).
+$pageMaxWidth: 900px;
+
+/* Shape */
+
+// Corner radius shared by cards and panels.
+$cardRadius: 10px;
+
+/* Breakpoints */
+
+// Below this the greeting animation stacks under the text rather than sitting
+// beside it, where it would overlap the copy.
+$bpGreetingStack: 1200px;
+
+// News grid drops from three columns to two.
+$bpNewsTwoCol: 1100px;
+
+// Audience cards fold into a single column.
+$bpSingleCol: 900px;
+
+// Standard mobile breakpoint.
+$bpMobile: 768px;
+
+// News grid folds into a single column.
+$bpNewsOneCol: 700px;
+
+// Narrow phones, where card text needs to step down a size.
+$bpCardNarrow: 480px;

@@ -22,7 +22,9 @@ export default function Blogs() {
     return null;
   }
 
-  const displayedBlogs = blogs.slice(0, 8);
+  // Up to 6 latest posts; how many actually show is controlled responsively
+  // in CSS (6 in a 2x3 grid on wide screens, 4 on medium, 3 on narrow).
+  const displayedBlogs = blogs.slice(0, 6);
 
   return (
     <section
@@ -58,17 +60,11 @@ export default function Blogs() {
               />
             );
           })}
-          <BlogCard
-            key="more-news"
-            isDark={isDark}
-            blog={{
-              url: "/blog",
-              title: "More news...",
-              description: "Click here to see all our news and updates",
-            }}
-          />
         </div>
       </div>
+      <a className="all-news-link" href="/blog">
+        All news →
+      </a>
     </section>
   );
 }

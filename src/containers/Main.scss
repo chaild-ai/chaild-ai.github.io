@@ -5,3 +5,9 @@
   color: white;
   transition: "0.1s";
 }
+
+/* The greeting animation is allowed to bleed past its block; clip it at the
+   viewport so it never introduces a horizontal scrollbar. */
+#main-content {
+  overflow-x: clip;
+}
