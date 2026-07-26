@@ -158,7 +158,8 @@ export const publications = [
     title:
       "Towards Open Benchmarks for Human Flourishing with AI: Report of the October '25 Workshop and Next Steps",
     venue: "MIT Media Lab",
-    url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/"
+    url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/",
+    post: "aha-benchmarks-report"
   }
 ];
 
