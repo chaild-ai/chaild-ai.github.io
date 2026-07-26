@@ -105,7 +105,8 @@ const blogSection = {
     "chi-workshop-2026",
     "funding-youth-advisory",
     "study-genai",
-    "white-paper"
+    "white-paper",
+    "chaild-launch"
   ]
 };
 
