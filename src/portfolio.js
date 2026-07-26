@@ -94,6 +94,7 @@ const blogSection = {
   blogSlugs: [
     "kcl-teachers-conference",
     "festival-of-computing",
+    "youth-prism-science-oxford",
     "aha-benchmarks-report",
     "aha-benchmarks-workshop",
     "chaild-at-chi-2026",
