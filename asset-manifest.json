@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.53121d2e.css",
-    "main.js": "/static/js/main.eb9ec175.js",
-    "static/js/83.63bd4a00.chunk.js": "/static/js/83.63bd4a00.chunk.js",
-    "static/js/395.c2770368.chunk.js": "/static/js/395.c2770368.chunk.js",
+    "main.js": "/static/js/main.3a9e8183.js",
+    "static/js/83.b31b0b8c.chunk.js": "/static/js/83.b31b0b8c.chunk.js",
+    "static/js/395.977a9423.chunk.js": "/static/js/395.977a9423.chunk.js",
     "static/media/oxford-cs-POS_RGB.jpg": "/static/media/oxford-cs-POS_RGB.630e405238a50361252e.jpg",
     "static/media/oxford-cs-NEG_RGB.jpg": "/static/media/oxford-cs-NEG_RGB.16385c6cea2c7fda6be9.jpg",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
@@ -19,12 +19,12 @@
     "static/media/ucl-inverted.svg": "/static/media/ucl-inverted.207bf154949b9910ea4817c8fe6955a5.svg",
     "static/media/ucl.svg": "/static/media/ucl.6b7c113391f5fa28fe8141fdbb4bfa1c.svg",
     "main.53121d2e.css.map": "/static/css/main.53121d2e.css.map",
-    "main.eb9ec175.js.map": "/static/js/main.eb9ec175.js.map",
-    "83.63bd4a00.chunk.js.map": "/static/js/83.63bd4a00.chunk.js.map",
-    "395.c2770368.chunk.js.map": "/static/js/395.c2770368.chunk.js.map"
+    "main.3a9e8183.js.map": "/static/js/main.3a9e8183.js.map",
+    "83.b31b0b8c.chunk.js.map": "/static/js/83.b31b0b8c.chunk.js.map",
+    "395.977a9423.chunk.js.map": "/static/js/395.977a9423.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53121d2e.css",
-    "static/js/main.eb9ec175.js"
+    "static/js/main.3a9e8183.js"
   ]
 }
