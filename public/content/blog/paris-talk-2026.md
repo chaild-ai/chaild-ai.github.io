@@ -1,7 +1,7 @@
 ---
 title: "CHAILD researcher speaks at the France-Oxford-Quebec Colloquium on 'Shaping the Future of AI"
 tags: ["impact", "talks"]
-date: "2026-07-01"
+date: "2026-07-19"
 ---
 
 
