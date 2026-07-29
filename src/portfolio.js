@@ -92,6 +92,8 @@ const blogSection = {
   display: true, // Set false to hide this section, defaults to true
   // Blog slugs: metadata is loaded from markdown frontmatter in /public/content/blog/<slug>.md
   blogSlugs: [
+    "paris-talk-2026",
+    "round-table-2026",
     "chaild-at-idc-2026",
     "kcl-teachers-conference",
     "festival-of-computing",
