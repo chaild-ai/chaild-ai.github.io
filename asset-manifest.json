@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.53121d2e.css",
-    "main.js": "/static/js/main.69c10f8c.js",
+    "main.js": "/static/js/main.85e612d6.js",
     "static/js/83.b31b0b8c.chunk.js": "/static/js/83.b31b0b8c.chunk.js",
     "static/js/395.977a9423.chunk.js": "/static/js/395.977a9423.chunk.js",
     "static/media/oxford-cs-POS_RGB.jpg": "/static/media/oxford-cs-POS_RGB.630e405238a50361252e.jpg",
@@ -19,12 +19,12 @@
     "static/media/ucl-inverted.svg": "/static/media/ucl-inverted.207bf154949b9910ea4817c8fe6955a5.svg",
     "static/media/ucl.svg": "/static/media/ucl.6b7c113391f5fa28fe8141fdbb4bfa1c.svg",
     "main.53121d2e.css.map": "/static/css/main.53121d2e.css.map",
-    "main.69c10f8c.js.map": "/static/js/main.69c10f8c.js.map",
+    "main.85e612d6.js.map": "/static/js/main.85e612d6.js.map",
     "83.b31b0b8c.chunk.js.map": "/static/js/83.b31b0b8c.chunk.js.map",
     "395.977a9423.chunk.js.map": "/static/js/395.977a9423.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53121d2e.css",
-    "static/js/main.69c10f8c.js"
+    "static/js/main.85e612d6.js"
   ]
 }
