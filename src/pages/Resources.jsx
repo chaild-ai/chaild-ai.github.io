@@ -180,7 +180,7 @@ export default function Resources() {
           >
             Useful resources we have come across through our work with
             computing educators — for bringing AI into the classroom in a way
-            that supports children's agency.
+            that supports children's agency. However, please note that listing here does not indicate an endorsement from CHAILD.
           </p>
 
           {resourceCategories.map((category) => (
