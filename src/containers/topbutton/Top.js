@@ -35,7 +35,24 @@ export default function Top() {
       title="Go to top"
       aria-label="Scroll to top"
     >
-      <i className="fas fa-hand-point-up" aria-hidden="true"></i>
+      {/* Inline rather than an icon font: one glyph is not worth a
+          stylesheet and a webfont from a third-party origin. */}
+      <svg
+        className="top-icon"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path d="M12 19V5" />
+        <path d="M5 12l7-7 7 7" />
+      </svg>
     </button>
   );
 }
