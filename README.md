@@ -4,6 +4,10 @@ Website for the CHAILD project, hosted at [chaild.org](https://chaild.org).
 
 The site is a React single-page app built with [Create React App](https://create-react-app.dev/), based on the [DeveloperFolio](https://github.com/saadpasta/developerFolio) template. Source code lives on the `main` branch; the built site is published from the `gh-pages` branch (no Jekyll).
 
+Before changing any colour, typeface or partner logo, read
+**[docs/branding.md](docs/branding.md)** — it records the palette and the rules
+that keep it accessible, several of which are easy to break without noticing.
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) and npm
