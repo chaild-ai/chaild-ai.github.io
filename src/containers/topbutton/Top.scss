@@ -16,7 +16,23 @@
   font-size: 25px;
 }
 
+/* Block kills the inline baseline gap under the SVG. */
+.top-icon {
+  display: block;
+}
+
 #topButton:hover {
   background-color: $topButtonHover;
   transition: all ease-in-out 0.2s;
+}
+
+/* As Button.scss: the accent carries the surface on the dark page. The
+   light-theme hover is the dark page colour itself, so it flips to white. */
+.dark-mode #topButton {
+  background-color: $accentColorDark;
+  color: $darkBackground;
+}
+
+.dark-mode #topButton:hover {
+  background-color: $textColorDark;
 }

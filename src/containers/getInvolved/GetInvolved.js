@@ -5,10 +5,9 @@ import StyleContext from "../../contexts/StyleContext";
 import qrCodesignPrototypes from "../../assets/images/qr/qr-codesign-prototypes.png";
 import qrYouthAiResearch from "../../assets/images/qr/qr-youth-ai-research.png";
 
-// Calls to action for people who would like to take part in our research.
-// Each item shows a QR code alongside the link, so the forms can also be
-// reached from a printed hand-out or a slide. Edit the items below as
-// studies open and close.
+// Calls to action for taking part in our research. Each item shows a QR code
+// beside the link, so a form can also be reached from a printed hand-out.
+// Edit the items below as studies open and close.
 const getInvolved = {
   display: true,
   title: "Take part in our research",
@@ -86,32 +85,17 @@ export default function GetInvolved() {
       id="get-involved"
       aria-labelledby="get-involved-heading"
     >
-      <div
-        className={isDark ? "dark-mode get-involved-card" : "get-involved-card"}
-      >
+      <div className="get-involved-card">
         <div className="get-involved-header">
           <h2 id="get-involved-heading" className="get-involved-heading">
             {getInvolved.title}
           </h2>
-          <p
-            className={
-              isDark
-                ? "dark-mode get-involved-subtitle"
-                : "subTitle get-involved-subtitle"
-            }
-          >
-            {getInvolved.subtitle}
-          </p>
+          <p className="get-involved-subtitle">{getInvolved.subtitle}</p>
         </div>
 
         <ul className="get-involved-list">
           {getInvolved.items.map((item) => (
-            <li
-              key={item.audience}
-              className={
-                isDark ? "dark-mode get-involved-item" : "get-involved-item"
-              }
-            >
+            <li key={item.audience} className="get-involved-item">
               <button
                 type="button"
                 className="get-involved-qr-button"

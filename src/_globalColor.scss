@@ -1,84 +1,93 @@
-/* Change colors in this file to style to your needs on a global level. 
-Certain colors are used for different and multiply types of elements. 
-For greater control over colors visit each components .scss file. */
+/* The single source of colour. Nothing in src/ hardcodes a hue; components
+   only write neutral black-or-white alpha (shadows, scrims), which cannot
+   drift off-palette.
 
-// button colors
-$buttonColor: #55198b;
-$buttonHover: #8c43ce;
-$topButtonHover: #000;
+   The palette is the University of Oxford's. Oxford name, Pantone and measured
+   contrast are recorded per value so provenance needs no re-deriving. Tints of
+   a listed colour say so on their own line.
 
-// text colors light theme
-$titleColor: #000000;
-$textColor: #000000;
-$subTitle: #6c757d; // 4.7:1 on white (WCAG AA)
-$cardSubtitle: #666666;
-$talkCardSubTitle: #7f8287;
-$blogCardTitleColor: #262626;
+   Three rules, expanded in docs/branding.md:
+     1. $highlight is a FILL, never text — 1.50:1 on white.
+     2. $buttonColor is 1.82:1 on $darkBackground, so it must never be a
+        surface inside .dark-mode. Use $accentColorDark with a
+        $darkBackground label.
+     3. The light theme is white plus tints of one hue, Oxford blue. An
+        off-hue neutral reads as a second scheme laid over the first. */
 
-// text color dark theme
-$textColorDark: #ffffff;
-$subTitleDark: #ced4da; // secondary text on $darkBackground, ~11.3:1
-$accentColorDark: #d9c8fa; // links/accents on $darkBackground, ~11:1
+// primary — links, buttons, tags, card accents. Royal blue rather than Oxford
+// blue, which is dark enough to read as black and belongs to headings; hovers
+// deepen toward that heading colour.
+$buttonColor: #1d42a6; // Oxford royal blue, Pantone 2126C — 8.82:1 on white (AAA)
+$buttonHover: #002147; // Oxford blue, Pantone 282 — 16.05:1 on white (AAA)
+$topButtonHover: #002147; // matching $buttonHover
 
-// toggle switch colors
-$toggleCheck: #2196f3;
-$toggleSwitchSliderBG: #767676; // >=3:1 against the white thumb and page
+// highlight — small accents only (tags, current nav item), identical in both
+// themes because it brings its own dark label.
+//
+// Oxford yellow ochre at 70% lightness rather than its listed 58%. WCAG 2.x
+// ignores chroma and overstates saturated yellows: the listed value measures
+// 9.06:1 but is only APCA Lc 68. Hue and saturation are untouched; lightening
+// lifts the label to Lc 77, in line with the rest of the site.
+$highlight: #ead27b; // Oxford yellow ochre lightened — 10.70:1 / APCA Lc 77 under $highlightLabel
+$highlightLabel: #002147; // the only text colour permitted on $highlight
+// Edge for a yellow shape: 1.56:1 against $highlight, drawing the pill without
+// competing with the label, and legible on both pages (2.34:1 on white,
+// 6.87:1 on navy) so a badge looks the same in either theme.
+$highlightEdge: #caa620; // Oxford yellow ochre at 46% lightness
 
-// light background colors
+// text — light theme. Headings take full-strength Oxford blue; body text is a
+// tint, because Oxford blue over a paragraph reads as black.
+$titleColor: #002147; // Oxford blue, Pantone 282 — 16.05:1 on white (AAA)
+$textColor: #334d6c; // Oxford blue at 80% — 8.68:1 on white (AAA)
+// No third, lighter tier exists here: AAA on the card fills caps luminance at
+// 0.0887 and $textColor is already 0.0709, a 1.25x window. Secondary copy is
+// $textColor set apart by size and weight.
+$blogCardTitleColor: #002147;
+
+// text — dark theme
+$textColorDark: #ffffff; // 16.05:1 on $darkBackground (AAA)
+// Body colour, with $textColorDark above it for headings. The step to headings
+// is 1.22:1 against 1.85:1 in light — white is the ceiling, so lightening body
+// text necessarily narrows it. Size and weight carry the rest.
+$subTitleDark: #e6e9ed; // white at 90% toward Oxford blue — 13.18:1 (AAA)
+$accentColorDark: #b9d6f2; // Oxford sky blue, Pantone 277C — 10.67:1 on $darkBackground (AAA)
+
+// toggle switch — one track colour for both themes, always under a white
+// thumb, so it must clear 3:1 three ways: against the white header (4.41:1),
+// the navy one (3.64:1), and under the thumb (4.41:1).
+$toggleSwitchSliderBG: #667a91; // Oxford blue at 60%
+
+// backgrounds
 $lightBackground1: #fff;
 $lightBackground2: rgb(255, 255, 255);
-$lightBackground3: #f5f2f4;
-$blogCardContainerColor: #586069;
-// dark background colors
-$darkBackground: #171c28;
+$lightBackground3: #f5f6f8; // Oxford blue at 4% — card surface a step above the page
+$darkBackground: #002147; // Oxford blue, Pantone 282 — same value as $titleColor
+// Dark twin of $lightBackground3: 1.11:1 against the navy page, matching the
+// 1.08:1 that $lightBackground3 gives on white, so a card reads as equally
+// lifted in either theme.
+$darkSurface: rgba(255, 255, 255, 0.04);
 
-// light theme box shadows
-$lightBoxShadowDark: rgba(0, 0, 0, 0.2);
+// shadows
 $lightBoxShadow: rgba(0, 0, 0, 0.1);
-$lightBoxShadowDarker: rgba(0, 0, 0, 0.3);
-
-// dark theme box shadows
 $darkBoxShadow: #d9dbdf;
 $darkBoxShadow2: #ffffff;
+$darkGlow: rgba(255, 255, 255, 0.1); // black is invisible on navy, so dark lifts with light
 
-// linear gradients
-$experienceCardBlurredDivLG: linear-gradient(
-  rgba(0, 0, 0, 0.4),
-  rgba(0, 0, 0, 0.2)
-);
-$experienceCardBannerLG: linear-gradient(
-  rgba(0, 0, 0, 0.7),
-  rgba(0, 0, 0, 0.5)
-);
+// borders — a tint of Oxford blue rather than a neutral grey, which would read
+// as a warmer second scheme against the blue-tinted surfaces it outlines.
+$lightBorder1: #ccd3da; // Oxford blue at 20% on white
+$darkBorder1: rgba(255, 255, 255, 0.15);
 
-// borders
-$progressBarBackground: rgb(243, 239, 239);
-$lightBorder1: rgba(211, 211, 211, 0.397);
-$educationCardBorder: #a9a7f9;
+// Halo behind a sparkle — a step stronger than the container borders, since it
+// reads at the scale of a glyph rather than a card edge.
+//
+// The dark value runs at a higher ratio on purpose: matching ratios across a
+// near-black page does not match appearance. At the navy page's luminance of
+// 0.015, 1.9:1 is a gap of 0.056 where the same ratio on white is 0.504. 3.09:1
+// brings the dark gap to 0.137, which is what makes the two look alike. Judge
+// this pair by the luminance gap, not the ratio.
+$sparkleEdge: #b2bcc8; // Oxford blue at 30% on white — 1.92:1 on the light page
+$sparkleEdgeDark: rgba(255, 255, 255, 0.35); // 3.09:1 on the dark page
 
 // hovers
-$achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.2);
-$blogCardHoverSmallColor: rgba(255, 255, 255, 0.8);
 $headerHoverBG: #f4f4f4;
-$contactDetailHoverTS: #b5b5b5;
-
-// misc backgrounds
-$progressBarSpanBG: #aaa5ff;
-$iconBackground: #333;
-$appHeaderBG: #282c34;
-
-// misc colors
-$skillsColor: #645beb;
-$appLink: #09d3ac;
-
-// social media icons
-$faceBook: #3b5998;
-$linkedin: #0e76a8;
-$github: #333;
-$gitlab: #fca326;
-$google: #ea4335;
-$twitter: #1da1f2;
-$medium: #000;
-$stackoverflow: #f48024;
-$instagram: #c13584;
-$kaggle: #20beff;

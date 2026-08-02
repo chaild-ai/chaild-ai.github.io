@@ -3,6 +3,7 @@ import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
 import { blogSection } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import Sparkles from "../../components/sparkles/Sparkles";
 import { fetchAllBlogMetadata } from "../../utils/parseFrontmatter";
 
 export default function Blogs() {
@@ -34,15 +35,9 @@ export default function Blogs() {
     >
       <div className="blog-header">
         <h2 id="blogs-heading" className="blog-header-text">
-          {blogSection.title}
+          {blogSection.title}{" "}
+          <Sparkles flip />
         </h2>
-        <p
-          className={
-            isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
-          }
-        >
-          {blogSection.subtitle}
-        </p>
       </div>
       <div className="blog-main-div">
         <div className="blog-text-div">

@@ -3,6 +3,7 @@ import "./People.scss";
 import emoji from "react-easy-emoji";
 import { peopleSection } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import Sparkles from "../../components/sparkles/Sparkles";
 
 export default function People() {
   const { isDark } = useContext(StyleContext);
@@ -26,7 +27,7 @@ export default function People() {
           <li
             key={i}
             className={
-              isDark ? "dark-mode subTitle people-text" : "subTitle people-text"
+              "subTitle people-text"
             }
           >
             <span aria-hidden="true">{emoji("⚡ ")}</span>
@@ -41,7 +42,7 @@ export default function People() {
 
   return (
     <section
-      className={isDark ? "dark-mode main" : "main"}
+      className="main"
       id="people"
       aria-labelledby="people-heading"
     >
@@ -49,9 +50,10 @@ export default function People() {
         <div className="people-text-div fade-in-up">
           <h2
             id="people-heading"
-            className={isDark ? "dark-mode people-heading" : "people-heading"}
+            className="people-heading"
           >
             {peopleSection.title}{" "}
+            <Sparkles />
           </h2>
           <p
             className={

@@ -41,9 +41,7 @@ export function parseFrontmatter(markdown) {
   return { frontmatter, content };
 }
 
-/**
- * Fetch a markdown file and parse its frontmatter.
- */
+/** Fetch a markdown file and parse its frontmatter. */
 export async function fetchAndParseBlog(slug) {
   try {
     const res = await fetch(`/content/blog/${slug}.md`);
@@ -61,10 +59,7 @@ export async function fetchAndParseBlog(slug) {
   }
 }
 
-/**
- * Fetch all blog metadata by reading a manifest or scanning directory.
- * For now, assumes a static list of slugs. Can be extended to fetch a manifest.
- */
+/** Fetch metadata for a list of blog slugs. */
 export async function fetchAllBlogMetadata(slugs) {
   const blogs = await Promise.all(
     slugs.map((slug) => fetchAndParseBlog(slug))

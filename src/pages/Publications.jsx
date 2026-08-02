@@ -20,9 +20,7 @@ export default function Publications() {
         <Header />
         <main id="main-content" className="publications-container fade-in-up">
           <h1
-            className={
-              isDark ? "dark-mode publications-title" : "publications-title"
-            }
+            className="publications-title"
           >
             Publications
           </h1>
@@ -62,9 +60,7 @@ export default function Publications() {
                   {items.map((pub, i) => (
                     <li
                       key={`${pub.title}-${i}`}
-                      className={
-                        isDark ? "dark-mode publication" : "publication"
-                      }
+                      className="publication"
                     >
                       {pub.authors && (
                         <span className="publication-authors">

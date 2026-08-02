@@ -91,21 +91,17 @@ export default function BlogPost({ slug }) {
             ← Back to all posts
           </a>
           <h1
-            className={isDark ? "dark-mode blog-post-title" : "blog-post-title"}
+            className="blog-post-title"
           >
             {post.title}
           </h1>
-          {/* <p className={isDark ? "dark-mode blog-post-description" : "blog-post-description"}>
-              {post.description}
-            </p> */}
-
           {/* Display tags */}
           {post.tags && post.tags.length > 0 && (
             <div className="blog-post-tags">
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className={`blog-tag ${isDark ? "dark-mode" : ""}`}
+                  className="blog-tag"
                 >
                   {tag}
                 </span>
@@ -116,7 +112,7 @@ export default function BlogPost({ slug }) {
           {/* Display date; format in UTC so "2026-02-01" doesn't render
                 as the previous day in timezones west of UTC */}
           {post.date && (
-            <p className={`blog-post-date ${isDark ? "dark-mode" : ""}`}>
+            <p className="blog-post-date">
               Published:{" "}
               <time dateTime={post.date}>
                 {new Date(post.date).toLocaleDateString(undefined, {

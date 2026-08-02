@@ -1,10 +1,13 @@
 @use "../../globalColor" as *;
 @use "../../layout" as *;
 
+/* Ranged left while the cards are in a row, centred once they fold -- the rule
+   every section heading follows.
+
+   No max-width: it could never bind on a lone heading, but with `margin: 0
+   auto` it would centre the box and start the heading inside the cards. */
 .audience-paths-header {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 1.75rem;
+  margin: 0 0 1.75rem;
 }
 
 .audience-paths-heading {
@@ -12,10 +15,6 @@
   margin: 0 0 0.35rem;
 }
 
-.audience-paths-subtitle {
-  margin: 0;
-  font-size: 1.05rem;
-}
 
 .audience-paths-grid {
   list-style: none;
@@ -65,13 +64,13 @@
 .audience-card-title {
   font-size: 1.35rem;
   margin: 0 0 0.5rem;
-  color: $textColor;
+  color: $titleColor;
 }
 
 .audience-card-description {
   margin: 0 0 1rem;
   line-height: 1.55;
-  color: $subTitle;
+  color: $textColor;
   flex-grow: 1;
 }
 
@@ -81,30 +80,35 @@
 }
 
 /* Dark theme */
-.dark-mode.audience-card .audience-card-link {
-  border-color: rgba(255, 255, 255, 0.15);
-  background-color: transparent;
+.dark-mode .audience-card .audience-card-link {
+  border-color: $darkBorder1;
+  background-color: $darkSurface;
 }
 
-.dark-mode.audience-card .audience-card-link:hover,
-.dark-mode.audience-card .audience-card-link:focus-visible {
+.dark-mode .audience-card .audience-card-link:hover,
+.dark-mode .audience-card .audience-card-link:focus-visible {
   border-color: $accentColorDark;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
 }
 
-.dark-mode.audience-card .audience-card-title {
+.dark-mode .audience-card .audience-card-title {
   color: $textColorDark;
 }
 
-.dark-mode.audience-card .audience-card-description {
+.dark-mode .audience-card .audience-card-description {
   color: $subTitleDark;
 }
 
-.dark-mode.audience-card .audience-card-cta {
+.dark-mode .audience-card .audience-card-cta {
   color: $accentColorDark;
 }
 
 @media (max-width: $bpSingleCol) {
+  /* Folded, the cards are one centred column, so the heading centres over
+     them rather than against a column set in from the page edge. */
+  .audience-paths-header {
+    text-align: center;
+  }
   .audience-paths-grid {
     grid-template-columns: 1fr;
     max-width: 480px;

@@ -2,22 +2,6 @@
 @use "../../globalColor" as *;
 @use "../../layout" as *;
 
-.square {
-  width: 440px;
-  height: 430px;
-  background: $textColorDark;
-  border-radius: 4px;
-  box-shadow: 0px 20px 50px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  margin-top: 30px;
-}
-
-.square:hover {
-  box-shadow: 0 20px 40px $lightBoxShadow;
-}
-
 .blog-header-text {
   font-size: 40px;
   font-weight: 400;
@@ -50,35 +34,19 @@
 .blog-main-div {
   display: flex;
 }
-.blog-image-div > img {
-  max-width: 100%;
-  height: auto;
-}
-/* News grid: 3 columns (2x3 = 6 cards) on wide screens, 2 columns
-   (2x2 = 4 cards) on medium, 1 column (3 cards) on narrow. Extra cards
-   past each layout's count are hidden. The "current & upcoming" card is
-   always the first cell, so the post counts are 5 / 3 / 2. */
+/* News grid: 6 cards on wide, 4 on medium, 3 on narrow; extras are hidden.
+   The "current & upcoming" card is always first, so post counts are 5/3/2. */
 .blog-text-div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
-/* Card-count limits apply only to the homepage News section; the /blog page
-   reuses .blog-text-div and must list every post matching the filters. */
+/* Homepage only -- /blog reuses .blog-text-div and lists every match. */
 #blogs .blog-text-div > *:nth-child(n + 7) {
   display: none;
 }
-.subTitle {
-  color: $subTitle;
-}
-
 /* Media Query */
-@media (max-width: 1380px) {
-  .blog-header-text {
-    font-size: 40px;
-  }
-}
-@media (max-width: 768px) {
+@media (max-width: $bpMobile) {
   .blog-header-text {
     font-size: 30px;
     text-align: center;

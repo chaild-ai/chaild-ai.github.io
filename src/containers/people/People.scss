@@ -1,23 +1,17 @@
 @use "../../globalColor" as *;
+@use "../../layout" as *;
 
+/* The text is the only child, and carries no left margin, so the section
+   starts on the same edge as every other one. */
 .people-main-div {
   display: flex;
   width: 100%;
   overflow: hidden;
 }
 
-.people-text-div {
-  margin-left: 50px;
-}
-
 .people-main-div > * {
   flex: 1;
   margin-bottom: 30px;
-}
-
-.people-image-div > img {
-  max-width: 20%;
-  height: 10px;
 }
 
 .people-heading {
@@ -31,6 +25,7 @@
 }
 
 .people-list li {
+  @include emoji-list-item;
   margin: 16px 0;
 }
 
@@ -38,10 +33,6 @@
   font-size: 1em;
   margin: 16px 0 8px;
 }
-.subTitle {
-  color: $subTitle;
-}
-
 .people-text-row-div {
   display: flex;
 }
@@ -51,12 +42,12 @@
 }
 
 /* Media Query */
-@media (max-width: 1380px) {
+@media (max-width: $bpHeadingStep) {
   .people-heading {
     font-size: 40px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: $bpMobile) {
   .people-heading {
     font-size: 30px;
     text-align: center;
@@ -69,7 +60,6 @@
     flex-direction: column;
   }
   .people-text-div {
-    margin-left: 0px;
     margin: 20px;
   }
   .people-text {
@@ -78,10 +68,6 @@
   .people-text-subtitle {
     font-size: 16px;
     text-align: center;
-  }
-  .people-image-div {
-    /* display: none; */
-    order: 2;
   }
   .people-text-row-div {
     flex-direction: column;
