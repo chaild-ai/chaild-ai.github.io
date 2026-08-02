@@ -106,6 +106,10 @@ const blogSection = {
 
 // Footer Section (partner logos live in Footer.js, next to their imports)
 const footerSection = {
+  // Must name the partners in the same order as the logo strip above it --
+  // see the note in Footer.js.
+  partnership:
+    "A collaboration between the University of Oxford's Department of Computer Science and Institute for Ethics in AI, and the UCL Knowledge Lab, funded by UK Research and Innovation.",
   grantName:
     "CHAILD — Children's Agency In the age of AI: Leveraging InterDisciplinarity",
   grantRef: "UKRI ref. MR/Z505882/1",
