@@ -6,9 +6,6 @@ import emoji from "react-easy-emoji";
 
 // Summary And Greeting Section
 
-const illustration = {
-  animated: true // Set to false to use static SVG
-};
 
 const greeting = {
   username: "CHAILD",
@@ -32,13 +29,6 @@ const skillsSection = {
     "Developing design principles for agency",
     "Creating new guidelines for parental and educational support",
     "Formulating policy recommendations to prioritise children’s agency"
-  ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
-  softwareSkills: [
-    // 
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -80,9 +70,6 @@ const peopleSection = {
       ]
     }
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -116,11 +103,6 @@ const blogSection = {
   ]
 };
 
-const socialMediaLinks = {
-  twitter: "https://x.com/oxfordccai",
-  github: "https://github.com/OxfordHCC",
-  display: true // Set true to display this section, defaults to false
-};
 
 // Footer Section (partner logos live in Footer.js, next to their imports)
 const footerSection = {
@@ -135,9 +117,7 @@ const footerSection = {
 
 
 export {
-  illustration,
   greeting,
-  socialMediaLinks,
   skillsSection,
   peopleSection,
   blogSection,
