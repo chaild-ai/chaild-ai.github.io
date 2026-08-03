@@ -18,10 +18,10 @@ export default function NotFound() {
       <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
         <main id="main-content" className="not-found-container fade-in-up">
-          <h1 className={isDark ? "dark-mode not-found-title" : "not-found-title"}>
+          <h1 className="not-found-title">
             Page not found
           </h1>
-          <p className={isDark ? "dark-mode not-found-text" : "not-found-text"}>
+          <p className="not-found-text">
             Sorry, we couldn't find the page you were looking for. It may have
             moved, or the link may be incorrect.
           </p>

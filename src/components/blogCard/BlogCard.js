@@ -1,24 +1,26 @@
 import React from "react";
 import "./BlogCard.scss";
 
-export default function BlogCard({blog, isDark}) {
+/* headingLevel: the card sits under an <h2> on the homepage and an <h1> on
+   /blog, so the level that keeps the outline unbroken differs by context and
+   the page passes it. 3 is the homepage case. */
+export default function BlogCard({blog, headingLevel = 3}) {
+  const Heading = `h${headingLevel}`;
   const isExternal = Boolean(blog.url) && !blog.url.startsWith("/");
 
   return (
     <div>
-      <div className={isDark ? "blog-container dark-mode" : "blog-container"}>
+      <div className="blog-container">
         <a
-          className={
-            isDark ? "dark-mode blog-card blog-card-shadow" : "blog-card"
-          }
+          className="blog-card"
           href={blog.url}
           target={isExternal ? "_blank" : undefined}
           rel={isExternal ? "noreferrer" : undefined}
         >
-          <h3 className={isDark ? "small-dark blog-title" : "blog-title"}>
+          <Heading className="blog-title">
             {blog.title}
-          </h3>
-          <p className={isDark ? "small-dark small" : "small"}>
+          </Heading>
+          <p className="small">
             {blog.description}
           </p>
           <div className="go-corner">

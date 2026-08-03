@@ -9,11 +9,11 @@
 
 .resources-title {
   font-size: 2.5rem;
-  color: $textColor;
+  color: $titleColor;
   margin-bottom: 0.5rem;
 }
 
-.dark-mode.resources-title {
+.dark-mode .resources-title {
   color: $textColorDark;
 }
 
@@ -23,7 +23,7 @@
   margin-bottom: 2rem;
 }
 
-.dark-mode.resources-intro {
+.dark-mode .resources-intro {
   color: $subTitleDark;
 }
 
@@ -33,13 +33,13 @@
 
 .resources-category-title {
   font-size: 1.6rem;
-  color: $textColor;
+  color: $titleColor;
   border-bottom: 2px solid $buttonColor;
   padding-bottom: 0.35rem;
   margin-bottom: 1rem;
 }
 
-.dark-mode.resources-category-title {
+.dark-mode .resources-category-title {
   color: $textColorDark;
   border-bottom-color: $accentColorDark;
 }
@@ -71,7 +71,7 @@
 
 .resource-description {
   margin: 0.25rem 0 0;
-  color: $subTitle;
+  color: $textColor;
   line-height: 1.6;
 }
 
@@ -82,14 +82,14 @@
 .resources-outro {
   margin-top: 2.5rem;
   font-style: italic;
-  color: $subTitle;
+  color: $textColor;
 }
 
-.dark-mode.resources-outro {
+.dark-mode .resources-outro {
   color: $subTitleDark;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bpMobile) {
   .resources-title {
     font-size: 1.9rem;
   }

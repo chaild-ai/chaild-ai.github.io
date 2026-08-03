@@ -1,25 +1,25 @@
 @use "../../globalColor" as *;
+@use "../../layout" as *;
 
 .footer-text {
   text-align: center;
-  color: $subTitle !important;
+  color: $textColor;
   margin: 0.4rem auto;
   max-width: 60rem;
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
-/* scoped to the footer; a bare .dark-mode selector here used to leak
-   'color: white !important' onto every dark-mode element site-wide */
-.dark-mode.footer-text {
-  color: $textColorDark !important;
+/* Scoped to the footer: (0,2,0) against `.footer-text`'s (0,1,0). */
+.dark-mode .footer-text {
+  color: $subTitleDark;
 }
 
 .footer-text a {
   color: $buttonColor;
 }
 
-.dark-mode.footer-text a {
+.dark-mode .footer-text a {
   color: $accentColorDark;
 }
 
@@ -28,10 +28,8 @@
   opacity: 0.85;
 }
 
-/* The footer background is transparent so it inherits the page theme.
-   Each partner logo is swapped for a dark-theme variant in Footer.js
-   (Oxford CS NEG, UCL inverted, UKRI reversed), so no light card is
-   needed and the strip adapts to the active theme. */
+/* Transparent, so it inherits the page theme. Footer.js swaps each partner
+   logo for a reversed variant, so no light card is needed behind them. */
 .footer-partner-logos {
   list-style: none;
   display: flex;
@@ -39,7 +37,9 @@
   align-items: center;
   justify-content: center;
   gap: 1.5rem 2.5rem;
-  max-width: 60rem;
+  // Wide enough to keep all four on one row now that the UCL lockup carries
+  // its department name and runs 6.3:1.
+  max-width: 70rem;
   margin: 0 auto 1.5rem;
   padding: 0;
 }
@@ -48,13 +48,21 @@
   display: flex;
 }
 
+/* These wrap an image and no text, but anything added to one would take the
+   browser's default link colour. */
+.footer-partner-logos a {
+  color: inherit;
+}
+
+/* Height comes from the partner data via --logo-h: the marks differ in aspect
+   ratio and in how much of their canvas the artwork fills. See Footer.js. */
 .footer-partner-logos img {
-  height: 48px;
+  height: var(--logo-h, 58px);
   width: auto;
-  max-width: 190px;
+  // Only binds on the widest lockup; below it, height is what sets the size.
+  max-width: 360px;
   object-fit: contain;
   display: block;
-  border-radius: 4px;
 }
 
 .footer-div {
@@ -64,15 +72,17 @@
   border-top: 1px solid $lightBorder1;
 }
 
-.dark-mode.footer-div {
-  border-top-color: rgba(255, 255, 255, 0.12);
+.dark-mode .footer-div {
+  border-top-color: $darkBorder1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bpMobile) {
   .footer-partner-logos {
     gap: 1rem 1.75rem;
   }
+  /* Scale the whole strip down together, so the relative weights hold. */
   .footer-partner-logos img {
-    height: 36px;
+    height: calc(var(--logo-h, 58px) * 0.72);
+    max-width: 260px;
   }
 }

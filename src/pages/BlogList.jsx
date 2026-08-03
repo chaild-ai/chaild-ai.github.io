@@ -73,7 +73,7 @@ export default function BlogList() {
             <h1 className="blog-header-text">{blogSection.title}</h1>
             <p
               className={
-                isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
+                "subTitle blog-subtitle"
               }
             >
               {blogSection.subtitle}
@@ -90,7 +90,7 @@ export default function BlogList() {
                     key={tag}
                     className={`tag-button ${
                       selectedTags.includes(tag) ? "active" : ""
-                    } ${isDark ? "dark-mode" : ""}`}
+                    }`}
                     aria-pressed={selectedTags.includes(tag)}
                     onClick={() => toggleTag(tag)}
                   >
@@ -107,7 +107,7 @@ export default function BlogList() {
                 filteredBlogs.map((blog, i) => (
                   <BlogCard
                     key={i}
-                    isDark={isDark}
+                    headingLevel={2}
                     blog={{
                       url: `/blog/${blog.slug}`,
                       image: blog.image,
@@ -117,7 +117,7 @@ export default function BlogList() {
                   />
                 ))
               ) : (
-                <p className={isDark ? "dark-mode" : ""}>
+                <p>
                   No blogs match the selected tags.
                 </p>
               )}

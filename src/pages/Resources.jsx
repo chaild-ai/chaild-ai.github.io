@@ -170,13 +170,11 @@ export default function Resources() {
       <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
         <main id="main-content" className="resources-container fade-in-up">
-          <h1 className={isDark ? "dark-mode resources-title" : "resources-title"}>
+          <h1 className="resources-title">
             AI literacy resources for teachers
           </h1>
           <p
-            className={
-              isDark ? "dark-mode resources-intro" : "subTitle resources-intro"
-            }
+            className="subTitle resources-intro"
           >
             Useful resources we have come across through our work with
             computing educators — for bringing AI into the classroom in a way
@@ -189,22 +187,12 @@ export default function Resources() {
               className="resources-category"
               aria-label={category.title}
             >
-              <h2
-                className={
-                  isDark
-                    ? "dark-mode resources-category-title"
-                    : "resources-category-title"
-                }
-              >
-                {category.title}
-              </h2>
+              <h2 className="resources-category-title">{category.title}</h2>
               <ul className="resources-list">
                 {category.resources.map((resource) => (
                   <li
                     key={resource.name}
-                    className={
-                      isDark ? "dark-mode resource-item" : "resource-item"
-                    }
+                    className="resource-item"
                   >
                     <a
                       href={resource.url}
@@ -223,7 +211,7 @@ export default function Resources() {
             </section>
           ))}
 
-          <p className={isDark ? "dark-mode resources-outro" : "resources-outro"}>
+          <p className="resources-outro">
             Know a resource that belongs here? We'd love to hear about it —
             find us via the links in the footer.
           </p>

@@ -9,11 +9,11 @@
 
 .publications-title {
   font-size: 2.5rem;
-  color: $textColor;
+  color: $titleColor;
   margin-bottom: 0.5rem;
 }
 
-.dark-mode.publications-title {
+.dark-mode .publications-title {
   color: $textColorDark;
 }
 
@@ -23,7 +23,7 @@
   margin-bottom: 2rem;
 }
 
-.dark-mode.publications-intro {
+.dark-mode .publications-intro {
   color: $subTitleDark;
 }
 
@@ -33,13 +33,13 @@
 
 .publications-section-title {
   font-size: 1.6rem;
-  color: $textColor;
+  color: $titleColor;
   border-bottom: 2px solid $buttonColor;
   padding-bottom: 0.35rem;
   margin-bottom: 1rem;
 }
 
-.dark-mode.publications-section-title {
+.dark-mode .publications-section-title {
   color: $textColorDark;
   border-bottom-color: $accentColorDark;
 }
@@ -59,12 +59,12 @@
   color: $textColor;
 }
 
-.dark-mode.publication {
-  color: $textColorDark;
+.dark-mode .publication {
+  color: $subTitleDark;
 }
 
 .publication-authors {
-  color: $subTitle;
+  color: $textColor;
 }
 
 .dark-mode .publication-authors {
@@ -76,7 +76,7 @@
 }
 
 .publication-venue {
-  color: $subTitle;
+  color: $textColor;
 }
 
 .dark-mode .publication-venue {
@@ -98,7 +98,7 @@
   color: $accentColorDark;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $bpMobile) {
   .publications-title {
     font-size: 1.9rem;
   }

@@ -21,14 +21,6 @@
 
 .greeting-main {
   display: flex;
-}
-
-.subTitle {
-  color: $subTitle !important;
-}
-
-.greeting-main {
-  display: flex;
   align-items: center;
   position: relative;
 }
@@ -52,12 +44,13 @@
 .greeting-text {
   font-size: 60px;
   line-height: 1.1;
-  color: $textColor !important;
+  /* A heading, so it takes the heading colour in both themes. */
+  color: $titleColor;
   white-space: nowrap;
 }
 
-.dark-mode.greeting-text {
-  color: $textColorDark !important;
+.dark-mode .greeting-text {
+  color: $textColorDark;
 }
 
 .greeting-text-p {
@@ -74,10 +67,10 @@
   font-size: 1.7rem;
   font-weight: 700;
   margin: 0 0 0.6rem;
-  color: $textColor;
+  color: $titleColor;
 }
 
-.dark-mode.greeting-missions-heading {
+.dark-mode .greeting-missions-heading {
   color: $textColorDark;
 }
 
@@ -88,13 +81,14 @@
 }
 
 .greeting-mission {
+  @include emoji-list-item;
   margin: 8px 0;
   font-size: 1.15rem;
   line-height: 1.5;
-  color: $subTitle;
+  color: $textColor;
 }
 
-.dark-mode.greeting-mission {
+.dark-mode .greeting-mission {
   color: $subTitleDark;
 }
 
@@ -103,17 +97,19 @@
   height: auto;
 }
 
-/* Decorative animation, sized by the width available to the right of the
-   text so it always stays essentially whole: its 720:500 aspect ratio then
-   sets the height, capped at the height of the greeting block. It is allowed
-   a small bleed past the block edge (clipped at the viewport by
-   #main-content), and starts well clear of the text so it never overlaps. */
+/* Sized by the width available to the right of the text; its 720:500 aspect
+   ratio then sets the height, capped to the greeting block.
+
+   It ends at the block edge rather than bleeding past it. A percentage bleed
+   is a share of the block, while the room to bleed into is the page margin,
+   and the block grows faster than the margin -- so past a point the bleed
+   outruns it and #main-content clips the artwork. */
 .greeting-image-div {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 66%;
-  right: -10%;
+  right: 0;
   aspect-ratio: 720 / 500;
   max-height: 100%;
   display: flex;
@@ -168,7 +164,7 @@
 }
 
 /* Media Query */
-@media (max-width: 1380px) {
+@media (max-width: $bpHeadingStep) {
   .greeting-text {
     font-size: 48px;
   }
@@ -241,7 +237,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: $bpNarrowPhone) {
   .main {
     width: auto;
   }

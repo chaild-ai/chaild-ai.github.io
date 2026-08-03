@@ -1,10 +1,14 @@
 @use "../../globalColor" as *;
 
+/* The sun and moon are real emoji characters, so without this a drag across
+   the header selects them. It is a switch, not text. */
 .switch {
   position: relative;
   display: inline-block;
   width: 50px;
   height: 26px;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Visually hide the checkbox; the slider is the visual control */
@@ -41,13 +45,20 @@
   transition: 0.4s;
 }
 
-input:checked + .slider {
-  background-color: $toggleCheck;
+/* Track and thumb keep their colours across themes; only position and the
+   emoji change, so the switch reads as one object rather than two.
+
+   A dark track under a light thumb is also the only option available: on the
+   navy page anything darker drops below 3:1 and disappears.
+   $toggleSwitchSliderBG is the single value clearing 3:1 on both pages
+   (4.41:1 on white, 3.64:1 on navy) and under the thumb (4.41:1). */
+input:focus-visible + .slider {
+  outline: 3px solid $buttonColor;
+  outline-offset: 2px;
 }
 
-input:focus-visible + .slider {
-  outline: 3px solid $toggleCheck;
-  outline-offset: 2px;
+input:checked:focus-visible + .slider {
+  outline-color: $accentColorDark;
 }
 
 input:checked + .slider::before,
@@ -70,20 +81,6 @@ input:checked + .slider > .emoji {
   place-items: center;
 }
 
-.slider::after {
-  display: inline;
-  position: absolute;
-  right: 9.3%;
-  bottom: 17.5%;
-}
-
-input:checked + .slider::after {
-  display: inline;
-  position: absolute;
-  right: 56.3%;
-  bottom: 14.5%;
-}
-
 .emoji {
   z-index: 10;
   display: flex;
@@ -91,25 +88,3 @@ input:checked + .slider::after {
   margin-left: 2px;
 }
 
-@media all and (max-width: 786px) and (min-width: 425px) {
-  input:checked + .slider::after {
-    right: 60.3%;
-    bottom: 20.5%;
-  }
-  .slider::after {
-    right: 15.3%;
-    bottom: 22.5%;
-  }
-}
-
-@media all and (max-width: 2560px) and (min-width: 1552px) {
-  .slider::after {
-    bottom: 12.5% !important;
-  }
-}
-
-@media all and (max-width: 1552px) and (min-width: 1440px) {
-  .slider::after {
-    bottom: 7.5% !important;
-  }
-}

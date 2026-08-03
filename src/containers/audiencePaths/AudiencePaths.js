@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import emoji from "react-easy-emoji";
 import "./AudiencePaths.scss";
-import StyleContext from "../../contexts/StyleContext";
+import Sparkles from "../../components/sparkles/Sparkles";
 
 // Audience-based entry points into the site. Each card sends a visitor to
 // the content most relevant to them. The blog list accepts a comma-separated
@@ -34,7 +34,6 @@ const audiences = [
 ];
 
 export default function AudiencePaths() {
-  const { isDark } = useContext(StyleContext);
 
   return (
     <section
@@ -44,17 +43,9 @@ export default function AudiencePaths() {
     >
       <div className="audience-paths-header">
         <h2 id="audience-paths-heading" className="audience-paths-heading">
-          Find what you need
+          Find what you need{" "}
+          <Sparkles />
         </h2>
-        <p
-          className={
-            isDark
-              ? "dark-mode audience-paths-subtitle"
-              : "subTitle audience-paths-subtitle"
-          }
-        >
-          Whether you research, teach, or shape policy, here's where to start.
-        </p>
       </div>
 
       <ul className="audience-paths-grid">
@@ -62,7 +53,7 @@ export default function AudiencePaths() {
           <li
             key={audience.title}
             className={
-              isDark ? "dark-mode audience-card" : "audience-card"
+              "audience-card"
             }
           >
             <a href={audience.href} className="audience-card-link">

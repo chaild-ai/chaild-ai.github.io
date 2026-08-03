@@ -10,20 +10,20 @@
 
 .not-found-title {
   font-size: 2.5rem;
-  color: $textColor;
+  color: $titleColor;
 }
 
-.dark-mode.not-found-title {
+.dark-mode .not-found-title {
   color: $textColorDark;
 }
 
 .not-found-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: $subTitle;
+  color: $textColor;
 }
 
-.dark-mode.not-found-text {
+.dark-mode .not-found-text {
   color: $subTitleDark;
 }
 

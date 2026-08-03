@@ -20,19 +20,11 @@ export default function Publications() {
         <Header />
         <main id="main-content" className="publications-container fade-in-up">
           <h1
-            className={
-              isDark ? "dark-mode publications-title" : "publications-title"
-            }
+            className="publications-title"
           >
             Publications
           </h1>
-          <p
-            className={
-              isDark
-                ? "dark-mode publications-intro"
-                : "subTitle publications-intro"
-            }
-          >
+          <p className="subTitle publications-intro">
             Papers, talks, and reports by the CHAILD team and our collaborators.
           </p>
 
@@ -49,22 +41,12 @@ export default function Publications() {
                 className="publications-section"
                 aria-label={section.title}
               >
-                <h2
-                  className={
-                    isDark
-                      ? "dark-mode publications-section-title"
-                      : "publications-section-title"
-                  }
-                >
-                  {section.title}
-                </h2>
+                <h2 className="publications-section-title">{section.title}</h2>
                 <ul className="publications-list">
                   {items.map((pub, i) => (
                     <li
                       key={`${pub.title}-${i}`}
-                      className={
-                        isDark ? "dark-mode publication" : "publication"
-                      }
+                      className="publication"
                     >
                       {pub.authors && (
                         <span className="publication-authors">

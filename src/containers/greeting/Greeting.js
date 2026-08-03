@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import emoji from "react-easy-emoji";
 import "./Greeting.scss";
 import childrenWaving from "../../assets/lottie/childrenWaving";
@@ -6,10 +6,8 @@ import childrenWavingStill from "../../assets/images/childrenWaving.svg";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import Button from "../../components/button/Button";
 import { greeting, skillsSection } from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
-  const { isDark } = useContext(StyleContext);
   const prefersReducedMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
   ).matches;
@@ -27,41 +25,20 @@ export default function Greeting() {
           <div>
             <h1
               id="greeting-heading"
-              className={isDark ? "dark-mode greeting-text" : "greeting-text"}
+              className="greeting-text"
             >
               {" "}
               {greeting.title} <span className="wave-emoji">{emoji("👋")}</span>
             </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode greeting-text-p"
-                  : "greeting-text-p subTitle"
-              }
-            >
-              {greeting.subTitle}
-            </p>
+            <p className="greeting-text-p subTitle">{greeting.subTitle}</p>
             {skillsSection.display && (
               <div id="skills" className="greeting-missions">
-                <h2
-                  className={
-                    isDark
-                      ? "dark-mode greeting-missions-heading"
-                      : "greeting-missions-heading"
-                  }
-                >
+                <h2 className="greeting-missions-heading">
                   {skillsSection.title}
                 </h2>
                 <ul className="greeting-missions-list">
                   {skillsSection.skills.map((skill, i) => (
-                    <li
-                      key={i}
-                      className={
-                        isDark
-                          ? "dark-mode greeting-mission"
-                          : "greeting-mission"
-                      }
-                    >
+                    <li key={i} className="greeting-mission">
                       <span aria-hidden="true">{emoji("⚡ ")}</span>
                       {skill}
                     </li>
