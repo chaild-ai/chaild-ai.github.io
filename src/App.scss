@@ -32,9 +32,8 @@ h6 {
   color: $textColor;
 }
 
-/* `.dark-mode` sits on the wrapper for some subtitles and on the element
-   itself for others, so this must match either way. Specificity settles it
-   against the plain `.subTitle` rule -- (0,2,0) against (0,1,0). */
+/* Wins over the plain `.subTitle` rule on specificity alone -- (0,2,0)
+   against (0,1,0) -- so no !important is needed. */
 .dark-mode .subTitle {
   color: $subTitleDark;
 }
