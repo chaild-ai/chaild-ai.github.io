@@ -4,7 +4,7 @@ import "./BlogCard.scss";
 /* headingLevel: the card sits under an <h2> on the homepage and an <h1> on
    /blog, so the level that keeps the outline unbroken differs by context and
    the page passes it. 3 is the homepage case. */
-export default function BlogCard({blog, isDark, headingLevel = 3}) {
+export default function BlogCard({blog, headingLevel = 3}) {
   const Heading = `h${headingLevel}`;
   const isExternal = Boolean(blog.url) && !blog.url.startsWith("/");
 

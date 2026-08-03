@@ -1,12 +1,10 @@
-import React, {useContext, useState} from "react";
+import React, {useState} from "react";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
-import StyleContext from "../../contexts/StyleContext";
 import {greeting, blogSection} from "../../portfolio";
 
 function Header() {
-  const {isDark} = useContext(StyleContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const viewBlog = blogSection.display;
 
@@ -75,7 +73,7 @@ function Header() {
           aria-label="Menu"
           onClick={() => setIsMenuOpen(open => !open)}
         >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
+          <span className="navicon"></span>
         </button>
         <nav aria-label="Main">
           <ul id="nav-menu" className={menuClasses}>

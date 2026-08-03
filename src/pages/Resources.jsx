@@ -187,15 +187,7 @@ export default function Resources() {
               className="resources-category"
               aria-label={category.title}
             >
-              <h2
-                className={
-                  isDark
-                    ? "dark-mode resources-category-title"
-                    : "resources-category-title"
-                }
-              >
-                {category.title}
-              </h2>
+              <h2 className="resources-category-title">{category.title}</h2>
               <ul className="resources-list">
                 {category.resources.map((resource) => (
                   <li

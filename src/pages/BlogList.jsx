@@ -107,7 +107,6 @@ export default function BlogList() {
                 filteredBlogs.map((blog, i) => (
                   <BlogCard
                     key={i}
-                    isDark={isDark}
                     headingLevel={2}
                     blog={{
                       url: `/blog/${blog.slug}`,

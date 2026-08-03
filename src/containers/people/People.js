@@ -1,35 +1,22 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./People.scss";
 import emoji from "react-easy-emoji";
 import { peopleSection } from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
 import Sparkles from "../../components/sparkles/Sparkles";
 
 export default function People() {
-  const { isDark } = useContext(StyleContext);
   if (!peopleSection.display) {
     return null;
   }
 
   const renderGroup = (group) => (
     <div key={group.title}>
-      <h3
-        className={
-          isDark
-            ? "dark-mode subTitle people-text people-group-title"
-            : "subTitle people-text people-group-title"
-        }
-      >
+      <h3 className="subTitle people-text people-group-title">
         {group.title}
       </h3>
       <ul className="people-list">
         {group.members.map((member, i) => (
-          <li
-            key={i}
-            className={
-              "subTitle people-text"
-            }
-          >
+          <li key={i} className="subTitle people-text">
             <span aria-hidden="true">{emoji("⚡ ")}</span>
             {member}
           </li>
@@ -55,13 +42,7 @@ export default function People() {
             {peopleSection.title}{" "}
             <Sparkles />
           </h2>
-          <p
-            className={
-              isDark
-                ? "dark-mode subTitle people-text-subtitle"
-                : "subTitle people-text-subtitle"
-            }
-          >
+          <p className="subTitle people-text-subtitle">
             {peopleSection.subTitle}
           </p>
           <div className="people-text-row-div">

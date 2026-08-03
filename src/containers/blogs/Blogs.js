@@ -1,13 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./Blog.scss";
 import BlogCard from "../../components/blogCard/BlogCard";
 import { blogSection } from "../../portfolio";
-import StyleContext from "../../contexts/StyleContext";
 import Sparkles from "../../components/sparkles/Sparkles";
 import { fetchAllBlogMetadata } from "../../utils/parseFrontmatter";
 
 export default function Blogs() {
-  const { isDark } = useContext(StyleContext);
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
@@ -45,7 +43,6 @@ export default function Blogs() {
             return (
               <BlogCard
                 key={i}
-                isDark={isDark}
                 blog={{
                   url: `/blog/${blog.slug}`,
                   image: blog.image,

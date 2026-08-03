@@ -24,13 +24,7 @@ export default function Publications() {
           >
             Publications
           </h1>
-          <p
-            className={
-              isDark
-                ? "dark-mode publications-intro"
-                : "subTitle publications-intro"
-            }
-          >
+          <p className="subTitle publications-intro">
             Papers, talks, and reports by the CHAILD team and our collaborators.
           </p>
 
@@ -47,15 +41,7 @@ export default function Publications() {
                 className="publications-section"
                 aria-label={section.title}
               >
-                <h2
-                  className={
-                    isDark
-                      ? "dark-mode publications-section-title"
-                      : "publications-section-title"
-                  }
-                >
-                  {section.title}
-                </h2>
+                <h2 className="publications-section-title">{section.title}</h2>
                 <ul className="publications-list">
                   {items.map((pub, i) => (
                     <li
