@@ -53,6 +53,10 @@ News posts are markdown files served from `public/content/blog/`.
    - `url` is optional: a "read more" link shown at the bottom of the post — either an external `https://` link or a site-relative path (e.g. a PDF).
    - `image` is optional: a thumbnail shown on the news card.
 
+   Start body headings at `##`, not `#`. The post title is already the page's
+   `<h1>`, so a `#` heading adds a second one and breaks the page outline for
+   screen readers.
+
 3. Add the slug to the `blogSlugs` array in `src/portfolio.js`. Posts are sorted by `date` automatically (newest first) on both the homepage and the `/blog` list, so the array order doesn't matter — just add the slug anywhere.
 4. Put any images in `public/content/blog/images/` (reference them as `/content/blog/images/<name>`) and PDFs or other documents in `public/static/media/` (reference them as `/static/media/<name>`). Use descriptive filenames, e.g. `CHAILD-white-paper-2026.pdf`.
 5. Preview locally with `npm start`, then commit and deploy (below).
