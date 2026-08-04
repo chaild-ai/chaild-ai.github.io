@@ -2,7 +2,7 @@
 title: "Our first white paper"
 description: "Missions and challenges of the CHAILD project"
 tags: ["white paper", "publication"]
-date: "2026-02-01"
+date: "2025-03-01"
 url: "/static/media/CHAILD-white-paper-1.pdf"
 ---
 

@@ -9,10 +9,10 @@ date: "2026-06-29"
 
 It was such a busy week for the CHAILD team and affiliates at [Interaction Design and Children (IDC) Conference](https://idc.acm.org/2026/) in Brighton this week.
 
-![CHAILD team standing together in front of the Brighton Pier](/content/blog/images/idc-2026-pier.JPG "CHAILD team at IDC 2026")
+![CHAILD team standing together in front of the Brighton Pier](/content/blog/images/idc-2026-pier.jpg "CHAILD team at IDC 2026")
 
 
-#  CHAILD's presentations at IDC 2026
+## CHAILD's presentations at IDC 2026
 
 The CHAILD team was well-presented in all sessions:
 
@@ -23,17 +23,17 @@ The CHAILD team was well-presented in all sessions:
 
 - On the second day, Isobel Voysey and Trisha-mae Capistrano presented their WiP [Design for the in-between moments for parents and their under 5s](https://dl.acm.org/doi/10.1145/3773077.3812174) and Sarah Turner presented her WiP [A scoping review of YP and genAI](https://dl.acm.org/doi/10.1145/3773077.3812130), with this being Trisha-mae Capistrano's first conference presentation 👏 
 
-![Wip poster](/content/blog/images/idc-2026-wip.JPG "Isobel and Trisha presenting the In-Between poster")
+![Wip poster](/content/blog/images/idc-2026-wip.jpg "Isobel and Trisha presenting the In-Between poster")
 
 - On the third day, Isobel presented our full paper on [Agency in Child–AI Interaction: A Review of How It Is Conceptualised, Studied, and Supported in HCI](https://dl.acm.org/doi/10.1145/3773077.3806105), c/o: Vidminas Vizgirda, Sarah Turner, Leslye Dias Duran, Zaki Pauzi, Manolis Mavrikis & Carina Prunkl.
 
-![Isobel presents](/content/blog/images/idc-2026-agency.JPG "Isobel presenting the agency review paper")
+![Isobel presents](/content/blog/images/idc-2026-agency.jpg "Isobel presenting the agency review paper")
 
 
 This timely paper highlights the need for agency conceptualisation clarity and the need to consider relational agency in child-centred designs. [See our earlier blog post](https://chaild.org/blog/agency-lit-review).
 
 
-# Paper highlights
+## Paper highlights
 
 1. [Training Wheels, Not Guardrails: Supporting Teen Agency Through Real-Time Online Safety Nudges for Social Media](https://dl.acm.org/doi/full/10.1145/3773077.3806123) by Zainab Agha et al.
 
