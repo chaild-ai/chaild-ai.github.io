@@ -1,5 +1,6 @@
 ---
 title: "CHAILD hosts our First Expert Roundtable on Children and Agency"
+description: "How to conceptualise and assess children's agency"
 tags: ["impact", "policy"]
 date: "2026-07-01"
 ---

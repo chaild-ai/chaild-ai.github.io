@@ -1,5 +1,6 @@
 ---
 title: "CHAILD researcher speaks at the France-Oxford-Quebec Colloquium on 'Shaping the Future of AI"
+description: "How to design for children's agency in interacting with AI companions"
 tags: ["impact", "talks"]
 date: "2026-07-19"
 ---
