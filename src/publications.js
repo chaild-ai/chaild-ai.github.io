@@ -89,6 +89,16 @@ export const publications = [
   // Presentations & talks
   {
     type: "talk",
+    year: 2025,
+    authors: "Vidminas Vizgirda",
+    title:
+      "CHAILD — Children's Agency in the Age of AI: Leveraging Interdisciplinarity",
+    venue:
+      "Computer Science Education group, University of Edinburgh, 10 November 2025",
+    post: "edinburgh-cs-ed-2025"
+  },
+  {
+    type: "talk",
     year: 2026,
     authors: "Leslye Denisse Dias Duran",
     title: "How Can AI Support Children's Agency?",
