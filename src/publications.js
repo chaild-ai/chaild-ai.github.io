@@ -132,6 +132,15 @@ export const publications = [
       "Institute of Applied Mathematics seminar, Vilnius University, 22 May 2026",
     post: "vilnius-seminar-2026"
   },
+  {
+    type: "talk",
+    year: 2026,
+    authors: "Vidminas Vizgirda",
+    title: "AI and agency: helping young people think for themselves",
+    venue: "Computing at School AI community event, online, 15 July 2026",
+    url: "https://www.computingatschool.org.uk/forum-news-blogs/2026/july/ai-and-agency-helping-young-people-think-for-themselves-cas-ai-event/",
+    post: "cas-ai-webinar-2026"
+  },
 
   // Policy reports
   {
