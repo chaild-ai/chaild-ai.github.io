@@ -103,6 +103,15 @@ export const publications = [
     venue: "MPLS Researcher Conference: AI & Ethics, University of Oxford",
     post: "mpls-ai-ethics-conf"
   },
+  {
+    type: "talk",
+    year: 2026,
+    authors: "Vidminas Vizgirda",
+    title: "Child-Centred AI-Mediated Collaborative Agency by Design",
+    venue: "SICSA Pre-CHI Day 2026, University of Stirling, 1 April 2026",
+    url: "https://sicsa.ac.uk/events/pre-chi-day-2026/",
+    post: "sicsa-pre-chi-2026"
+  },
 
   // Policy reports
   {
