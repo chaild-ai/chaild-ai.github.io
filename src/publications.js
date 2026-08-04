@@ -137,9 +137,9 @@ export const publications = [
     year: 2026,
     authors: "Vidminas Vizgirda",
     title:
-      "Artificial intelligence in the study process: challenges and solutions",
+      "Vaikų ir paauglių agentiškumas sąveikaujant su generatyviniu DI (Children's and teenagers' agency when interacting with generative AI)",
     venue:
-      "Institute of Applied Mathematics seminar, Vilnius University, 22 May 2026",
+      "Institute of Applied Mathematics seminar series on AI in the study process, Vilnius University, 22 May 2026",
     post: "vilnius-seminar-2026"
   },
   {
