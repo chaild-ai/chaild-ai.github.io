@@ -44,10 +44,10 @@ const resourceCategories = [
           "Ready-to-teach lessons from Common Sense Education on AI's benefits, risks, and responsible use."
       },
       {
-        name: "Media literacy in the age of AI",
-        url: "https://experience-ai.org/en/units/ai-safety/lessons/10",
+        name: "Our Futures and AI: A Youth Work Toolkit",
+        url: "https://www.youthlink.scot/wp-content/uploads/AI-Toolkit-Digital-Youth-Work.pdf",
         description:
-          "A classroom lesson on recognising and critically evaluating AI-generated content."
+          "Activities and guidance for exploring AI with young people, co-created with them and published by YouthLink Scotland."
       }
     ]
   },
