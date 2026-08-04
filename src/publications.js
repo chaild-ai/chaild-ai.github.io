@@ -122,6 +122,16 @@ export const publications = [
       "Beyond the Classroom, Trinity College, University of Oxford, 5 May 2026",
     post: "beyond-the-classroom-2026"
   },
+  {
+    type: "talk",
+    year: 2026,
+    authors: "Vidminas Vizgirda",
+    title:
+      "Artificial intelligence in the study process: challenges and solutions",
+    venue:
+      "Institute of Applied Mathematics seminar, Vilnius University, 22 May 2026",
+    post: "vilnius-seminar-2026"
+  },
 
   // Policy reports
   {
