@@ -112,6 +112,16 @@ export const publications = [
     url: "https://sicsa.ac.uk/events/pre-chi-day-2026/",
     post: "sicsa-pre-chi-2026"
   },
+  {
+    type: "talk",
+    year: 2026,
+    authors: "Vidminas Vizgirda, Isobel Voysey, Jun Zhao",
+    title:
+      "Computer Science & Philosophy: be in Control when Using AI applications",
+    venue:
+      "Beyond the Classroom, Trinity College, University of Oxford, 5 May 2026",
+    post: "beyond-the-classroom-2026"
+  },
 
   // Policy reports
   {
