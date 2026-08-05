@@ -38,4 +38,4 @@ Agency and autonomy came up many times across the conference (we were, of course
 
 ## What's next
 
-Following the workshop, a call for papers is open for a special issue on Agency in Child-AI Interaction in the [International Journal of Child-Computer Interaction](https://www.sciencedirect.com/journal/international-journal-of-child-computer-interaction), covering agency broadly — not just collaborative agency. Several related workshops are also coming up at [IDC 2026](https://idc.acm.org/2026/attending/accepted-workshops/) in June, and the conversation continues on the [CAMCAD community Discord](https://discord.gg/6kuHZdetEJ).
+Following the workshop, a call for papers is open for a [special issue on Agency in Child-AI Interaction](/blog/ijcci-special-issue-2026) in the International Journal of Child-Computer Interaction, covering agency broadly — not just collaborative agency. Several related workshops are also coming up at [IDC 2026](https://idc.acm.org/2026/attending/accepted-workshops/) in June, and the conversation continues on the [CAMCAD community Discord](https://discord.gg/6kuHZdetEJ).
