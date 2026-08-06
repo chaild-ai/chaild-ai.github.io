@@ -9,8 +9,8 @@ On 15 January 2026, members of the CHAILD team attended the MPLS Researcher Conf
 
 ![Leslye and Isobel standing in front of a poster signalling University of Oxford MPLS Researcher Conference AI and Ethics](/content/blog/images/mpls-2026-poster.jpeg)
 
-Leslye Dias Duran received a prize for her presentation on *How can AI support children's agency?*, with the judges appreciating a philosopher's perspective.
+Leslye Dias Duran received a prize for her presentation *How Can AI Support Children's Agency?*, with the judges appreciating a philosopher's perspective.
 
-Isobel Voysey shared about the new youth advisory group, which received interest from several researchers looking to consult with the group, from departments including Chemistry and Astrophysics.
+Isobel Voysey introduced the new youth advisory group in *Young voices in AI research: Piloting an MPLS-wide youth advisory group*. Several researchers expressed interest in consulting with the group, from departments including Chemistry and Astrophysics.
 
 Additionally, Prof. Sir Nigel Shadbolt was involved in a stimulating roundtable discussion on responsible AI in science and the future of research careers.
