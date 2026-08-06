@@ -2,7 +2,9 @@
  * CHAILD publications, talks, and reports.
  *
  * This is the single place to edit the Publications page. Each entry:
- *   type    - "paper" | "talk" | "policy" | "report" (controls the section)
+ *   type    - "paper" | "talk" | "workshop" | "policy" (controls the section).
+ *             "workshop" covers sessions we ran and the reports they produced;
+ *             a paper presented at someone else's workshop is a "paper".
  *   year    - publication year (controls ordering within a section)
  *   authors - author list as it should be cited (optional)
  *   title   - work title
@@ -105,21 +107,6 @@ export const publications = [
       {
         label: "Event page",
         url: "https://www.digital-futures-for-children.net/events/IDC-2026"
-      }
-    ]
-  },
-  {
-    type: "paper",
-    year: 2025,
-    authors: "Manolis Mavrikis and Eirini Geraniou",
-    title:
-      "Crafting AI-supported Exploratory Learning Activities for the Mathematics Classroom",
-    venue:
-      "17th International Conference on Technology in Mathematics Teaching (ICTMT 17), London, 21–23 October 2025",
-    links: [
-      {
-        label: "Programme",
-        url: "https://ictmt17.org.uk/workshop-program/"
       }
     ]
   },
@@ -264,6 +251,54 @@ export const publications = [
     post: "cas-ai-webinar-2026"
   },
 
+  // Workshops we ran, and the reports that came out of them
+  {
+    type: "workshop",
+    year: 2026,
+    authors:
+      "Vidminas Vizgirda, Hawra Rabaan, Jianing Wang, Khadija El Aadmi Laamech, and Christina Detsika",
+    title: "Final report from the CAMCAD workshop at CHI 2026",
+    venue: "CAMCAD Workshop at CHI 2026, Barcelona, Spain, 16 April 2026",
+    links: [
+      {
+        label: "Report",
+        url: "https://oxfordhcc.github.io/CAMCAD/report/"
+      }
+    ],
+    post: "chaild-at-chi-2026"
+  },
+  {
+    type: "workshop",
+    year: 2026,
+    authors:
+      "Pattie Maes, Pat Pataranutaporn, Valdemar Danry, Auren Liu, and colleagues (incl. Vidminas Vizgirda and Isobel Voysey)",
+    title:
+      "Towards Open Benchmarks for Human Flourishing with AI: Report of the October '25 Workshop and Next Steps",
+    venue: "MIT Media Lab",
+    links: [
+      {
+        label: "Report",
+        url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/"
+      }
+    ],
+    post: "aha-benchmarks-report"
+  },
+  {
+    type: "workshop",
+    year: 2025,
+    authors: "Manolis Mavrikis and Eirini Geraniou",
+    title:
+      "Crafting AI-supported Exploratory Learning Activities for the Mathematics Classroom",
+    venue:
+      "17th International Conference on Technology in Mathematics Teaching (ICTMT 17), London, 21–23 October 2025",
+    links: [
+      {
+        label: "Programme",
+        url: "https://ictmt17.org.uk/workshop-program/"
+      }
+    ]
+  },
+
   // Policy reports
   {
     type: "policy",
@@ -320,39 +355,6 @@ export const publications = [
         url: "https://hdr.undp.org/content/human-development-report-2025"
       }
     ]
-  },
-
-  // Other reports
-  {
-    type: "report",
-    year: 2026,
-    authors:
-      "Vidminas Vizgirda, Hawra Rabaan, Jianing Wang, Khadija El Aadmi Laamech, and Christina Detsika",
-    title: "Final report from the CAMCAD workshop at CHI 2026",
-    venue: "CAMCAD Workshop at CHI 2026, Barcelona, Spain, 16 April 2026",
-    links: [
-      {
-        label: "Report",
-        url: "https://oxfordhcc.github.io/CAMCAD/report/"
-      }
-    ],
-    post: "chaild-at-chi-2026"
-  },
-  {
-    type: "report",
-    year: 2026,
-    authors:
-      "Pattie Maes, Pat Pataranutaporn, Valdemar Danry, Auren Liu, and colleagues (incl. Vidminas Vizgirda and Isobel Voysey)",
-    title:
-      "Towards Open Benchmarks for Human Flourishing with AI: Report of the October '25 Workshop and Next Steps",
-    venue: "MIT Media Lab",
-    links: [
-      {
-        label: "Report",
-        url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/"
-      }
-    ],
-    post: "aha-benchmarks-report"
   }
 ];
 
@@ -360,6 +362,6 @@ export const publications = [
 export const publicationSections = [
   { type: "paper", title: "Papers and accepted work" },
   { type: "talk", title: "Presentations & talks" },
-  { type: "policy", title: "Policy reports" },
-  { type: "report", title: "Other reports" }
+  { type: "workshop", title: "Workshops" },
+  { type: "policy", title: "Policy reports" }
 ];
