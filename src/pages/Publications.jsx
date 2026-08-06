@@ -7,6 +7,9 @@ import { useDarkTheme } from "../hooks/useDarkTheme";
 import { publications, publicationSections } from "../publications";
 import "./Publications.scss";
 
+// Ignore leading punctuation so a quoted title sorts under its first letter.
+const titleKey = (title) => title.replace(/^[^A-Za-z0-9]+/, "");
+
 export default function Publications() {
   const [isDark, toggleTheme] = useDarkTheme();
 
@@ -29,9 +32,17 @@ export default function Publications() {
           </p>
 
           {publicationSections.map((section) => {
+            // Newest first, then by title, so an entry lands in the same place
+            // wherever it is added to the array. Dates are "YYYY-MM" or bare
+            // "YYYY", which sorts last in its year — exactly where an entry
+            // with an unknown month belongs.
             const items = publications
               .filter((p) => p.type === section.type)
-              .sort((a, b) => b.year - a.year);
+              .sort(
+                (a, b) =>
+                  b.date.localeCompare(a.date) ||
+                  titleKey(a.title).localeCompare(titleKey(b.title))
+              );
             if (items.length === 0) {
               return null;
             }
@@ -55,7 +66,9 @@ export default function Publications() {
                           {pub.authors}{" "}
                         </span>
                       )}
-                      <span className="publication-year">({pub.year}). </span>
+                      <span className="publication-year">
+                        ({pub.date.slice(0, 4)}){". "}
+                      </span>
                       <span className="publication-work-title">
                         {pub.title}
                       </span>

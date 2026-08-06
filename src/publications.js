@@ -5,7 +5,9 @@
  *   type    - "paper" | "talk" | "workshop" | "policy" (controls the section).
  *             "workshop" covers sessions we ran and the reports they produced;
  *             a paper presented at someone else's workshop is a "paper".
- *   year    - publication year (controls ordering within a section)
+ *   date    - "YYYY-MM", or bare "YYYY" when the month is unknown. Sections
+ *             list newest first, then by title, so a new entry can go
+ *             anywhere in this array. Only the year is displayed.
  *   authors - author list as it should be cited (optional)
  *   title   - work title
  *   venue   - where it appeared (optional)
@@ -21,7 +23,7 @@ export const publications = [
   // Papers and accepted work
   {
     type: "paper",
-    year: 2026,
+    date: "2026-06",
     authors:
       "Isobel Voysey, Vidminas Vizgirda, Sarah Turner, Leslye Denisse Dias Duran, Zaki Pauzi, Manolis Mavrikis, Carina Prunkl, and Jun Zhao",
     title:
@@ -33,7 +35,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-04",
     authors:
       "Vidminas Vizgirda, Isobel Voysey, Zaki Pauzi, Najme Babai, Eva Durall Gazulla, Jane Waite, Ayça Atabey, Sarah Turner, Manolis Mavrikis, and Jun Zhao",
     title: "Child-Centred AI-Mediated Collaborative Agency by Design",
@@ -44,7 +46,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-06",
     authors: "Zaki Pauzi and Manolis Mavrikis",
     title:
       "Should Machines Get to Judge? Rethinking the Design of AI-Mediated Assessment in Education",
@@ -54,7 +56,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-06",
     authors:
       "Zaki Pauzi, Vidminas Vizgirda, Leslye Denisse Dias Duran, and Manolis Mavrikis",
     title: "Towards Evaluating Student Agency in AI-Mediated Learning",
@@ -64,7 +66,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-07",
     authors: "Leslye Denisse Dias Duran and Isobel Voysey",
     title: "Friction as Support for Children's Agency",
     venue:
@@ -78,7 +80,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-05",
     authors: "Jan Hauters, Manolis Mavrikis, and Kaśka Porayska-Pomsta",
     title:
       "'Agency,' Because it Sounds Ethical: Interrogating Buzz in AI Ethics Literacy Through a Delphi Study",
@@ -87,7 +89,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-06",
     authors:
       "Vidminas Vizgirda, Isobel Voysey, Leslye Denisse Dias Duran, Zaki Pauzi, Sarah Turner, Carina Prunkl, Manolis Mavrikis, and Jun Zhao",
     title: "Side-by-side LLM outputs encourage choice, supporting teens' agency",
@@ -97,7 +99,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2026,
+    date: "2026-06",
     authors:
       "Vidminas Vizgirda, Isobel Voysey, Leslye Denisse Dias Duran, Zaki Pauzi, Sarah Turner, Carina Prunkl, Manolis Mavrikis, and Jun Zhao",
     title: "Side-by-side LLM outputs support choice and teens' agency",
@@ -112,7 +114,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2025,
+    date: "2025-07",
     authors: "Zaki Pauzi, Michael Dodman, and Manolis Mavrikis",
     title: "Automating Pedagogical Evaluation of LLM-based Conversational Agents",
     venue:
@@ -130,7 +132,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2025,
+    date: "2025-06",
     authors: "Isobel Voysey and Jun Zhao",
     title:
       "Defining and supporting children's agency within the context of a datafied childhood",
@@ -139,7 +141,7 @@ export const publications = [
   },
   {
     type: "paper",
-    year: 2025,
+    date: "2025-06",
     authors: "Isobel Voysey and Jun Zhao",
     title: "Playfulness and agency in child-AI systems",
     venue:
@@ -149,7 +151,7 @@ export const publications = [
   // Presentations & talks
   {
     type: "talk",
-    year: 2025,
+    date: "2025-09",
     authors: "Manolis Mavrikis and Jun Zhao",
     title:
       "Children's Agency in AIED: early insights from the UKRI-funded project CHAILD",
@@ -164,7 +166,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2025,
+    date: "2025-11",
     authors: "Vidminas Vizgirda",
     title:
       "CHAILD — Children's Agency in the Age of AI: Leveraging Interdisciplinarity",
@@ -174,7 +176,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-01",
     authors: "Leslye Denisse Dias Duran",
     title: "How Can AI Support Children's Agency?",
     venue: "MPLS Researcher Conference: AI & Ethics, University of Oxford",
@@ -182,7 +184,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-01",
     authors: "Isobel Voysey",
     title: "Young voices in AI research: Piloting an MPLS-wide youth advisory group",
     venue: "MPLS Researcher Conference: AI & Ethics, University of Oxford",
@@ -190,7 +192,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-04",
     authors: "Vidminas Vizgirda",
     title: "Child-Centred AI-Mediated Collaborative Agency by Design",
     venue: "SICSA Pre-CHI Day 2026, University of Stirling, 1 April 2026",
@@ -204,7 +206,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-05",
     authors: "Vidminas Vizgirda, Isobel Voysey, Jun Zhao",
     title:
       "Computer Science & Philosophy: be in Control when Using AI applications",
@@ -214,7 +216,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-05",
     authors: "Vidminas Vizgirda",
     title:
       "Vaikų ir paauglių agentiškumas sąveikaujant su generatyviniu DI (Children's and teenagers' agency when interacting with generative AI)",
@@ -230,7 +232,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-06",
     authors: "Leslye Denisse Dias Duran",
     title: "Children's Agency and AI",
     venue:
@@ -238,7 +240,7 @@ export const publications = [
   },
   {
     type: "talk",
-    year: 2026,
+    date: "2026-07",
     authors: "Vidminas Vizgirda",
     title: "AI and agency: helping young people think for themselves",
     venue: "Computing at School AI community event, online, 15 July 2026",
@@ -254,7 +256,7 @@ export const publications = [
   // Workshops we ran, and the reports that came out of them
   {
     type: "workshop",
-    year: 2026,
+    date: "2026-04",
     authors:
       "Vidminas Vizgirda, Hawra Rabaan, Jianing Wang, Khadija El Aadmi Laamech, and Christina Detsika",
     title: "Final report from the CAMCAD workshop at CHI 2026",
@@ -269,7 +271,7 @@ export const publications = [
   },
   {
     type: "workshop",
-    year: 2026,
+    date: "2026-05",
     authors:
       "Pattie Maes, Pat Pataranutaporn, Valdemar Danry, Auren Liu, and colleagues (incl. Vidminas Vizgirda and Isobel Voysey)",
     title:
@@ -285,7 +287,7 @@ export const publications = [
   },
   {
     type: "workshop",
-    year: 2025,
+    date: "2025-10",
     authors: "Manolis Mavrikis and Eirini Geraniou",
     title:
       "Crafting AI-supported Exploratory Learning Activities for the Mathematics Classroom",
@@ -302,7 +304,7 @@ export const publications = [
   // Policy reports
   {
     type: "policy",
-    year: 2026,
+    date: "2026-01",
     title:
       "A Rapid Review of AI Literacy Frameworks, with Policy Recommendations",
     authors: "Veli Hillman, Wayne Holmes, and Tania Duarte",
@@ -317,7 +319,7 @@ export const publications = [
   },
   {
     type: "policy",
-    year: 2026,
+    date: "2026-02",
     title: "International AI Safety Report 2026",
     venue:
       "Chaired by Yoshua Bengio and written by over 100 independent experts, overseen by an Expert Advisory Panel nominated by more than 30 countries and intergovernmental organisations. Carina Prunkl is one of its two lead writers.",
@@ -325,13 +327,13 @@ export const publications = [
   },
   {
     type: "policy",
-    year: 2026,
+    date: "2026",
     title:
       "Joint letter to the UK Prime Minister on the UK social media policy for under-16s"
   },
   {
     type: "policy",
-    year: 2025,
+    date: "2025-11",
     title: "Joint Statement on Artificial Intelligence and the Rights of the Child",
     venue:
       "Led by the International Telecommunication Union with UNICEF, UNESCO, the ILO and the UN Committee on the Rights of the Child, and co-signed by over 50 organisations. Contributed to by the Oxford Child-Centred AI group.",
@@ -344,7 +346,7 @@ export const publications = [
   },
   {
     type: "policy",
-    year: 2025,
+    date: "2025-05",
     title:
       "Human Development Report 2025 — A matter of choice: People and possibilities in the age of AI",
     venue:
