@@ -63,30 +63,86 @@ export const publications = [
     authors: "Leslye Denisse Dias Duran and Isobel Voysey",
     title: "Friction as Support for Children's Agency",
     venue:
-      "Workshops at the Fourth International Conference on Hybrid Human–Artificial Intelligence (HHAI-WS 2026), Brussels, Belgium"
+      "Third Frictional Design in Hybrid Human-AI Systems workshop at the Fifth International Conference on Hybrid Human–Artificial Intelligence (HHAI 2026), Brussels, Belgium, 7 July 2026",
+    url: "https://sites.google.com/view/frictional-ai/home"
   },
   {
     type: "paper",
-    year: 2025,
-    authors: "M. Mavrikis and E. Geraniou",
+    year: 2026,
+    authors: "Jan Hauters, Manolis Mavrikis, and Kaśka Porayska-Pomsta",
     title:
-      "Crafting AI-supported Exploratory Learning Activities for the Mathematics Classroom"
+      "'Agency,' Because it Sounds Ethical: Interrogating Buzz in AI Ethics Literacy Through a Delphi Study",
+    venue:
+      "2nd International Conference on Artificial Intelligence and Education (ICAIE 2026), Taicang, China, 13–15 May 2026"
+  },
+  {
+    type: "paper",
+    year: 2026,
+    authors:
+      "Vidminas Vizgirda, Isobel Voysey, Leslye Denisse Dias Duran, Zaki Pauzi, Sarah Turner, Carina Prunkl, Manolis Mavrikis, and Jun Zhao",
+    title: "Side-by-side LLM outputs encourage choice, supporting teens' agency",
+    venue:
+      "Proceedings of the 2nd Workshop on C3AI: Where Do Trust, Design, and Evaluation Meet in Child–AI Interaction? (C3AI '26), co-located with the 25th ACM Interaction Design and Children Conference (IDC '26), Brighton, United Kingdom, 22–25 June 2026, 5 pages",
+    url: "https://c3aiidc26.di.uniba.it/"
+  },
+  {
+    type: "paper",
+    year: 2026,
+    authors:
+      "Vidminas Vizgirda, Isobel Voysey, Leslye Denisse Dias Duran, Zaki Pauzi, Sarah Turner, Carina Prunkl, Manolis Mavrikis, and Jun Zhao",
+    title: "Side-by-side LLM outputs support choice and teens' agency",
+    venue:
+      "Poster presented at the Designing ethical and rights-respecting child-centred AI for learning workshop, co-located with the 25th ACM Interaction Design and Children Conference (IDC '26), Brighton, United Kingdom, 22–25 June 2026",
+    url: "https://www.digital-futures-for-children.net/events/IDC-2026"
   },
   {
     type: "paper",
     year: 2025,
-    authors: "Z. Pauzi, M. Dodman, and M. Mavrikis",
-    title: "Automating Pedagogical Evaluation of LLM-based Conversational Agents"
-  },
-  {
-    type: "paper",
-    year: 2025,
-    authors: "I. Voysey and J. Zhao",
+    authors: "Manolis Mavrikis and Eirini Geraniou",
     title:
-      "Defining and supporting children's agency within the context of a datafied childhood"
+      "Crafting AI-supported Exploratory Learning Activities for the Mathematics Classroom",
+    venue:
+      "17th International Conference on Technology in Mathematics Teaching (ICTMT 17), London, 21–23 October 2025",
+    url: "https://ictmt17.org.uk/workshop-program/"
+  },
+  {
+    type: "paper",
+    year: 2025,
+    authors: "Zaki Pauzi, Michael Dodman, and Manolis Mavrikis",
+    title: "Automating Pedagogical Evaluation of LLM-based Conversational Agents",
+    venue:
+      "Proceedings of the Second Workshop on Automated Evaluation of Learning and Assessment Content (EvalLAC 2025), co-located with AIED 2025, Palermo, Italy",
+    url: "https://discovery.ucl.ac.uk/id/eprint/10212920/"
+  },
+  {
+    type: "paper",
+    year: 2025,
+    authors: "Isobel Voysey and Jun Zhao",
+    title:
+      "Defining and supporting children's agency within the context of a datafied childhood",
+    venue:
+      "Grasping Data workshop at the 24th Annual ACM Interaction Design and Children Conference (IDC '25), Reykjavík, Iceland"
+  },
+  {
+    type: "paper",
+    year: 2025,
+    authors: "Isobel Voysey and Jun Zhao",
+    title: "Playfulness and agency in child-AI systems",
+    venue:
+      "Designing Playful and Ethical Child-AI Systems workshop at the 24th Annual ACM Interaction Design and Children Conference (IDC '25), Reykjavík, Iceland"
   },
 
   // Presentations & talks
+  {
+    type: "talk",
+    year: 2025,
+    authors: "Manolis Mavrikis and Jun Zhao",
+    title:
+      "Children's Agency in AIED: early insights from the UKRI-funded project CHAILD",
+    venue:
+      "AIEOU Collaborator Conference, AI in Education at Oxford University, 16 September 2025",
+    url: "https://www.education.ox.ac.uk/news/global-experts-unite-at-ai-in-education-conference/"
+  },
   {
     type: "talk",
     year: 2025,
@@ -140,7 +196,16 @@ export const publications = [
       "Vaikų ir paauglių agentiškumas sąveikaujant su generatyviniu DI (Children's and teenagers' agency when interacting with generative AI)",
     venue:
       "Institute of Applied Mathematics seminar series on AI in the study process, Vilnius University, 22 May 2026",
+    url: "https://mif.vu.lt/lt3/kas-vyksta-fakultete/naujienos/renginiai/5429-tmi-seminaras-%E2%80%9Edirbtinio-intelekto-naudojimas-studij%C5%B3-procese-i%C5%A1%C5%A1%C5%ABkiai-ir-sprendimo-b%C5%ABdai%E2%80%9C-2",
     post: "vilnius-seminar-2026"
+  },
+  {
+    type: "talk",
+    year: 2026,
+    authors: "Leslye Denisse Dias Duran",
+    title: "Children's Agency and AI",
+    venue:
+      "UKRI AI Centre for Doctoral Training in Safe Artificial Intelligence Systems (SAINTS), University of York, held in Scarborough, 30 June – 1 July 2026"
   },
   {
     type: "talk",
@@ -156,16 +221,19 @@ export const publications = [
   {
     type: "policy",
     year: 2026,
-    title: "A Rapid Review of AI Literacy Frameworks",
-    authors: "Hillman et al.",
-    venue: "The Royal Society",
+    title:
+      "A Rapid Review of AI Literacy Frameworks, with Policy Recommendations",
+    authors: "Veli Hillman, Wayne Holmes, and Tania Duarte",
+    venue: "Prepared for the Royal Society, London",
     url: "https://royalsociety.org/-/media/policy/projects/ai-in-education/hillman-et-al-a-rapid-review-of-ai-literacy-frameworks.pdf",
     post: "royal-society-2026"
   },
   {
     type: "policy",
     year: 2026,
-    title: "International AI Safety Report",
+    title: "International AI Safety Report 2026",
+    venue:
+      "Chaired by Yoshua Bengio and written by over 100 independent experts, overseen by an Expert Advisory Panel nominated by more than 30 countries and intergovernmental organisations. Carina Prunkl is one of its two lead writers.",
     url: "https://internationalaisafetyreport.org"
   },
   {
@@ -178,13 +246,18 @@ export const publications = [
     type: "policy",
     year: 2025,
     title: "Joint Statement on Artificial Intelligence and the Rights of the Child",
-    venue: "Contributed to by the Oxford Child-Centred AI group"
+    venue:
+      "Led by the International Telecommunication Union with UNICEF, UNESCO, the ILO and the UN Committee on the Rights of the Child, and co-signed by over 50 organisations. Contributed to by the Oxford Child-Centred AI group.",
+    url: "https://www.itu.int/hub/publication/d-str-cyb_joint-2025/"
   },
   {
     type: "policy",
     year: 2025,
-    title: "UNDP Development Report 2025",
-    venue: "United Nations Development Programme"
+    title:
+      "Human Development Report 2025 — A matter of choice: People and possibilities in the age of AI",
+    venue:
+      "United Nations Development Programme. Carina Prunkl informed the report's discussion of autonomy and agency, and contributed a spotlight article on workers' agency.",
+    url: "https://hdr.undp.org/content/human-development-report-2025"
   },
 
   // Other reports
