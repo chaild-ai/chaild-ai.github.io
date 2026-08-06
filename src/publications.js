@@ -7,7 +7,10 @@
  *   authors - author list as it should be cited (optional)
  *   title   - work title
  *   venue   - where it appeared (optional)
- *   url     - external link, e.g. a DOI or report page (optional)
+ *   links   - external links as [{ label, url }, ...] (optional). Label by
+ *             what the destination is: DOI, Report, Event page. Where two
+ *             links are the same kind, name the source instead, since the
+ *             kind no longer tells them apart.
  *   post    - slug of a related news post in /public/content/blog (optional).
  *             More than one entry may link to the same post — e.g. both
  *             MPLS talks below link to "mpls-ai-ethics-conf".
@@ -23,7 +26,7 @@ export const publications = [
       "Agency in Child–AI Interaction: A Review of How It Is Conceptualised, Studied, and Supported in HCI",
     venue:
       "Proceedings of the 25th Annual ACM Interaction Design and Children Conference (IDC '26), 573–587",
-    url: "https://doi.org/10.1145/3773077.3806105",
+    links: [{ label: "DOI", url: "https://doi.org/10.1145/3773077.3806105" }],
     post: "agency-lit-review"
   },
   {
@@ -34,7 +37,7 @@ export const publications = [
     title: "Child-Centred AI-Mediated Collaborative Agency by Design",
     venue:
       "Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26), Article 928, 1–5",
-    url: "https://doi.org/10.1145/3772363.3778754",
+    links: [{ label: "DOI", url: "https://doi.org/10.1145/3772363.3778754" }],
     post: "chaild-at-chi-2026"
   },
   {
@@ -45,7 +48,7 @@ export const publications = [
       "Should Machines Get to Judge? Rethinking the Design of AI-Mediated Assessment in Education",
     venue:
       "Companion Publication of the 2026 ACM Designing Interactive Systems Conference (DIS '26 Companion), 171–175",
-    url: "https://doi.org/10.1145/3802974.3809410"
+    links: [{ label: "DOI", url: "https://doi.org/10.1145/3802974.3809410" }]
   },
   {
     type: "paper",
@@ -55,7 +58,7 @@ export const publications = [
     title: "Towards Evaluating Student Agency in AI-Mediated Learning",
     venue:
       "Companion Publication of the 2026 ACM Designing Interactive Systems Conference (DIS '26 Companion), 221–225",
-    url: "https://doi.org/10.1145/3802974.3809419"
+    links: [{ label: "DOI", url: "https://doi.org/10.1145/3802974.3809419" }]
   },
   {
     type: "paper",
@@ -64,7 +67,12 @@ export const publications = [
     title: "Friction as Support for Children's Agency",
     venue:
       "Third Frictional Design in Hybrid Human-AI Systems workshop at the Fifth International Conference on Hybrid Human–Artificial Intelligence (HHAI 2026), Brussels, Belgium, 7 July 2026",
-    url: "https://sites.google.com/view/frictional-ai/home"
+    links: [
+      {
+        label: "Event page",
+        url: "https://sites.google.com/view/frictional-ai/home"
+      }
+    ]
   },
   {
     type: "paper",
@@ -83,7 +91,7 @@ export const publications = [
     title: "Side-by-side LLM outputs encourage choice, supporting teens' agency",
     venue:
       "Proceedings of the 2nd Workshop on C3AI: Where Do Trust, Design, and Evaluation Meet in Child–AI Interaction? (C3AI '26), co-located with the 25th ACM Interaction Design and Children Conference (IDC '26), Brighton, United Kingdom, 22–25 June 2026, 5 pages",
-    url: "https://c3aiidc26.di.uniba.it/"
+    links: [{ label: "Event page", url: "https://c3aiidc26.di.uniba.it/" }]
   },
   {
     type: "paper",
@@ -93,7 +101,12 @@ export const publications = [
     title: "Side-by-side LLM outputs support choice and teens' agency",
     venue:
       "Poster presented at the Designing ethical and rights-respecting child-centred AI for learning workshop, co-located with the 25th ACM Interaction Design and Children Conference (IDC '26), Brighton, United Kingdom, 22–25 June 2026",
-    url: "https://www.digital-futures-for-children.net/events/IDC-2026"
+    links: [
+      {
+        label: "Event page",
+        url: "https://www.digital-futures-for-children.net/events/IDC-2026"
+      }
+    ]
   },
   {
     type: "paper",
@@ -103,7 +116,12 @@ export const publications = [
       "Crafting AI-supported Exploratory Learning Activities for the Mathematics Classroom",
     venue:
       "17th International Conference on Technology in Mathematics Teaching (ICTMT 17), London, 21–23 October 2025",
-    url: "https://ictmt17.org.uk/workshop-program/"
+    links: [
+      {
+        label: "Programme",
+        url: "https://ictmt17.org.uk/workshop-program/"
+      }
+    ]
   },
   {
     type: "paper",
@@ -112,7 +130,16 @@ export const publications = [
     title: "Automating Pedagogical Evaluation of LLM-based Conversational Agents",
     venue:
       "Proceedings of the Second Workshop on Automated Evaluation of Learning and Assessment Content (EvalLAC 2025), co-located with AIED 2025, Palermo, Italy",
-    url: "https://discovery.ucl.ac.uk/id/eprint/10212920/"
+    links: [
+      {
+        label: "CEUR-WS",
+        url: "https://ceur-ws.org/Vol-4006/paper3short.pdf"
+      },
+      {
+        label: "UCL Discovery",
+        url: "https://discovery.ucl.ac.uk/id/eprint/10212920/"
+      }
+    ]
   },
   {
     type: "paper",
@@ -141,7 +168,12 @@ export const publications = [
       "Children's Agency in AIED: early insights from the UKRI-funded project CHAILD",
     venue:
       "AIEOU Collaborator Conference, AI in Education at Oxford University, 16 September 2025",
-    url: "https://www.education.ox.ac.uk/news/global-experts-unite-at-ai-in-education-conference/"
+    links: [
+      {
+        label: "Event page",
+        url: "https://www.education.ox.ac.uk/news/global-experts-unite-at-ai-in-education-conference/"
+      }
+    ]
   },
   {
     type: "talk",
@@ -175,7 +207,12 @@ export const publications = [
     authors: "Vidminas Vizgirda",
     title: "Child-Centred AI-Mediated Collaborative Agency by Design",
     venue: "SICSA Pre-CHI Day 2026, University of Stirling, 1 April 2026",
-    url: "https://sicsa.ac.uk/events/pre-chi-day-2026/",
+    links: [
+      {
+        label: "Event page",
+        url: "https://sicsa.ac.uk/events/pre-chi-day-2026/"
+      }
+    ],
     post: "sicsa-pre-chi-2026"
   },
   {
@@ -196,7 +233,12 @@ export const publications = [
       "Vaikų ir paauglių agentiškumas sąveikaujant su generatyviniu DI (Children's and teenagers' agency when interacting with generative AI)",
     venue:
       "Institute of Applied Mathematics seminar series on AI in the study process, Vilnius University, 22 May 2026",
-    url: "https://mif.vu.lt/lt3/kas-vyksta-fakultete/naujienos/renginiai/5429-tmi-seminaras-%E2%80%9Edirbtinio-intelekto-naudojimas-studij%C5%B3-procese-i%C5%A1%C5%A1%C5%ABkiai-ir-sprendimo-b%C5%ABdai%E2%80%9C-2",
+    links: [
+      {
+        label: "Event page",
+        url: "https://mif.vu.lt/lt3/kas-vyksta-fakultete/naujienos/renginiai/5429-tmi-seminaras-%E2%80%9Edirbtinio-intelekto-naudojimas-studij%C5%B3-procese-i%C5%A1%C5%A1%C5%ABkiai-ir-sprendimo-b%C5%ABdai%E2%80%9C-2"
+      }
+    ],
     post: "vilnius-seminar-2026"
   },
   {
@@ -213,7 +255,12 @@ export const publications = [
     authors: "Vidminas Vizgirda",
     title: "AI and agency: helping young people think for themselves",
     venue: "Computing at School AI community event, online, 15 July 2026",
-    url: "https://www.computingatschool.org.uk/forum-news-blogs/2026/july/ai-and-agency-helping-young-people-think-for-themselves-cas-ai-event/",
+    links: [
+      {
+        label: "Event page",
+        url: "https://www.computingatschool.org.uk/forum-news-blogs/2026/july/ai-and-agency-helping-young-people-think-for-themselves-cas-ai-event/"
+      }
+    ],
     post: "cas-ai-webinar-2026"
   },
 
@@ -225,7 +272,12 @@ export const publications = [
       "A Rapid Review of AI Literacy Frameworks, with Policy Recommendations",
     authors: "Veli Hillman, Wayne Holmes, and Tania Duarte",
     venue: "Prepared for the Royal Society, London",
-    url: "https://royalsociety.org/-/media/policy/projects/ai-in-education/hillman-et-al-a-rapid-review-of-ai-literacy-frameworks.pdf",
+    links: [
+      {
+        label: "Report",
+        url: "https://royalsociety.org/-/media/policy/projects/ai-in-education/hillman-et-al-a-rapid-review-of-ai-literacy-frameworks.pdf"
+      }
+    ],
     post: "royal-society-2026"
   },
   {
@@ -234,7 +286,7 @@ export const publications = [
     title: "International AI Safety Report 2026",
     venue:
       "Chaired by Yoshua Bengio and written by over 100 independent experts, overseen by an Expert Advisory Panel nominated by more than 30 countries and intergovernmental organisations. Carina Prunkl is one of its two lead writers.",
-    url: "https://internationalaisafetyreport.org"
+    links: [{ label: "Report", url: "https://internationalaisafetyreport.org" }]
   },
   {
     type: "policy",
@@ -248,7 +300,12 @@ export const publications = [
     title: "Joint Statement on Artificial Intelligence and the Rights of the Child",
     venue:
       "Led by the International Telecommunication Union with UNICEF, UNESCO, the ILO and the UN Committee on the Rights of the Child, and co-signed by over 50 organisations. Contributed to by the Oxford Child-Centred AI group.",
-    url: "https://www.itu.int/hub/publication/d-str-cyb_joint-2025/"
+    links: [
+      {
+        label: "Statement",
+        url: "https://www.itu.int/hub/publication/d-str-cyb_joint-2025/"
+      }
+    ]
   },
   {
     type: "policy",
@@ -257,7 +314,12 @@ export const publications = [
       "Human Development Report 2025 — A matter of choice: People and possibilities in the age of AI",
     venue:
       "United Nations Development Programme. Carina Prunkl informed the report's discussion of autonomy and agency, and contributed a spotlight article on workers' agency.",
-    url: "https://hdr.undp.org/content/human-development-report-2025"
+    links: [
+      {
+        label: "Report",
+        url: "https://hdr.undp.org/content/human-development-report-2025"
+      }
+    ]
   },
 
   // Other reports
@@ -268,7 +330,12 @@ export const publications = [
       "Vidminas Vizgirda, Hawra Rabaan, Jianing Wang, Khadija El Aadmi Laamech, and Christina Detsika",
     title: "Final report from the CAMCAD workshop at CHI 2026",
     venue: "CAMCAD Workshop at CHI 2026, Barcelona, Spain, 16 April 2026",
-    url: "https://oxfordhcc.github.io/CAMCAD/report/",
+    links: [
+      {
+        label: "Report",
+        url: "https://oxfordhcc.github.io/CAMCAD/report/"
+      }
+    ],
     post: "chaild-at-chi-2026"
   },
   {
@@ -279,7 +346,12 @@ export const publications = [
     title:
       "Towards Open Benchmarks for Human Flourishing with AI: Report of the October '25 Workshop and Next Steps",
     venue: "MIT Media Lab",
-    url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/",
+    links: [
+      {
+        label: "Report",
+        url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/"
+      }
+    ],
     post: "aha-benchmarks-report"
   }
 ];

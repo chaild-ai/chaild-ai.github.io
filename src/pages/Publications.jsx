@@ -43,7 +43,9 @@ export default function Publications() {
               >
                 <h2 className="publications-section-title">{section.title}</h2>
                 <ul className="publications-list">
-                  {items.map((pub, i) => (
+                  {items.map((pub, i) => {
+                    const links = pub.links || [];
+                    return (
                     <li
                       key={`${pub.title}-${i}`}
                       className="publication"
@@ -61,19 +63,19 @@ export default function Publications() {
                         <span className="publication-venue">. {pub.venue}</span>
                       )}
                       <span className="publication-links">
-                        {pub.url && (
-                          <>
-                            {" "}
+                        {links.map((link, j) => (
+                          <React.Fragment key={link.url}>
+                            {j === 0 ? " " : " · "}
                             <a
-                              href={pub.url}
+                              href={link.url}
                               target="_blank"
                               rel="noreferrer"
                               className="publication-link"
                             >
-                              Link
+                              {link.label}
                             </a>
-                          </>
-                        )}
+                          </React.Fragment>
+                        ))}
                         {pub.post && (
                           <>
                             {" · "}
@@ -87,7 +89,8 @@ export default function Publications() {
                         )}
                       </span>
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
               </section>
             );
