@@ -298,7 +298,8 @@ export const publications = [
         label: "Programme",
         url: "https://ictmt17.org.uk/workshop-program/"
       }
-    ]
+    ],
+    post: "ictmt17-workshop-2025"
   },
 
   // Policy reports
