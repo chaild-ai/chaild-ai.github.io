@@ -87,7 +87,6 @@ const blogSection = {
     "vilnius-seminar-2026",
     "beyond-the-classroom-2026",
     "sicsa-pre-chi-2026",
-    "paris-talk-2026",
     "round-table-2026",
     "chaild-at-idc-2026",
     "kcl-teachers-conference",
