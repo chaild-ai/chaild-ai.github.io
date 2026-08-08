@@ -358,6 +358,21 @@ export const publications = [
         url: "https://hdr.undp.org/content/human-development-report-2025"
       }
     ]
+  },
+  {
+    type: "policy",
+    date: "2025-07",
+    title:
+      "Me, Myself and AI: Understanding and safeguarding children's use of AI chatbots",
+    venue:
+      "Internet Matters. Jun Zhao was one of four experts who shaped the report's recommendations.",
+    links: [
+      {
+        label: "Report",
+        url: "https://www.internetmatters.org/hub/research/me-myself-and-ai-chatbot-research/"
+      }
+    ],
+    post: "internet-matters-2025"
   }
 ];
 
