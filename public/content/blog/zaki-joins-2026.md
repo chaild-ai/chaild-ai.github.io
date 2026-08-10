@@ -10,7 +10,7 @@ url: "https://profiles.ucl.ac.uk/103498-zaki-pauzi"
 
 ![Zaki, Manolis and Vid standing together in front of a large geodesic sculpture at the UCL Knowledge Lab](/content/blog/images/ucl-team-2026.jpg "The UCL side of the CHAILD team: Zaki, Manolis and Vid")
 
-That completes the UCL team in the project. Manolis has led it from the start, Vid took up a joint post here in August 2025 alongside [his Oxford role](/blog/new-researchers-2025) and is supervised by Manolis on this side too, and Zaki now joins them.
+That completes the UCL team in the project. Manolis has led it from the start, Vid [took up a joint post here in August 2025](/blog/vid-joins-ucl-2025) alongside his Oxford role and is supervised by Manolis on this side too, and Zaki now joins them.
 
 Zaki is no stranger to the building or the CHAILD team - he was previously already working with Manolis on evaluating educational technology in the [Transforming Education with Emerging Technologies (TransEET) project](https://transeet.eu/).
 

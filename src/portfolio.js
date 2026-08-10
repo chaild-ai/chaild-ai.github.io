@@ -81,6 +81,7 @@ const blogSection = {
   blogSlugs: [
     "zaki-joins-2026",
     "leslye-joins-2025",
+    "vid-joins-ucl-2025",
     "new-researchers-2025",
     "internet-matters-2025",
     "cella-study-2026",
