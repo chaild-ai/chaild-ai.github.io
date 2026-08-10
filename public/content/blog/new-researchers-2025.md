@@ -8,6 +8,8 @@ url: "https://oxfordccai.org/post/20-25-05-new-members/"
 
 Two researchers started with CHAILD at Oxford on 22 April, a couple of months after [the project began](/blog/chaild-launch). Both join as Research Associates in the Department of Computer Science, supervised by Dr Jun Zhao and Professor Sir Nigel Shadbolt.
 
+![The University of Oxford Department of Computer Science sign outside the building on Parks Road](/content/blog/images/oxford-cs-2025.jpg "The Department of Computer Science, where both are based")
+
 ## Isobel
 
 **Dr Isobel Voysey** comes from the Edinburgh Centre for Robotics, where her PhD — *Minimat: the development of a minimal animate robot for animal welfare education*, supervised by Dr J. Michael Herrmann — built a robot to teach children about animal welfare. Working with the Scottish SPCA and a biomimetic robot called MiRo, she studied how children's existing attitudes to animals and to robots shape the way they engage with a robotic animal, and which behaviours and physical features make a machine read as alive. Before that came an Engineering degree at Cambridge, a year of it at the National University of Singapore, and a master's in the Bio-Inspired Robotics Lab spent teaching a robot to load a dishwasher from a cluttered canteen tray.
