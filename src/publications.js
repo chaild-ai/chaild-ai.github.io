@@ -52,7 +52,8 @@ export const publications = [
       "Should Machines Get to Judge? Rethinking the Design of AI-Mediated Assessment in Education",
     venue:
       "Companion Publication of the 2026 ACM Designing Interactive Systems Conference (DIS '26 Companion), 171–175",
-    links: [{ label: "DOI", url: "https://doi.org/10.1145/3802974.3809410" }]
+    links: [{ label: "DOI", url: "https://doi.org/10.1145/3802974.3809410" }],
+    post: "dis-2026"
   },
   {
     type: "paper",
@@ -62,7 +63,8 @@ export const publications = [
     title: "Towards Evaluating Student Agency in AI-Mediated Learning",
     venue:
       "Companion Publication of the 2026 ACM Designing Interactive Systems Conference (DIS '26 Companion), 221–225",
-    links: [{ label: "DOI", url: "https://doi.org/10.1145/3802974.3809419" }]
+    links: [{ label: "DOI", url: "https://doi.org/10.1145/3802974.3809419" }],
+    post: "dis-2026"
   },
   {
     type: "paper",
