@@ -11,6 +11,15 @@ export default function NotFound() {
 
   useEffect(() => {
     document.title = "Page not found | CHAILD";
+    /* 404.html carries its own noindex, so this is not for the normal case.
+       It covers the legacy /?/<path> URLs the shim in index.html still
+       decodes: those are served from index.html, so they answer 200 and would
+       otherwise look like a real page. Delete this with the shim. */
+    const tag = document.createElement("meta");
+    tag.name = "robots";
+    tag.content = "noindex";
+    document.head.appendChild(tag);
+    return () => tag.remove();
   }, []);
 
   return (

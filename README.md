@@ -41,6 +41,11 @@ tags and JSON-LD. Posts are picked up automatically; a **new top-level route
 needs adding to the script**. The build fails if `blogSlugs` and the markdown
 files disagree, so a dead URL cannot reach the sitemap.
 
+`404.html` is generated the same way, as the app shell with a `noindex` tag. It
+deliberately does not redirect: every real route is a file now, so anything
+reaching it is genuinely missing and should stay an HTTP 404 rather than be
+turned into a 200.
+
 ## Adding content (news posts)
 
 News posts are markdown files served from `public/content/blog/`.

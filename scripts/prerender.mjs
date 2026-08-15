@@ -114,12 +114,15 @@ const ORG = {
   logo: OG_IMAGE
 };
 
-function head({ title, description, path, jsonld, type = "website" }) {
+function head({ title, description, path, jsonld, type = "website", noindex }) {
   const url = `${SITE}${path}`;
   return [
     `<title>${esc(title)}</title>`,
     `<meta name="description" content="${esc(description)}">`,
-    `<link rel="canonical" href="${esc(url)}">`,
+    // A missing page has no canonical URL of its own to point at.
+    noindex
+      ? `<meta name="robots" content="noindex">`
+      : `<link rel="canonical" href="${esc(url)}">`,
     `<meta property="og:type" content="${type}">`,
     `<meta property="og:site_name" content="${SITE_NAME}">`,
     `<meta property="og:locale" content="en_GB">`,
@@ -151,7 +154,7 @@ const template = (() => {
 function render(meta) {
   return template
     .replace(/<title>[\s\S]*?<\/title>/, "")
-    .replace(/<meta name="description"[^>]*>/g, "")
+    .replace(/<meta name="(description|robots)"[^>]*>/g, "")
     .replace(/<meta property="(og|twitter):[^"]*"[^>]*>/g, "")
     .replace(/<link rel="canonical"[^>]*>/g, "")
     .replace("</head>", `${head(meta)}</head>`);
@@ -309,6 +312,22 @@ for (const p of posts) {
     ]
   });
 }
+
+/* GitHub Pages serves this for any unmatched path, with a 404 status. It is
+   the app shell, so App.js sees the requested pathname and renders NotFound --
+   a real 404 that still looks like the site. It deliberately does not redirect:
+   every real route now has its own index.html, so anything landing here is
+   genuinely missing and should stay a 404 rather than become a 200. */
+writeFileSync(
+  join(build, "404.html"),
+  render({
+    path: "/404",
+    title: "Page not found | CHAILD",
+    description: "The page you were looking for could not be found.",
+    noindex: true,
+    jsonld: []
+  })
+);
 
 // ---------------------------------------------------------------- sitemap
 
