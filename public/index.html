@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--
-      Single Page Apps for GitHub Pages
+      Legacy shim. Deep links used to arrive as /?/<path> from a redirect in
+      404.html; every route is now a real file, so nothing produces those URLs
+      any more. This keeps ones already indexed or bookmarked working.
       https://github.com/rafgraph/spa-github-pages (MIT License)
-      Decodes the path that 404.html encoded into the query string and
-      restores the real URL before the app boots, so the SPA router sees the
-      original deep-link path.
     -->
     <script type="text/javascript">
       (function (l) {
@@ -30,26 +29,30 @@
       })(window.location);
     </script>
 
-    <!-- Edit meta tags for SEO -->
-    <title>CHAILD | Supporting Children's Agency</title>
-    <meta name="title" content="CHAILD | Supporting children's agency">
-    <meta name="description" content="A UKRI project that seeks the definition and design for children's agency in the age of AI">
+    <!--
+      These are the defaults. scripts/prerender.mjs replaces them per route at
+      build time, so each page ships its own title, description, canonical,
+      Open Graph tags and JSON-LD. Edit both if the wording changes.
+    -->
+    <title>CHAILD | Supporting children's agency</title>
+    <meta name="description" content="A UKRI research project defining and designing children's agency in the age of AI">
+    <link rel="canonical" href="%PUBLIC_URL%/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chaild.org/">
+    <meta property="og:site_name" content="CHAILD">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:url" content="%PUBLIC_URL%/">
     <meta property="og:title" content="CHAILD | Supporting children's agency">
-    <meta property="og:description" content="A UKRI project that seeks the definition and design for children's agency in the age of AI">
-    <!-- Link to a hosted image -->
-    <!-- <meta property="og:image" content=""> -->
-    
+    <meta property="og:description" content="A UKRI research project defining and designing children's agency in the age of AI">
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.png">
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://chaild.org/">
+    <meta property="twitter:url" content="%PUBLIC_URL%/">
     <meta property="twitter:title" content="CHAILD | Supporting children's agency">
-    <meta property="twitter:description" content="A UKRI project that seeks the definition and design for children's agency in the age of AI">
-    <!-- Link to a hosted image -->
-    <!-- <meta property="twitter:image" content=""> -->
+    <meta property="twitter:description" content="A UKRI research project defining and designing children's agency in the age of AI">
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.png">
 
     <meta name="msapplication-TileColor" content="#002147">
     <meta name="theme-color" content="#002147" />

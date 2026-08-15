@@ -29,6 +29,18 @@ npm test          # run tests
 npm run format    # format code with Prettier
 ```
 
+### Prerendering
+
+`npm run build` runs `scripts/prerender.mjs` afterwards, which writes one
+`index.html` per route into `build/` — plus `sitemap.xml`. Without it GitHub
+Pages has no file at `/blog/<slug>` and answers with `404.html` and an HTTP 404,
+which keeps every page but the home page out of search results.
+
+Each generated page gets its own title, description, canonical URL, Open Graph
+tags and JSON-LD. Posts are picked up automatically; a **new top-level route
+needs adding to the script**. The build fails if `blogSlugs` and the markdown
+files disagree, so a dead URL cannot reach the sitemap.
+
 ## Adding content (news posts)
 
 News posts are markdown files served from `public/content/blog/`.
