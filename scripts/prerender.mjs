@@ -201,6 +201,7 @@ emit("/", {
       name: SITE_NAME,
       url: `${SITE}/`,
       description: SITE_DESC,
+      inLanguage: "en-GB",
       publisher: ORG
     }
   ]
@@ -302,7 +303,8 @@ for (const p of posts) {
         dateModified: p.date,
         keywords: Array.isArray(p.tags) ? p.tags.join(", ") : undefined,
         image: OG_IMAGE,
-          author: ORG,
+        inLanguage: "en-GB",
+        author: ORG,
         publisher: ORG,
         mainEntityOfPage: {
           "@type": "WebPage",
