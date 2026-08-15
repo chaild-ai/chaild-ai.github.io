@@ -10,7 +10,7 @@ On Tuesday 10 February — Safer Internet Day — Vid attended [YouthLink Scotla
 
 ![Delegates seated at round tables watching a presentation, seen from the back of the room](/content/blog/images/dyw-2026-session.jpg "A session at the Digital Youth Work Conference")
 
-The headline was the launch of **Our Futures and AI: A Youth Work Toolkit**, presented by Ryan McKay of the Citadel Youth Centre and Les Ellis of Cromar Future Group. It is full of activities and guidance for exploring AI with young people — and, importantly, it was co-created with them. Ben MacPherson, Minister for Higher and Further Education, welcomed the toolkit and spoke with the young people who made it. We have [added it to our resources page](/resources).
+The headline was the launch of **Our Futures and AI: A Youth Work Toolkit**, presented by Ryan McKay of the Citadel Youth Centre and Les Ellis of Cromar Future Group. It is full of activities and guidance for exploring AI with young people — and, importantly, it was co-created with them. Ben MacPherson, Minister for Higher and Further Education, welcomed the toolkit and spoke with the young people who made it. We have [added it to our resources page](/resources/).
 
 ![Small modelling clay figures on a table, one spelling out CFG](/content/blog/images/dyw-2026-ai-show-models.jpg "Models made during one of the activities from the Youth Work Toolkit")
 

@@ -16,4 +16,4 @@ We discussed the concept of agency, why it is desirable (and limitations to this
 
 In the CHAILD project, we ask whether generative AI tools can be built to help children and young people make informed decisions and enact them themselves, without giving up their agency to the tools.
 
-The session closed with a discussion of what this means one stage further on, for university students and educators. Many of the pressures are the same ones school pupils described to us [a fortnight earlier](/blog/beyond-the-classroom-2026): assessment that is hard to trust in both directions, and tools that are easier to lean on than to interrogate.
+The session closed with a discussion of what this means one stage further on, for university students and educators. Many of the pressures are the same ones school pupils described to us [a fortnight earlier](/blog/beyond-the-classroom-2026/): assessment that is hard to trust in both directions, and tools that are easier to lean on than to interrogate.

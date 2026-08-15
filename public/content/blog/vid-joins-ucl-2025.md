@@ -5,7 +5,7 @@ tags: ["team"]
 date: "2025-08-18"
 ---
 
-**Dr Vidminas Vizgirda** has taken up a second appointment as a Research Fellow at the UCL Knowledge Lab, alongside [the Oxford post he started in April](/blog/new-researchers-2025). At UCL he is supervised by Professor Manolis Mavrikis.
+**Dr Vidminas Vizgirda** has taken up a second appointment as a Research Fellow at the UCL Knowledge Lab, alongside [the Oxford post he started in April](/blog/new-researchers-2025/). At UCL he is supervised by Professor Manolis Mavrikis.
 
 ![The glass frontage of IOE, UCL's Faculty of Education and Society, seen from the street](/content/blog/images/ucl-ioe-2025.jpg "IOE, UCL's Faculty of Education and Society")
 

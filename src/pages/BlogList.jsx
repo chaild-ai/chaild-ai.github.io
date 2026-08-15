@@ -109,7 +109,7 @@ export default function BlogList() {
                     key={i}
                     headingLevel={2}
                     blog={{
-                      url: `/blog/${blog.slug}`,
+                      url: `/blog/${blog.slug}/`,
                       image: blog.image,
                       title: blog.title,
                       description: blog.description,

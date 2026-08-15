@@ -73,7 +73,7 @@ export default function BlogPost({ slug }) {
           <Header />
           <main id="main-content" className="blog-post-container">
             <h1>Post not found</h1>
-            <a href="/blog">← Back to all posts</a>
+            <a href="/blog/">← Back to all posts</a>
           </main>
           <Footer />
           <ScrollToTopButton />
@@ -87,7 +87,7 @@ export default function BlogPost({ slug }) {
       <StyleProvider value={{ isDark: isDark, changeTheme: toggleTheme }}>
         <Header />
         <main id="main-content" className="blog-post-container fade-in-up">
-          <a href="/blog" className="back-link">
+          <a href="/blog/" className="back-link">
             ← Back to all posts
           </a>
           <h1

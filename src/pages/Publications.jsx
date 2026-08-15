@@ -93,7 +93,7 @@ export default function Publications() {
                           <>
                             {" · "}
                             <a
-                              href={`/blog/${pub.post}`}
+                              href={`/blog/${pub.post}/`}
                               className="publication-link"
                             >
                               Our news

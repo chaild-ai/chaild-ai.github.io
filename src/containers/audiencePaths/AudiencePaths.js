@@ -6,7 +6,8 @@ import Sparkles from "../../components/sparkles/Sparkles";
 // Audience-based entry points into the site. Each card sends a visitor to
 // the content most relevant to them. The blog list accepts a comma-separated
 // `tag` query so a single link can combine tags (e.g. publications + talks).
-const buildTagLink = (tags) => `/blog?tag=${encodeURIComponent(tags.join(","))}`;
+const buildTagLink = (tags) =>
+  `/blog/?tag=${encodeURIComponent(tags.join(","))}`;
 
 const audiences = [
   {
@@ -14,7 +15,7 @@ const audiences = [
     title: "For researchers",
     description: "Read our publications and conference presentations.",
     linkText: "Publications & presentations",
-    href: "/publications"
+    href: "/publications/"
   },
   {
     icon: "🍎",
@@ -22,7 +23,7 @@ const audiences = [
     description:
       "Explore AI literacy resources to use at home and in the classroom.",
     linkText: "Browse resources",
-    href: "/resources"
+    href: "/resources/"
   },
   {
     icon: "🏛️",

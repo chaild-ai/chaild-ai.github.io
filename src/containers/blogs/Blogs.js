@@ -44,7 +44,7 @@ export default function Blogs() {
               <BlogCard
                 key={i}
                 blog={{
-                  url: `/blog/${blog.slug}`,
+                  url: `/blog/${blog.slug}/`,
                   image: blog.image,
                   title: blog.title,
                   description: blog.description,
@@ -54,7 +54,7 @@ export default function Blogs() {
           })}
         </div>
       </div>
-      <a className="all-news-link" href="/blog">
+      <a className="all-news-link" href="/blog/">
         All news →
       </a>
     </section>

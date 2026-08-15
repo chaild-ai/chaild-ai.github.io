@@ -11,16 +11,21 @@ function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   // Routing is plain pathnames (see App.js), so the current section is just a
-  // prefix match -- /blog/<slug> should still mark News.
-  const pathname = window.location.pathname;
-  const isCurrent = href =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  // prefix match -- /blog/<slug> should still mark News. Links carry a trailing
+  // slash to match what GitHub Pages serves, but the dev server answers the
+  // slashless form too, so compare with the slash stripped from both.
+  const trim = p => p.replace(/\/+$/, "");
+  const pathname = trim(window.location.pathname);
+  const isCurrent = href => {
+    const h = trim(href);
+    return h === "" ? pathname === "" : pathname === h || pathname.startsWith(h + "/");
+  };
 
   const navItems = [
     {href: "/", label: "Home"},
-    {href: "/publications", label: "Publications"},
-    {href: "/resources", label: "Resources"},
-    ...(viewBlog ? [{href: "/blog", label: "News"}] : [])
+    {href: "/publications/", label: "Publications"},
+    {href: "/resources/", label: "Resources"},
+    ...(viewBlog ? [{href: "/blog/", label: "News"}] : [])
   ];
 
   const menuClasses = ["menu", isMenuOpen ? "menu-open" : ""]

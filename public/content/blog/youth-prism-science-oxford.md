@@ -7,7 +7,7 @@ date: "2026-02-18"
 
 On Tuesday 17 February, we ran a workshop with 16 teenagers at the [Science Oxford](https://scienceoxford.com/) centre, as part of their three-day Insight into STEM Careers programme. Students had applied to join this programme themselves. The young people came from schools across east Oxfordshire and Buckinghamshire, predominantly state schools and mostly from underserved communities.
 
-The workshop is part of our [Youth PRISM study](/blog/study-genai), which investigates two questions: what are teenagers' current experiences with large language models, and what makes those experiences positive or negative? And what values drive teenagers' decision-making about — and during — the use of generative AI?
+The workshop is part of our [Youth PRISM study](/blog/study-genai/), which investigates two questions: what are teenagers' current experiences with large language models, and what makes those experiences positive or negative? And what values drive teenagers' decision-making about — and during — the use of generative AI?
 
 After a short introduction to the Oxford Child-Centred AI group, the students worked through three activities in small groups:
 

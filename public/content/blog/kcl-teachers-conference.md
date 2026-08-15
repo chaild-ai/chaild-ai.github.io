@@ -5,7 +5,7 @@ tags: ["networking"]
 date: "2025-07-06"
 ---
 
-On Saturday, Vid attended a [Computing at School](https://www.computingatschool.org.uk/) conference for computing teachers at King's College London. Hot on the heels of [the Festival of Computing](/blog/festival-of-computing) earlier in the week, it offered another window into how AI is landing in England's classrooms. Some select takeaways related to agency:
+On Saturday, Vid attended a [Computing at School](https://www.computingatschool.org.uk/) conference for computing teachers at King's College London. Hot on the heels of [the Festival of Computing](/blog/festival-of-computing/) earlier in the week, it offered another window into how AI is landing in England's classrooms. Some select takeaways related to agency:
 
 ## Working with AI without handing it the wheel
 

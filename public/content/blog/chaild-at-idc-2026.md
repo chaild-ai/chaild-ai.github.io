@@ -30,7 +30,7 @@ The CHAILD team was well-presented in all sessions:
 ![Isobel presents](/content/blog/images/idc-2026-agency.jpg "Isobel presenting the agency review paper")
 
 
-This timely paper highlights the need for agency conceptualisation clarity and the need to consider relational agency in child-centred designs. [See our earlier blog post](https://chaild.org/blog/agency-lit-review).
+This timely paper highlights the need for agency conceptualisation clarity and the need to consider relational agency in child-centred designs. [See our earlier blog post](/blog/agency-lit-review/).
 
 
 ## Paper highlights
