@@ -34,4 +34,4 @@ Pupils do not need convincing that AI has problems. They need something more use
 
 We took the opportunity to invite Beyond the Classroom participants to join us for our co-design studies by asking a parent to register via our expression of interest form.
 
-Trinity College also hosted [our first Youth PRISM session](/blog/youth-prism-first), where we worked with a much smaller group in person. Doing both in the same year has been a good reminder that scale and depth trade off against each other.
+Trinity College also hosted [our first Youth PRISM session](/blog/youth-prism-first/), where we worked with a much smaller group in person. Doing both in the same year has been a good reminder that scale and depth trade off against each other.

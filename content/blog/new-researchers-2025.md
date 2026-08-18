@@ -6,7 +6,7 @@ date: "2025-04-22"
 url: "https://oxfordccai.org/post/20-25-05-new-members/"
 ---
 
-Two researchers started with CHAILD at Oxford on 22 April, a couple of months after [the project began](/blog/chaild-launch). Both join as Research Associates in the Department of Computer Science, supervised by Dr Jun Zhao and Professor Sir Nigel Shadbolt.
+Two researchers started with CHAILD at Oxford on 22 April, a couple of months after [the project began](/blog/chaild-launch/). Both join as Research Associates in the Department of Computer Science, supervised by Dr Jun Zhao and Professor Sir Nigel Shadbolt.
 
 ![The University of Oxford Department of Computer Science sign outside the building on Parks Road](/content/blog/images/oxford-cs-2025.jpg "The Department of Computer Science, where both are based")
 

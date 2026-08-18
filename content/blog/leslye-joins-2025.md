@@ -14,6 +14,6 @@ Her doctoral work asked how the risks and benefits of machine learning in medica
 
 Two further threads are already familiar territory here. One is **AI-induced deskilling** — the worry that a tool which reliably does the job for you wears away the ability underneath. She has written on it in medicine, and it is close kin to our worry about a child who never again has to plan an essay. The other is **friction in design**: the idea that a bit of resistance in a tool is not a usability failure but the thing that leaves a person room to think.
 
-Our [white paper](/blog/white-paper) took a first pass at defining children's agency, but the definition is neither precise nor complete. Having a philosopher in the team should help us sharpen it considerably and link our empirical work to theory.
+Our [white paper](/blog/white-paper/) took a first pass at defining children's agency, but the definition is neither precise nor complete. Having a philosopher in the team should help us sharpen it considerably and link our empirical work to theory.
 
 Welcome, Leslye.

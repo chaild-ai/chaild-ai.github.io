@@ -5,7 +5,7 @@ tags: ["youth prism", "research study"]
 date: "2026-03-19"
 ---
 
-On Thursday 19 March we ran our third [Youth PRISM](/blog/study-genai) session, back at Trinity College in Oxford where [the first one](/blog/youth-prism-first) took place in December.
+On Thursday 19 March we ran our third [Youth PRISM](/blog/study-genai/) session, back at Trinity College in Oxford where [the first one](/blog/youth-prism-first/) took place in December.
 
 This was the largest session so far. We had to split students into small groups of about six across several breakout rooms, each with researchers running the activities in parallel, before coming back together for a plenary.
 
@@ -13,7 +13,7 @@ This was the largest session so far. We had to split students into small groups 
 
 Because the session ran as part of an academic taster, we started in the auditorium with an introduction to the Oxford Child-Centred AI group and to what human-computer interaction research looks like — including some honest stories about applying to Oxford, which is usually what students most want to ask about.
 
-The three activities were the same ones we ran [at Science Oxford](/blog/youth-prism-science-oxford) in February:
+The three activities were the same ones we ran [at Science Oxford](/blog/youth-prism-science-oxford/) in February:
 
 1. **A values survey** — which AI tools students use and how often, then ranking eight values by importance: *factual*, *understandable*, *trustworthy*, *safe*, *fair*, *diverse*, *helpful* and *fun*.
 2. **Scenario discussions** — a set of situations where someone might turn to an AI chatbot. Groups decided which they would and would not use AI for, and wrote down why. The reasons are the interesting part; the choices on their own tell you very little.

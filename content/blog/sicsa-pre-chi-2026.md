@@ -16,4 +16,4 @@ Pre-CHI Day is a hybrid event run by the Scottish Informatics and Computer Scien
 
 Our talk introduced the [CAMCAD workshop](https://oxfordhcc.github.io/CAMCAD/) and the question behind it: how might AI applications be designed to support collaborative agency between children and others (peers, teachers, parents)? It was a useful rehearsal, and a good chance to hear where the framing landed with researchers outside child-computer interaction before we ran the workshop.
 
-The workshop went ahead in Barcelona a fortnight later — you can read [our reflections from CHI 2026](/blog/chaild-at-chi-2026), or go straight to the [full workshop report](https://oxfordhcc.github.io/CAMCAD/report/).
+The workshop went ahead in Barcelona a fortnight later — you can read [our reflections from CHI 2026](/blog/chaild-at-chi-2026/), or go straight to the [full workshop report](https://oxfordhcc.github.io/CAMCAD/report/).

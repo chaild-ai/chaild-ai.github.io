@@ -6,7 +6,7 @@ date: "2026-05-20"
 url: "https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/"
 ---
 
-Last October, we took part in the MIT Media Lab's [workshop on designing benchmarks for human flourishing with AI](/blog/aha-benchmarks-workshop). The resulting report, *[Towards Open Benchmarks for Human Flourishing with AI](https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/)*, is now officially published, with contributions from workshop participants — including Vid and Isobel.
+Last October, we took part in the MIT Media Lab's [workshop on designing benchmarks for human flourishing with AI](/blog/aha-benchmarks-workshop/). The resulting report, *[Towards Open Benchmarks for Human Flourishing with AI](https://www.media.mit.edu/projects/report-benchmarks-for-human-flourishing-with-ai/overview/)*, is now officially published, with contributions from workshop participants — including Vid and Isobel.
 
 The report synthesises what 80 experts from over 40 institutions produced across the workshop's three dimensions of flourishing — reasoning, comprehension and agency; curiosity and learning; and healthy emotional and social lives. It includes:
 
