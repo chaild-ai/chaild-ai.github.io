@@ -14,7 +14,7 @@
     "react-headroom": "^3.0.0",
     "react-markdown": "^8.0.0",
     "react-scripts": "^5.0.1",
-    "remark-gfm": "^4.0.1",
+    "remark-gfm": "^3.0.1",
     "sass": "^1.32.8"
   },
   "scripts": {
