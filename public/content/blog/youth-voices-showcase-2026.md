@@ -21,13 +21,13 @@ The morning will set the scene by exploring key opportunities and challenges con
 |---|---|
 | 9:45 – 10:15 | Arrival & welcome — still and sparkling water, tea and coffee available from the start |
 | 10:15 – 10:30 | Setting the stage — brief project overview and introductions |
-| 10:30 – 11:15 | Keynote presentation |
-| 11:15 – 12:00 | Youth & Researcher Panel — young people and researchers from the Youth Advisory Group discuss their experience, share results from youth contributions, and reflect on the year |
-| 12:00 – 13:00 | Sandwich lunch with whole fruit |
-| 13:00 – 13:30 | Introduce breakout group activities |
-| 13:30 – 14:00 | Breakout sessions — roundtable groups for teachers, youth, and parents |
-| 14:00 – 14:30 | Tea and coffee break |
-| 14:30 – 15:30 | Breakout sessions continue |
+| 10:30 – 11:15 | Invited presentation |
+| 11:15 – 11:45 | Youth & Researcher Panel — young people and researchers from the Youth Advisory Group discuss their experience, share results from youth contributions, and reflect on the year |
+| 11:45 – 12:30 | Reporting on project findings, along with YP's lightning reports of what they enjoyed, what they learnt, and messages for future efforts |
+| 12:30 – 13:30 | Sandwich lunch with whole fruit |
+| 13:30 – 15:30 | Breakout sessions — roundtable groups for teachers, youth, and parents |
+| 14:30 – 15:00 | Tea and coffee break |
+| 15:00 – 15:30 | Breakout sessions continue |
 | 15:30 – 16:00 | Plenary & wrap-up |
 
 ## Who it's for
