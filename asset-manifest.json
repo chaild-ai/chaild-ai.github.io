@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.44045c6d.css",
-    "main.js": "/static/js/main.da12fe4a.js",
-    "static/js/83.63bd4a00.chunk.js": "/static/js/83.63bd4a00.chunk.js",
-    "static/js/395.c2770368.chunk.js": "/static/js/395.c2770368.chunk.js",
+    "main.css": "/static/css/main.a9166efb.css",
+    "main.js": "/static/js/main.d4481007.js",
+    "static/js/423.eaede576.chunk.js": "/static/js/423.eaede576.chunk.js",
+    "static/js/607.0de710e6.chunk.js": "/static/js/607.0de710e6.chunk.js",
+    "static/js/251.60faf4f3.chunk.js": "/static/js/251.60faf4f3.chunk.js",
     "static/media/qr-codesign-prototypes.png": "/static/media/qr-codesign-prototypes.d7e4b97bf47eedd90ff7.png",
     "static/media/childrenWaving.svg": "/static/media/childrenWaving.f2544cb0f7105c193024c3a9c517d960.svg",
     "static/media/qr-youth-ai-research.png": "/static/media/qr-youth-ai-research.11b9bf644b087eca74d1.png",
@@ -26,13 +27,14 @@
     "static/media/ukri-inverted.svg": "/static/media/ukri-inverted.54e494937abb5a7b663ad1749a5c1f67.svg",
     "static/media/ukri.svg": "/static/media/ukri.9e2bb533d57a139a9e8f8c11c4da695e.svg",
     "index.html": "/index.html",
-    "main.44045c6d.css.map": "/static/css/main.44045c6d.css.map",
-    "main.da12fe4a.js.map": "/static/js/main.da12fe4a.js.map",
-    "83.63bd4a00.chunk.js.map": "/static/js/83.63bd4a00.chunk.js.map",
-    "395.c2770368.chunk.js.map": "/static/js/395.c2770368.chunk.js.map"
+    "main.a9166efb.css.map": "/static/css/main.a9166efb.css.map",
+    "main.d4481007.js.map": "/static/js/main.d4481007.js.map",
+    "423.eaede576.chunk.js.map": "/static/js/423.eaede576.chunk.js.map",
+    "607.0de710e6.chunk.js.map": "/static/js/607.0de710e6.chunk.js.map",
+    "251.60faf4f3.chunk.js.map": "/static/js/251.60faf4f3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.44045c6d.css",
-    "static/js/main.da12fe4a.js"
+    "static/css/main.a9166efb.css",
+    "static/js/main.d4481007.js"
   ]
 }
