@@ -18,17 +18,19 @@ The morning will set the scene by exploring key opportunities and challenges con
 ## Schedule for the day
 
 | Time | Session |
-|---|---|
-| 10:00 – 10:15 | Arrival & welcome — still and sparkling water, tea and coffee available from the start |
-| 10:15 – 10:30 | Setting the stage — brief project overview and introductions |
-| 10:30 – 11:15 | Invited presentation |
-| 11:15 – 11:45 | Youth & Researcher Panel — young people and researchers from the Youth Advisory Group discuss their experience, share results from youth contributions, and reflect on the year |
-| 11:45 – 12:30 | Reporting on project findings, along with YP's lightning reports of what they enjoyed, what they learnt, and messages for future efforts |
-| 12:30 – 13:30 | Sandwich lunch with whole fruit |
-| 13:30 – 14:30 | Breakout sessions — roundtable groups for teachers, youth, and parents |
-| 14:30 – 15:00 | Tea and coffee break |
-| 15:00 – 15:30 | Breakout sessions continue |
-| 15:30 – 16:00 | Plenary & wrap-up |
+| --- | --- |
+| 9:45–10:15 | Arrival 
+| 10:15–10:30 | Welcome and intro |
+| 10:30–11:00 | Youth & Researcher Panel — young people and researchers from the Youth Advisory Group discuss their experience, share results from youth contributions, and reflect on the year |
+| 11:00–11:30 | Youth Co-Design study findings and discussions |
+| 11:30–11:45 | Young People's lightning reports of what they enjoyed, what they learnt, and messages for future efforts |
+| 11:45–12:00 | Introduce the afternoon breakout session |
+| 12:00–13:00 | Sandwich lunch with whole fruit |
+| 13:00–14:00 | Breakout sessions — roundtable groups for teachers, youth, and parents |
+| 14:00–14:30 | Tea and coffee break |
+| 14:30–15:30 | Breakout sessions continue |
+| 15:30–16:00 | Plenary & wrap-up |
+
 
 ## Who it's for
 
@@ -56,6 +58,7 @@ You can also find us on the [University of Oxford Map](https://www.ox.ac.uk/abou
 Oxford is a lovely city, but driving around it can be challenging. Unfortunately, we cannot offer any onsite parking, and parking in Oxford can be quite expensive. Oxford also operates a congestion charge for all vehicles ([see details](https://www.oxfordshire.gov.uk/transport-and-travel/oxfords-temporary-congestion-charge-cars)).
 
 We recommend the following ways to travel:
+
 
 - **By bike:** Oxford is a cycle-friendly city and cycling is a great way to see it. Reuben College has secure bike parking onsite.
 - **By train:** Reuben College is a 20-minute walk or 15-minute bus ride from [Oxford Railway Station](https://www.nationalrail.co.uk/stations/oxford/), with regular trains to and from London Paddington and London Marylebone, as well as Birmingham and Manchester.
