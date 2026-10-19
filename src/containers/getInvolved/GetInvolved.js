@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import "./GetInvolved.scss";
 import StyleContext from "../../contexts/StyleContext";
-import qrCodesignPrototypes from "../../assets/images/qr/qr-codesign-prototypes.png";
+import qrLearnWithAiStudy from "../../assets/images/qr/qr-learn-with-ai-study.png";
 import qrYouthAiResearch from "../../assets/images/qr/qr-youth-ai-research.png";
 
 // Calls to action for taking part in our research. Each item shows a QR code
@@ -17,10 +17,10 @@ const getInvolved = {
     {
       audience: "Parents & guardians",
       description:
-        "Register your teenager's interest in helping us co-design AI prototypes - open to ages 13-17.",
+        "Register your teenager's interest in our five-week study of learning with AI (ages 13-17).",
       linkText: "Register their interest",
-      url: "https://forms.cloud.microsoft/e/GfkfK0mMvQ",
-      qr: qrCodesignPrototypes
+      url: "https://forms.cloud.microsoft/e/1fwKt0MPrw",
+      qr: qrLearnWithAiStudy
     },
     {
       audience: "Teachers",
