@@ -60,7 +60,9 @@ const peopleSection = {
         "Dr Leslye Dias Duran, University of Oxford",
         "Dr Vidminas Vizgirda, University College London and University of Oxford",
         "Dr Isobel Voysey, University of Oxford",
-        "Dr Zaki Pauzi, University College London"
+        "Dr Zaki Pauzi, University College London",
+        "Dr Kyrill Potapov, University College London",
+        "Yildiz Uzun, University College London"
       ]
     },
     {
@@ -79,6 +81,7 @@ const blogSection = {
   display: true, // Set false to hide this section, defaults to true
   // Blog slugs: metadata is loaded from markdown frontmatter in /public/content/blog/<slug>.md
   blogSlugs: [
+    "ucl-evaluation-team-2026",
     "youth-voices-showcase-2026",
     "dis-2026",
     "zaki-joins-2026",
