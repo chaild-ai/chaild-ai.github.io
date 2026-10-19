@@ -89,6 +89,15 @@
   color: $subTitleDark;
 }
 
+// An inline prose link, so it keeps its underline at rest.
+.resources-outro a {
+  color: $buttonColor;
+}
+
+.dark-mode .resources-outro a {
+  color: $accentColorDark;
+}
+
 @media (max-width: $bpMobile) {
   .resources-title {
     font-size: 1.9rem;

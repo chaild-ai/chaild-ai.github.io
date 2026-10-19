@@ -11,7 +11,7 @@ import "./Resources.scss";
 // resources below as we find new ones.
 const resourceCategories = [
   {
-    title: "Classroom-ready lessons and curricula",
+    title: "Lessons and curricula for the classroom",
     resources: [
       {
         name: "Experience AI",
@@ -68,15 +68,39 @@ const resourceCategories = [
       },
       {
         name: "Prompt a large language model",
-        url: "https://projects.raspberrypi.org/en/projects/prompt-a-large-language-model",
+        url: "https://projects.raspberrypi.org/en/projects/ai-LLM-prompt",
         description:
           "A hands-on coding project where young people build and refine their own prompts."
+      },
+      {
+        name: "micro:bit CreateAI",
+        url: "https://createai.microbit.org/",
+        description:
+          "Train a machine learning model on movement data from a micro:bit and use it in your own projects, with taster lessons and teacher resources from the Micro:bit Educational Foundation."
       },
       {
         name: "Somekone",
         url: "https://somekone.gen-ai.fi/library",
         description:
           "A social-media emulator from Finland's Generation AI programme that lets pupils see recommender systems and profiling at work."
+      },
+      {
+        name: "Breakable Machine",
+        url: "https://spoof.gen-ai.fi/",
+        description:
+          "Also from Generation AI: pupils train an image classifier and then try to fool it, a playful way into how machine learning can be tricked."
+      },
+      {
+        name: "In the Weights",
+        url: "https://intheweights.com/",
+        description:
+          "Type in a name and see how much a range of large language models have absorbed about that person — a striking way into what ends up in training data."
+      },
+      {
+        name: "Drift Calibrator",
+        url: "https://www.neuronpedia.org/drift-calibrator",
+        description:
+          "An MIT Media Lab research tool on Neuronpedia that visualises what is happening inside a model as you chat, such as when it drifts towards sycophancy."
       }
     ]
   },
@@ -213,7 +237,8 @@ export default function Resources() {
 
           <p className="resources-outro">
             Know a resource that belongs here? We'd love to hear about it —
-            find us via the links in the footer.
+            email us at{" "}
+            <a href="mailto:oxfordccai@cs.ox.ac.uk">oxfordccai@cs.ox.ac.uk</a>.
           </p>
         </main>
         <Footer />
