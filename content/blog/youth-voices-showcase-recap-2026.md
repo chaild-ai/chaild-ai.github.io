@@ -9,7 +9,6 @@ image: "/content/blog/images/youth-voices-2026-hall.jpg"
 
 On Saturday 26 September we hosted [Celebrating Youth Voices in AI & Data Science](/blog/youth-voices-showcase-2026/) in the Dining Hall of Reuben College, Oxford, to mark the end of a year of the MPLS youth advisory group. Around 40 teenagers and parents came, along with two MPLS researchers who had taken part in one of the youth advisory group sessions we facilitated earlier in the year. From the CHAILD team, Jun, Isobel, Vid, Manolis and Yildiz hosted the session.
 
-<!-- ![Rows of tables in the Reuben College Dining Hall under its dark timber roof arches, with teenagers and parents seated facing a screen showing the welcome slide](/content/blog/images/youth-voices-2026-hall.jpg "The Reuben College Dining Hall, just after the welcome") -->
 
 ## The morning
 
@@ -43,7 +42,6 @@ In the afternoon we split into roundtables, which ran in two sessions either sid
 
 The standards in question are the Department for Education's [Generative AI: product safety standards](https://www.gov.uk/government/publications/generative-ai-product-safety-expectations), which were updated in January this year with new sections on cognitive development, emotional and social development, mental health, and manipulation. These are the areas where CHAILD's work on children's agency is most relevant, so it was valuable to hear what the people they are meant to protect make of them.
 
-<!-- ![Teenagers around a table covered with printed screen templates, sticky notes and marker pens, sketching on paper, with a laptop open on a prototype called Real Chat AI](/content/blog/images/youth-voices-2026-breakout.jpg "Young people testing and sketching on our prototypes") -->
 
 ## What we heard
 
